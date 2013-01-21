@@ -21,7 +21,7 @@ sopranomelody = \relative f' {
   \time 4/4
   \repeat volta 2 {
     d8 a'4 g8 a c b g
-    a4 a g( fis8) g
+    a4 a \shape Slur #'((0 . 0)(0 . -0.55)(0.2 . -0.6)(0 . -0.2)) g( fis8) g
     a1
     d,8 a'4 g8 a c b g
     a4 a g( fis8) d
@@ -32,13 +32,13 @@ sopranomelody = \relative f' {
   }
   \bar "|."
   \cadenzaOn
-  d8 e\melisma fis\melismaEnd fis\breve
-  fis8\melisma e8\melismaEnd e\melisma g\melismaEnd
+  d8 e [ \melisma fis ] \melismaEnd fis\breve
+  fis8 [ \melisma e8 ] \melismaEnd e [ \melisma g ] \melismaEnd
   fis8
-  fis\melisma e\melismaEnd e\melisma fis\melismaEnd
+  fis [ \melisma e ] \melismaEnd e [ \melisma fis ] \melismaEnd
   \bar "dashed"
   fis\breve
-  fis8 fis d e\melisma fis\melismaEnd e e4
+  fis8 fis d e [ \melisma fis ] \melismaEnd e e4
   \cadenzaOff
   \bar "|."
 }
@@ -47,15 +47,22 @@ altomelody = \relative f' {
   \key d \major
   \time 4/4
   \repeat volta 2 {
-    d8 d4 e8 e e16\melisma d\melismaEnd e8 g
+    \tweak Stem #'length 5 d8 d4 e8 e e16\melisma d\melismaEnd e8 g
     fis8\melisma e\melismaEnd d4 d d
-    d2 ( d8 e g fis)
+    \shape Slur #'((0.2 . 1) (1 . 0) (-1 . 0) (0 . 0)) d2 ( d8 e g fis)
     d8 d4 e8 e e16\melisma d\melismaEnd e8 g
     fis8\melisma e\melismaEnd d4 d d
   }
   \alternative {
-    { d8( b d e d4 cis) }
-    { b4.( c8 d2) }
+    {
+      \shape Slur #'((0 . 0.2) (0 . 0.8) (0 . 1) (-0.5 . 1.4))
+      \tweak Beam #'positions #'(-5.3 . -5)
+      d8( b d e d4 cis)
+    }
+    {
+      \shape Slur #'((0 . 0.4) (0 . 0.5) (-0.3 . 0.1) (-0.4 . 0.3))
+      b4.( \tweak Stem #'length #5.5 c8 d2)
+    }
   }
   \bar "|."
   \cadenzaOn
@@ -71,10 +78,10 @@ tenormelody = \relative f {
   \time 4/4
   \repeat volta 2 {
     a4( d) c c8\melisma b\melismaEnd
-    a4 a b8\melisma a\melismaEnd b\melisma g\melismaEnd
+    a4 a b8[\melisma a]\melismaEnd b[\melisma g]\melismaEnd
     a4.( b8) a2
     a4( d) c c8\melisma b\melismaEnd
-    a2 b8\melisma a\melismaEnd b\melisma g\melismaEnd
+    a2 b8[\melisma a]\melismaEnd b[\melisma g]\melismaEnd
   }
   \alternative {
     { a1 }
@@ -93,15 +100,18 @@ bassmelody = \relative f {
   \key d \major
   \time 4/4
   \repeat volta 2 {
-    d2 e4 e
+    \tweak Stem #'length #5.5 d2 e4 e
     fis fis g g
     d2 d
-    d2 e4 e
+    \tweak Stem #'length #5.5 d2 e4 e
     fis2 g4 g
   }
   \alternative {
-    { a2( a,) }
-    { g( d') }
+    {
+      \shape Slur #'((0 . -0.4)(0 . -1)(-0.5 . 0)(0 . 0))
+      a2( a,)
+    }
+    { \tweak Stem #'length #4 g( d') }
   }
   \bar "|."
   \cadenzaOn
@@ -137,10 +147,10 @@ mentext = \lyricmode {
 stanzas = \markup {
   \fill-line {
     \large {
-      \hspace #0.1
+      \hspace #1
       \column {
         \line {
-          "2."
+          "  2. "
           \column {
             "Quia respexit humilitatem ancillæ suæ;"
             "ecce enim ex hoc beatam me dicent omnes generationes."
@@ -148,7 +158,7 @@ stanzas = \markup {
         }
         \vspace #0.5
         \line {
-          "3."
+          "  3. "
           \column {
             "Quia fecit mihi magna, qui potens est,"
             "et sanctum nomen eius."
@@ -156,7 +166,7 @@ stanzas = \markup {
         }
         \vspace #0.5
         \line {
-          "4."
+          "  4. "
           \column {
             "Et misericordia eius in progenies et progenies"
             "timentibus eum."
@@ -164,7 +174,7 @@ stanzas = \markup {
         }
         \vspace #0.5
         \line {
-          "5."
+          "  5. "
           \column {
             "Fecit potentiam in brachio suo,"
             "dispersit superbos mente cordis sui."
@@ -172,7 +182,7 @@ stanzas = \markup {
         }
         \vspace #0.5
         \line {
-          "6."
+          "  6. "
           \column {
             "Deposuit potentes de sede"
             "et exaltavit humiles."
@@ -180,7 +190,7 @@ stanzas = \markup {
         }
         \vspace #0.5
         \line {
-          "7."
+          "  7. "
           \column {
             "Esurientes implevit bonis"
             "et divites dimisit inanes."
@@ -188,7 +198,7 @@ stanzas = \markup {
         }
         \vspace #0.5
         \line {
-          "8."
+          "  8. "
           \column {
             "Suscepit Israel puerum suum,"
             "recordatus misericordiæ suæ."
@@ -196,7 +206,7 @@ stanzas = \markup {
         }
         \vspace #0.5
         \line {
-          "9."
+          "  9. "
           \column {
             "Sicut locutus est ad patres nostros,"
             "Abraham et semini eius in sæcula."
@@ -204,7 +214,7 @@ stanzas = \markup {
         }
         \vspace #0.5
         \line {
-          "10."
+          "10. "
           \column {
             "Gloria Patri, et Filio,"
             "et Spiritui Sancto."
@@ -212,7 +222,7 @@ stanzas = \markup {
         }
         \vspace #0.5
         \line {
-          "11."
+          "11. "
           \column {
             "Sicut erat in principio, et nunc et semper,"
             "et in sæcula sæculorum. Amen."
