@@ -1,6 +1,11 @@
 \version "2.17.3"
 #(set-global-staff-size 18)
 
+m = #(define-music-function (parser location off) (number?)
+       #{
+         \once \override Lyrics.LyricText #'X-offset = #off
+       #})
+
 \header	{
   title = "Magnificat"
   composer = "muzyka: Paweł Bębenek"
@@ -109,20 +114,24 @@ bassmelody = \relative f {
 %--------------------------------LYRICS--------------------------------
 womentext = \lyricmode {
   Mag -- ni -- fi -- cat a -- ni -- ma me -- a
-  Do -- mi -- num,
-  Mag -- ni -- fi -- cat a -- ni -- ma me -- a
-  Do -- mi -- num.
-  num.
-  Et ex -- sultavit spi -- ri -- tus me -- us
-  in_Deo sal -- va -- to -- re me -- o.
+  Do -- \tweak #'X-offset #-1.5 mi -- num,
+  \tweak #'X-offset #-2.5 Mag -- \tweak #'X-offset #0 ni -- fi -- cat a -- ni -- ma me -- a
+  Do -- \tweak #'X-offset #-1.2 mi -- num.
+  \tweak #'Y-offset #-0.4 \tweak #'X-offset #-0.8 num.
+
+  \overrideProperty #"Score.NonMusicalPaperColumn"
+  #'line-break-system-details #'((alignment-distances . (15)))
+
+  \override LyricText #'extra-offset = #'(0 . -0.5)
+  \override LyricHyphen #'extra-offset = #'(0 . -0.5)
+  Et ex -- \tweak #'X-offset #-0.7 sultavit spi -- ri -- tus me -- us
+  \tweak #'X-offset #-0.3 in_Deo sal -- va -- to -- re me -- o.
 }
 
 mentext = \lyricmode {
   Mag -- ni -- fi -- cat a -- ni -- ma me -- a,
   Mag -- ni -- fi -- cat Do -- mi -- num.
-  num.
-  Et ex -- sultavit spi -- ri -- tus me -- us
-  in_Deo sal -- va -- to -- re me -- o.
+  \tweak #'Y-offset #-0.55 num.
 }
 
 stanzas = \markup {
