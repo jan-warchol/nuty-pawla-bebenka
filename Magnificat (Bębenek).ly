@@ -52,6 +52,7 @@ altomelody = \relative f' {
   d8 d4 d\breve e4 e d8 d4 d
   \bar "dashed"
   d\breve d8 d d d4 d8 cis4
+  \cadenzaOff
 }
 tenormelody = \relative f {
   \key d \major
@@ -71,6 +72,7 @@ tenormelody = \relative f {
   a8 a4 a\breve a4 a4 a8 b4 b4
   \bar "dashed"
   b\breve b8 b b b4 b8 a4
+  \cadenzaOff
 }
 bassmelody = \relative f {
   \key d \major
@@ -90,6 +92,7 @@ bassmelody = \relative f {
   d8 d4 d\breve cis4 cis b8 a4 a
   \bar "dashed"
   g\breve g8 a b b4 cis8 cis4
+  \cadenzaOff
 }
 %--------------------------------LYRICS--------------------------------
 womentext = \lyricmode {
@@ -99,7 +102,7 @@ womentext = \lyricmode {
   Do -- mi -- num.
   num.
   Et ex -- sultavit spi -- ri -- tus me -- us
-  in_Deo sa -- lu -- ta -- ri me -- o.
+  in_Deo sal -- va -- to -- re me -- o.
 }
 
 mentext = \lyricmode {
@@ -107,7 +110,7 @@ mentext = \lyricmode {
   Mag -- ni -- fi -- cat Do -- mi -- num.
   num.
   Et ex -- sultavit spi -- ri -- tus me -- us
-  in_Deo sa -- lu -- ta -- ri me -- o.
+  in_Deo sal -- va -- to -- re me -- o.
 }
 
 stanzas = \markup {
@@ -118,15 +121,15 @@ stanzas = \markup {
         \line {
           "2."
           \column {
-            "Quia respexit humiliatem ancillæ suæ"
-            "Ecce enim ex hoc beatam me dicent omnes generationes."
+            "Quia respexit humilitatem ancillæ suæ;"
+            "ecce enim ex hoc beatam me dicent omnes generationes."
           }
         }
         \vspace #0.5
         \line {
           "3."
           \column {
-            "Quia fecit mihi magna qui potens est"
+            "Quia fecit mihi magna, qui potens est,"
             "et sanctum nomen eius."
           }
         }
@@ -134,7 +137,7 @@ stanzas = \markup {
         \line {
           "4."
           \column {
-            "Et misericordia eius a progenie in progenies"
+            "Et misericordia eius in progenies et progenies"
             "timentibus eum."
           }
         }
@@ -142,7 +145,7 @@ stanzas = \markup {
         \line {
           "5."
           \column {
-            "Fecit potentian in brachio suo,"
+            "Fecit potentiam in brachio suo,"
             "dispersit superbos mente cordis sui."
           }
         }
@@ -150,7 +153,7 @@ stanzas = \markup {
         \line {
           "6."
           \column {
-            "Deposuit potentes de sede,"
+            "Deposuit potentes de sede"
             "et exaltavit humiles."
           }
         }
@@ -158,8 +161,8 @@ stanzas = \markup {
         \line {
           "7."
           \column {
-            "Esurientes implevit bonis,"
-            "et diventes dimisit inanes."
+            "Esurientes implevit bonis"
+            "et divites dimisit inanes."
           }
         }
         \vspace #0.5
@@ -175,7 +178,7 @@ stanzas = \markup {
           "9."
           \column {
             "Sicut locutus est ad patres nostros,"
-            "Abraham, et semini eius in sæcula."
+            "Abraham et semini eius in sæcula."
           }
         }
         \vspace #0.5
@@ -231,6 +234,7 @@ stanzas = \markup {
   >>
   \layout {
     indent = 0\cm
+    \override NoteHead #'style = #'altdefault
   }
 }
 
