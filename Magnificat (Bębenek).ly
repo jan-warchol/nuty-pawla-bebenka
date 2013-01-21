@@ -13,6 +13,10 @@ m = #(define-music-function (parser location off) (number?)
 
 \paper {
   line-width = 145 \mm
+  top-margin = 10 \mm
+  system-system-spacing #'basic-distance = #16
+  % markup-system-spacing #'basic-distance = #15
+  tagline = ##f
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
@@ -248,7 +252,11 @@ stanzas = \markup {
         \altomelody
       }
     >>
-    \new Lyrics = sopranolyrics \lyricsto soprano \womentext
+    \new Lyrics = sopranolyrics \with {
+      \override VerticalAxisGroup #'nonstaff-unrelatedstaff-spacing #'padding = #2
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.4
+    }
+    \lyricsto soprano \womentext
 
     \new Staff = men <<
       \clef bass
@@ -261,7 +269,10 @@ stanzas = \markup {
         \bassmelody
       }
     >>
-    \new Lyrics = menlyrics \lyricsto tenor \mentext
+    \new Lyrics = menlyrics \with {
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.4
+    }
+    \lyricsto tenor \mentext
   >>
   \layout {
     indent = 0\cm
