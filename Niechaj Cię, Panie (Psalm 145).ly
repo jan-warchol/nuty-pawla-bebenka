@@ -10,8 +10,6 @@ commonprops = {
   \autoBeamOff
   \key g \minor
   \time 4/4
-}
-scoretempomarker = {
   \tempo 4 = 60
   \set Score.tempoHideNote = ##t
 }
@@ -80,7 +78,6 @@ text =  \lyricmode {
 
 fourstaveschoir = {
   \new ChoirStaff <<
-    \scoretempomarker
     \new ChordNames { \germanChords \akordy }
     \new Staff = soprano {
       \clef treble
