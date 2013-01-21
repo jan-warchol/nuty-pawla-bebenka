@@ -11,6 +11,7 @@
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody = \relative f' {
+  \dynamicUp
   \key d \major
   \time 4/4
   \repeat volta 2 {
@@ -24,6 +25,7 @@ sopranomelody = \relative f' {
     { e1 }
     { d1 }
   }
+  \bar "|."
   \cadenzaOn
   d8 e\melisma fis\melismaEnd fis\breve
   fis8\melisma e8\melismaEnd e\melisma g\melismaEnd
@@ -33,8 +35,10 @@ sopranomelody = \relative f' {
   fis\breve
   fis8 fis d e\melisma fis\melismaEnd e e4
   \cadenzaOff
+  \bar "|."
 }
 altomelody = \relative f' {
+  \dynamicUp
   \key d \major
   \time 4/4
   \repeat volta 2 {
@@ -48,13 +52,16 @@ altomelody = \relative f' {
     { d8( b d e d4 cis) }
     { b4.( c8 d2) }
   }
+  \bar "|."
   \cadenzaOn
   d8 d4 d\breve e4 e d8 d4 d
   \bar "dashed"
   d\breve d8 d d d4 d8 cis4
   \cadenzaOff
+  \bar "|."
 }
 tenormelody = \relative f {
+  \dynamicUp
   \key d \major
   \time 4/4
   \repeat volta 2 {
@@ -68,13 +75,16 @@ tenormelody = \relative f {
     { a1 }
     { g2( a) }
   }
+  \bar "|."
   \cadenzaOn
   a8 a4 a\breve a4 a4 a8 b4 b4
   \bar "dashed"
   b\breve b8 b b b4 b8 a4
   \cadenzaOff
+  \bar "|."
 }
 bassmelody = \relative f {
+  \dynamicUp
   \key d \major
   \time 4/4
   \repeat volta 2 {
@@ -88,11 +98,13 @@ bassmelody = \relative f {
     { a2( a,) }
     { g( d') }
   }
+  \bar "|."
   \cadenzaOn
   d8 d4 d\breve cis4 cis b8 a4 a
   \bar "dashed"
   g\breve g8 a b b4 cis8 cis4
   \cadenzaOff
+  \bar "|."
 }
 %--------------------------------LYRICS--------------------------------
 womentext = \lyricmode {
