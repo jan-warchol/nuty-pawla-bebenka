@@ -1,5 +1,5 @@
 \version "2.17.3"
-#(set-global-staff-size 18)
+#(set-global-staff-size 16)
 
 m = #(define-music-function (parser location off) (number?)
        #{
@@ -12,9 +12,13 @@ m = #(define-music-function (parser location off) (number?)
 }
 
 \paper {
+  paper-width = 165 \mm
+  paper-height = 240 \mm
   line-width = 145 \mm
-  top-margin = 10 \mm
-  system-system-spacing #'basic-distance = #16
+  top-margin = 4 \mm
+  bottom-margin = 6\mm
+  page-count = 1
+  system-system-spacing #'basic-distance = #15
   % markup-system-spacing #'basic-distance = #15
   tagline = ##f
 }
@@ -160,7 +164,7 @@ stanzas = \markup {
             "ecce enim ex hoc beatam me dicent omnes generationes."
           }
         }
-        \vspace #0.5
+        \vspace #0.35
         \line {
           "  3. "
           \column {
@@ -168,7 +172,7 @@ stanzas = \markup {
             "et sanctum nomen eius."
           }
         }
-        \vspace #0.5
+        \vspace #0.35
         \line {
           "  4. "
           \column {
@@ -176,7 +180,7 @@ stanzas = \markup {
             "timentibus eum."
           }
         }
-        \vspace #0.5
+        \vspace #0.35
         \line {
           "  5. "
           \column {
@@ -184,7 +188,7 @@ stanzas = \markup {
             "dispersit superbos mente cordis sui."
           }
         }
-        \vspace #0.5
+        \vspace #0.35
         \line {
           "  6. "
           \column {
@@ -192,7 +196,7 @@ stanzas = \markup {
             "et exaltavit humiles."
           }
         }
-        \vspace #0.5
+        \vspace #0.35
         \line {
           "  7. "
           \column {
@@ -200,7 +204,7 @@ stanzas = \markup {
             "et divites dimisit inanes."
           }
         }
-        \vspace #0.5
+        \vspace #0.35
         \line {
           "  8. "
           \column {
@@ -208,7 +212,7 @@ stanzas = \markup {
             "recordatus misericordiæ suæ."
           }
         }
-        \vspace #0.5
+        \vspace #0.35
         \line {
           "  9. "
           \column {
@@ -216,7 +220,7 @@ stanzas = \markup {
             "Abraham et semini eius in sæcula."
           }
         }
-        \vspace #0.5
+        \vspace #0.35
         \line {
           "10. "
           \column {
@@ -224,7 +228,7 @@ stanzas = \markup {
             "et Spiritui Sancto."
           }
         }
-        \vspace #0.5
+        \vspace #0.35
         \line {
           "11. "
           \column {
@@ -253,7 +257,7 @@ stanzas = \markup {
       }
     >>
     \new Lyrics = sopranolyrics \with {
-      \override VerticalAxisGroup #'nonstaff-unrelatedstaff-spacing #'padding = #2
+      \override VerticalAxisGroup #'nonstaff-unrelatedstaff-spacing #'padding = #1.75
       \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.4
     }
     \lyricsto soprano \womentext
@@ -270,7 +274,8 @@ stanzas = \markup {
       }
     >>
     \new Lyrics = menlyrics \with {
-      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.4
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.3
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'basic-distance = #0.3
     }
     \lyricsto tenor \mentext
   >>
