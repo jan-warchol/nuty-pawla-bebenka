@@ -17,12 +17,16 @@
   \tupletUp
   \clef treble
   % podaj tonację, na przykład \key g \minor
-  
+  \key d \minor
   % podaj metrum, na przykład \time 4/4
-  
+  \time 4/4
   % wpisz nuty:
-  
-  
+  \repeat volta 2 {
+  }
+  \alternative {
+    {  }
+    {  }
+  }
 }
 \addlyrics {
   
