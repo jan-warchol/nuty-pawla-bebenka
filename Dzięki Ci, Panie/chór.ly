@@ -1,5 +1,5 @@
 \version "2.16.1"
-#(set-global-staff-size 16)
+#(set-global-staff-size 18)
 
 \paper {
   indent = 0 \mm
@@ -13,6 +13,9 @@
 }
 
 \header {
+  title = "Dzięki Ci, Panie"
+  composer = "muzyka: Paweł Bębenek"
+  poet = "słowa: Radpert z St. Gallen"
 }
 
 \score {

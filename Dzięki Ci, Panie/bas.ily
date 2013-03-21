@@ -34,6 +34,7 @@
     { bes2. a4 d1 }
   }
   \bar "|."
+  \break
   \cadenzaOn
   d\breve e f4 f \bar "|"
   bes,\breve d4 d d c \bar "|"
@@ -41,6 +42,7 @@
   b\breve bes a4 a \bar "||"
 }
 \addlyrics {
+  \set stanza = "Ref: "
   Dzię -- ki, Ci, Pa -- nie,
   za Cia -- ło Twe i Krew,
   za da -- ry nie -- skoń -- czo -- ne
