@@ -243,31 +243,6 @@ text = \lyricmode {
     >>
   >>
 
-  % blok \layout zawiera ogólne ustawienia stylu
   \layout {
-    \compressFullBarRests
-    %\set Score.tempoHideNote = ##t
-
-    \override Lyrics.VerticalAxisGroup
-    #'nonstaff-unrelatedstaff-spacing #'padding = #0.5
-
-    \override Score.BarNumber #'break-visibility = #'#(#f #t #t)
-
-    \override Score.BarNumber #'self-alignment-X =
-    #(lambda (grob)
-       (let ((break-dir (ly:item-break-dir grob)))
-         (set! (ly:grob-property grob 'self-alignment-X)
-               (if (= break-dir RIGHT)
-                   1
-                   0))))
-
-    \override Score.BarNumber #'stencil =
-    #(lambda (grob)
-       (let ((break-dir (ly:item-break-dir grob)))
-         (set! (ly:grob-property grob 'font-size)
-               (if (= break-dir RIGHT)
-                   -1
-                   -3))
-         (ly:text-interface::print grob)))
   }
 }
