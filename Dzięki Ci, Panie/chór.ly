@@ -244,5 +244,6 @@ text = \lyricmode {
   >>
 
   \layout {
+    \override NoteHead #'style = #'altdefault
   }
 }
