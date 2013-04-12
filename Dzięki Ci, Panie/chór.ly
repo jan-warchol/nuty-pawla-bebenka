@@ -29,8 +29,6 @@ sopranomelody = \relative f' {
     \set Staff.midiMinimumVolume = #0.4
     \set Staff.midiMaximumVolume = #0.6
   }
-  \set Staff.instrumentName = "S "
-  \set Staff.shortInstrumentName = "S "
   \dynamicUp
   \tupletUp
   \clef treble
@@ -71,8 +69,6 @@ altomelody = \relative f' {
     \set Staff.midiMinimumVolume = #0.4
     \set Staff.midiMaximumVolume = #0.6
   }
-  \set Staff.instrumentName = "A "
-  \set Staff.shortInstrumentName = "A "
   \dynamicUp
   \tupletUp
   \clef treble
@@ -113,8 +109,6 @@ tenormelody = \relative f {
     \set Staff.midiMinimumVolume = #0.4
     \set Staff.midiMaximumVolume = #0.6
   }
-  \set Staff.instrumentName = "T "
-  \set Staff.shortInstrumentName = "T "
   \dynamicUp
   \tupletUp
   \clef "treble_8"
@@ -155,8 +149,6 @@ bassmelody = \relative f {
     \set Staff.midiMinimumVolume = #0.4
     \set Staff.midiMaximumVolume = #0.6
   }
-  \set Staff.instrumentName = "B "
-  \set Staff.shortInstrumentName = "B "
   \dynamicUp
   \tupletUp
   \clef bass
