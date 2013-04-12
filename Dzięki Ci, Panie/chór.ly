@@ -3,12 +3,9 @@
 
 \paper {
   indent = 0 \mm
-  left-margin = 12 \mm
-  right-margin = 14 \mm
-  %top-markup-spacing #'basic-distance = 5
-  %markup-system-spacing #'basic-distance = 40
-  %page-count =
-  %system-count =
+  left-margin = 13 \mm
+  right-margin = 12 \mm
+  top-markup-spacing #'basic-distance = 3
   \include "epifanijny-styl-nagłówków.ily"
 }
 
@@ -219,7 +216,7 @@ text = \lyricmode {
     >>
     \new Lyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.5
     }
     \lyricsto soprano \text
 
