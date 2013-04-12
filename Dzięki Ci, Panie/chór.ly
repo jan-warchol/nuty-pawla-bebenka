@@ -184,21 +184,28 @@ text = \lyricmode {
   za da -- ry nie -- skoń -- czo -- ne
   wiel -- bi -- my Cię!
   bi -- my Cię!
+  \once \override LyricSpace #'minimum-distance = #1.5
   \set stanza = "1."
   \tweak #'X-offset #-2
   "Chwalimy Cię, Wszechmocny, za"
   \tweak #'X-offset #-1
-  "dary Twe nieskoń" -- czo -- ne,
+  \markup { \concat { \bold \underline da ry } Twe nieskoń } --
+  \markup \bold \underline czo -- ne,
   \tweak #'X-offset #-0.5
-  "Za Ciało" i Two -- ją Krew.
+  \markup { \bold \underline za Ciało }
+  \markup \bold \underline i Two -- ją Krew.
+  \once \override LyricSpace #'minimum-distance = #1.5
   \tweak #'X-offset #-2
-  "Przebacz w swojej dobroci tym, co"
+  "Przebacz w swojej dobroci"
   \tweak #'X-offset #-0.5
-  Ciebie nie -- god -- ni,
+  \markup { \bold \underline tym, co Ciebie }
+  \markup \bold \underline nie -- god -- ni,
+  \once \override LyricSpace #'minimum-distance = #1.5
   \tweak #'X-offset #-1
-  "Kiedy do Twego"
+  \markup { \concat { \bold \underline kie dy } do Twego }
   \tweak #'X-offset #-1
-  "stołu się zbli" -- ża -- ją.
+  \markup { \concat { \bold \underline sto łu } się zbli } --
+  \markup \bold \underline ża -- ją.
 }
 
 \score {
