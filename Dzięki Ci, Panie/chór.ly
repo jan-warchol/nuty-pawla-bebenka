@@ -49,12 +49,12 @@ sopranomelody = \relative f' {
   }
   \alternative {
     { f2. g8( f) e1 }
-    { f2. g8( f) e1 }
+    { f2. e4 d1 }
   }
   \bar "|."
   \break
   \cadenzaOn
-  a\breve g f4 f4 \bar "|"
+  a'\breve g f4 f4 \bar "|"
   bes\breve a4 g f g \bar "|"
   f\breve f bes4 a a \bar "|"
   g\breve g a4 a4 \bar "||"
@@ -91,7 +91,7 @@ altomelody = \relative f' {
   }
   \alternative {
     { d2. d4 d2( cis) }
-    { d2. d4 d2( cis) }
+    { d2. d4 d1 }
   }
   \bar "|."
   \break
@@ -133,7 +133,7 @@ tenormelody = \relative f {
   }
   \alternative {
     { g2. g4 a1 }
-    { g2. g4 a1  }
+    { g2. a4 a1  }
   }
   \bar "|."
   \break
