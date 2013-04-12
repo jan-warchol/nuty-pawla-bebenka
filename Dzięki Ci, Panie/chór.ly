@@ -75,6 +75,7 @@ altomelody = \relative f' {
   \time 4/4
   % wpisz nuty:
   \repeat volta 2 {
+    \shape Slur #'((0 . 0.2)(0 . 0.5)(0 . 0.5)(0 . 0.2))
     f8( e d e) f4 d8( f)
     e2 e4 e
     f4 f f f
