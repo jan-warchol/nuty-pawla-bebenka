@@ -179,7 +179,7 @@ bassmelody = \relative f {
 
 text = \lyricmode {
   \set stanza = "Ref: "
-  Dzię -- ki, Ci, Pa -- nie,
+  Dzię -- ki Ci, Pa -- nie,
   za Cia -- ło Twe i Krew,
   za da -- ry nie -- skoń -- czo -- ne
   wiel -- bi -- my Cię!
@@ -188,22 +188,22 @@ text = \lyricmode {
   \set stanza = "1."
   \tweak #'X-offset #-2
   "Chwalimy Cię, Wszechmocny, za"
-  \tweak #'X-offset #-1
+  \tweak #'X-offset #-0.6
   \markup { \concat { \bold \underline da ry } Twe nieskoń } --
   \markup \bold \underline czo -- ne,
-  \tweak #'X-offset #-0.5
+  \tweak #'X-offset #-0.4
   \markup { \bold \underline za Ciało }
   \markup \bold \underline i Two -- ją Krew.
   \once \override LyricSpace #'minimum-distance = #1.5
   \tweak #'X-offset #-2
   "Przebacz w swojej dobroci"
-  \tweak #'X-offset #-0.5
+  \tweak #'X-offset #-1.4
   \markup { \bold \underline tym, co Ciebie }
   \markup \bold \underline nie -- god -- ni,
   \once \override LyricSpace #'minimum-distance = #1.5
   \tweak #'X-offset #-1
   \markup { \concat { \bold \underline kie dy } do Twego }
-  \tweak #'X-offset #-1
+  \tweak #'X-offset #-0.9
   \markup { \concat { \bold \underline sto łu } się zbli } --
   \markup \bold \underline ża -- ją.
 }
