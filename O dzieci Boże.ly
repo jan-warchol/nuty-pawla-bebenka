@@ -62,18 +62,16 @@ tenormelody = \relative f {
       \once \override Beam #'positions = #'(4 . 3.6)
       a8\melisma g\melismaEnd
       \override Stem #'length = #4
-      a2
-      a4
+      a2 a4
       a1.(
       \revert Stem #'length
-      b2.)
+      b2.) \bar "|." b4 b b
     }
     \new Lyrics \with { alignAboveContext = men fontSize = -2 }
     \lyricsto tenor \lyricmode {
       Al -- le -- lu -- ja!
     }
   >>
-  \bar "|." b4 b b
 }
 bassmelody = \relative f {
   \key e \minor
