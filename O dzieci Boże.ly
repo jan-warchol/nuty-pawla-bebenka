@@ -1,5 +1,5 @@
 \version "2.17.3"
-#(set-global-staff-size 17)
+#(set-global-staff-size 16.5)
 
 \header	{
   title = \markup \column { "O dzieci Boże, dosyć łez" " " " " " " }
@@ -110,8 +110,9 @@ akordy = \chordmode {
 %--------------------------------LYRICS--------------------------------
 text =  \lyricmode {
   \set stanza = "1."
-  O dzie -- ci \markup \underline Bo -- że, do -- syć łez,
-  bo Chrys -- tus \markup \underline dziś zmar -- twych -- wstan jest,
+  O dzie -- ci \tweak #'X-offset #-0.5 \markup \underline Bo -- że, do -- syć łez,
+  bo Chrys -- tus \tweak #'X-offset #-0.5 \markup \underline dziś zmar --
+  \tweak #'X-offset #-0.5 twych -- wstan jest,
   Król ży -- cia,
   \tweak #'X-offset #-1 \markup \underline
   wiecz -- nej \tweak #'X-offset #-1 chwa -- ły \tweak #'X-offset #-1.5 Król,
@@ -126,8 +127,8 @@ text =  \lyricmode {
   \revert LyricHyphen #'extra-offset
   \override StanzaNumber #'font-size = #-2
   \override LyricText #'font-size = #-2
-  \set stanza = "2."
-  I w_ran -- \tweak #'X-offset #-0.6 ny...
+  \set stanza = "(2."
+  I w_ran -- \tweak #'X-offset #-0.6 ny...)
 }
 
 stanzas = \markup \larger  {
