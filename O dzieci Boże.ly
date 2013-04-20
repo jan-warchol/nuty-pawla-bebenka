@@ -2,7 +2,7 @@
 #(set-global-staff-size 17)
 
 \header	{
-  title = "O dzieci Boże, dosyć łez"
+  title = \markup \column { "O dzieci Boże, dosyć łez" " " " " " " }
   poet = "słowa: Jan Tisserant"
   composer = "opracowanie: Paweł Bębenek"
   tagline = \markup {
@@ -12,6 +12,10 @@
 }
 
 \paper {
+  left-margin = 16 \mm
+  right-margin = 15 \mm
+  top-markup-spacing #'basic-distance = 10
+  system-system-spacing #'basic-distance = 15
 }
 %--------------------------------MELODY--------------------------------
 sopranomelody =	\relative f' {
@@ -25,7 +29,7 @@ sopranomelody =	\relative f' {
   e2. e4 e fis
   e( d) e g( fis) e
   b2. fis'4 g fis
-  e1.~ 
+  e1.~
   e2. \bar "|." e4 g a
 }
 altomelody = \relative f' {
@@ -92,26 +96,29 @@ text =  \lyricmode {
   \set stanza = "1."
   O dzie -- ci \markup \underline Bo -- że, do -- syć łez,
   bo Chrys -- tus \markup \underline dziś zmar -- twych -- wstan jest,
-  Król ży -- cia, \markup \underline wiecz -- nej chwa -- ły Król,
-  Al -- le -- lu -- ja! 
+  Król ży -- cia,
+  \tweak #'X-offset #-1 \markup \underline
+  wiecz -- nej \tweak #'X-offset #-1 chwa -- ły \tweak #'X-offset #-1.5 Król,
+  Al -- le -- lu -- ja!
   \override LyricText #'font-size = #-1
-  \override LyricText #'extra-offset = #'(0 . 1)
-  \override LyricHyphen #'extra-offset = #'(0 . 1)
-  Al -- le -- 
-  \once \override LyricText #'X-offset = #-0.6 
+  \override LyricText #'extra-offset = #'(0 . 0.9)
+  \override LyricHyphen #'extra-offset = #'(0 . 0.9)
+  Al -- le --
+  \once \override LyricText #'X-offset = #-0.6
   lu -- ja!
   \revert LyricText #'font-size
-  \revert LyricText #'extra-offset 
-  \revert LyricHyphen #'extra-offset 
+  \revert LyricText #'extra-offset
+  \revert LyricHyphen #'extra-offset
   \set stanza = "(2."
   I w_ran -- ny...)
 }
 
-stanzas = \markup {
+stanzas = \markup \larger {
   \fill-line {
     \large {
       \hspace #0.1
       \column {
+        \vspace #3
         \line {
           "2. "
           \column {
