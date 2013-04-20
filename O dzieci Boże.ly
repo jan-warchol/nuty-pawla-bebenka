@@ -30,7 +30,13 @@ sopranomelody =	\relative f' {
   e( d) e g( fis) e
   b2. fis'4 g fis
   e1.~
-  e2. \bar "|." e4 g a
+  e2. \bar "|."
+  % ugly, should be able to set all things at once,
+  % and not only for stems&noteheads
+  \set fontSize = #-3
+  \override Stem #'length = #4.2
+  \override Stem #'thickness = #1
+  e4 g a
 }
 altomelody = \relative f' {
   \key e \minor
@@ -44,7 +50,11 @@ altomelody = \relative f' {
   b2 b4 c2 c4
   b2. d4 d d
   d2 cis8\melisma b\melismaEnd cis2 a4
-  b2. \bar "|." e4 g fis
+  b2. \bar "|."
+  \set fontSize = #-3
+  \override Stem #'length = #4.2
+  \override Stem #'thickness = #1
+  e4 g fis
 }
 tenormelody = \relative f {
   \key e \minor
@@ -65,7 +75,11 @@ tenormelody = \relative f {
       a2 a4
       a1.(
       \revert Stem #'length
-      b2.) \bar "|." b4 b b
+      b2.) \bar "|."
+      \set fontSize = #-3
+      \override Stem #'length = #4.2
+      \override Stem #'thickness = #1
+      b4 b b
     }
     \new Lyrics \with { alignAboveContext = men fontSize = -2 }
     \lyricsto tenor \lyricmode {
@@ -85,7 +99,11 @@ bassmelody = \relative f {
   e2 d4 c2 a4
   b2. d4 d d
   a1.(
-  e'2.) \bar "|." e4 e e
+  e'2.) \bar "|."
+  \set fontSize = #-3
+  \override Stem #'length = #4.2
+  \override Stem #'thickness = #1
+  e4 e e
 }
 akordy = \chordmode {
 }
@@ -104,16 +122,17 @@ text =  \lyricmode {
   Al -- le --
   \once \override LyricText #'X-offset = #-0.6
   lu -- ja!
-  \revert LyricText #'font-size
   \revert LyricText #'extra-offset
   \revert LyricHyphen #'extra-offset
-  \set stanza = "(2."
-  I w_ran -- ny...)
+  \override StanzaNumber #'font-size = #-2
+  \override LyricText #'font-size = #-2
+  \set stanza = "2."
+  I w_ran -- \tweak #'X-offset #-0.6 ny...
 }
 
-stanzas = \markup \larger {
+stanzas = \markup \larger  {
   \fill-line {
-    \large {
+    \huge {
       \hspace #0.1
       \column {
         \vspace #3
@@ -123,7 +142,7 @@ stanzas = \markup \larger {
             \line { "I w ranny" \underline brzask "pierwszego dnia" }
             \line { \concat { "Do puste" \underline go } "grobu Pana" }
             \line { \concat { "Przyszli zdu" \underline mie ni } uczniowie, }
-            "Alleluja! Alleluja!"
+            "Alleluja!"
           }
         }
         \vspace #1
@@ -133,7 +152,7 @@ stanzas = \markup \larger {
             \line { \concat { "W ten Zmartwych" \underline wstania } "jasny dzień," }
             \line { \concat { "Smętny zwąt" \underline pie nia } "okrył cień" }
             \line { \concat { "Serce To" \underline ma sza } "Apostoła," }
-            "Alleluja! Alleluja!"
+            "Alleluja!"
           }
         }
         \vspace #1
@@ -143,7 +162,7 @@ stanzas = \markup \larger {
             \line { \concat { "Spojrzyj To" \underline ma szu, } "tylko sam" }
             \line { "Na bok i" \concat { \underline rę ce } "pełne ran," }
             \line { \concat { "Nie bądź nie" \underline wie rny, } "wierny bądź," }
-            "Alleluja! Alleluja!"
+            "Alleluja!"
           }
         }
         \vspace #1
@@ -153,7 +172,7 @@ stanzas = \markup \larger {
             \line { "Tomasza" \underline wzrok "rozjaśniał znów," }
             \line { "Upadł do" \concat { \underline Zba wiciela } "nóg," }
             \line { "Wołając" \concat { “ \underline Pan } mój i Bóg mój!”, }
-            "Alleluja! Alleluja!"
+            "Alleluja!"
           }
         }
       }
