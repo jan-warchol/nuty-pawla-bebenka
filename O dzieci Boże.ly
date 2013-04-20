@@ -25,7 +25,8 @@ sopranomelody =	\relative f' {
   e2. e4 e fis
   e( d) e g( fis) e
   b2. fis'4 g fis
-  e1.~ e2.
+  e1.~ 
+  e2. \bar "|." e4 g a
 }
 altomelody = \relative f' {
   \key e \minor
@@ -39,7 +40,7 @@ altomelody = \relative f' {
   b2 b4 c2 c4
   b2. d4 d d
   d2 cis8\melisma b\melismaEnd cis2 a4
-  b2.
+  b2. \bar "|." e4 g fis
 }
 tenormelody = \relative f {
   \key e \minor
@@ -51,8 +52,24 @@ tenormelody = \relative f {
   d2 d4 d2 a4
   g2. a4 a a
   g2 g4 g2 g4
-  fis2 a8 g a2 a4
-  a1.( b2.)
+  fis2
+  <<
+    {
+      \once \override Beam #'positions = #'(4 . 3.6)
+      a8\melisma g\melismaEnd
+      \override Stem #'length = #4
+      a2
+      a4
+      a1.(
+      \revert Stem #'length
+      b2.)
+    }
+    \new Lyrics \with { alignAboveContext = men fontSize = -2 }
+    \lyricsto tenor \lyricmode {
+      Al -- le -- lu -- ja!
+    }
+  >>
+  \bar "|." b4 b b
 }
 bassmelody = \relative f {
   \key e \minor
@@ -66,16 +83,28 @@ bassmelody = \relative f {
   e2 d4 c2 a4
   b2. d4 d d
   a1.(
-  e'2.)
+  e'2.) \bar "|." e4 e e
 }
 akordy = \chordmode {
 }
 %--------------------------------LYRICS--------------------------------
 text =  \lyricmode {
+  \set stanza = "1."
   O dzie -- ci Bo -- że, do -- syć łez,
   bo Chrys -- tus dziś zmar -- twych -- wstan jest,
   Król ży -- cia, wiecz -- nej chwa -- ły Król,
-  Al -- le -- lu -- ja! Al -- le -- lu -- ja!
+  Al -- le -- lu -- ja! 
+  \override LyricText #'font-size = #-1
+  \override LyricText #'extra-offset = #'(0 . 1)
+  \override LyricHyphen #'extra-offset = #'(0 . 1)
+  Al -- le -- 
+  \once \override LyricText #'X-offset = #-0.6 
+  lu -- ja!
+  \revert LyricText #'font-size
+  \revert LyricText #'extra-offset 
+  \revert LyricHyphen #'extra-offset 
+  \set stanza = "(2."
+  I w_ran -- ny...)
 }
 
 stanzas = \markup {
