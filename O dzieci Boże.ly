@@ -90,9 +90,9 @@ akordy = \chordmode {
 %--------------------------------LYRICS--------------------------------
 text =  \lyricmode {
   \set stanza = "1."
-  O dzie -- ci Bo -- że, do -- syć łez,
-  bo Chrys -- tus dziś zmar -- twych -- wstan jest,
-  Król ży -- cia, wiecz -- nej chwa -- ły Król,
+  O dzie -- ci \markup \underline Bo -- że, do -- syć łez,
+  bo Chrys -- tus \markup \underline dziś zmar -- twych -- wstan jest,
+  Król ży -- cia, \markup \underline wiecz -- nej chwa -- ły Król,
   Al -- le -- lu -- ja! 
   \override LyricText #'font-size = #-1
   \override LyricText #'extra-offset = #'(0 . 1)
@@ -115,9 +115,9 @@ stanzas = \markup {
         \line {
           "2. "
           \column {
-            "I w ranny brzask pierwszego dnia"
-            "Do pustego grobu Pana"
-            "Przyszli zdumieni uczniowie,"
+            \line { "I w ranny" \underline brzask "pierwszego dnia" }
+            \line { \concat { "Do puste" \underline go } "grobu Pana" }
+            \line { \concat { "Przyszli zdu" \underline mie ni } uczniowie, }
             "Alleluja! Alleluja!"
           }
         }
@@ -125,9 +125,9 @@ stanzas = \markup {
         \line {
           "3. "
           \column {
-            "W ten Zmartwychwstania jasny dzień,"
-            "Smętny zwątpienia okrył cień"
-            "Serce Tomasza Apostoła,"
+            \line { \concat { "W ten Zmartwych" \underline wstania } "jasny dzień," }
+            \line { \concat { "Smętny zwąt" \underline pie nia } "okrył cień" }
+            \line { \concat { "Serce To" \underline ma sza } "Apostoła," }
             "Alleluja! Alleluja!"
           }
         }
@@ -135,9 +135,9 @@ stanzas = \markup {
         \line {
           "4. "
           \column {
-            "Spojrzyj Tomaszu, tylko sam"
-            "Na bok i ręce pełne ran,"
-            "Nie bądź niewierny, wierny bądź,"
+            \line { \concat { "Spojrzyj To" \underline ma szu, } "tylko sam" }
+            \line { "Na bok i" \concat { \underline rę ce } "pełne ran," }
+            \line { \concat { "Nie bądź nie" \underline wie rny, } "wierny bądź," }
             "Alleluja! Alleluja!"
           }
         }
@@ -145,9 +145,9 @@ stanzas = \markup {
         \line {
           "5. "
           \column {
-            "Tomasza wzrok rozjaśniał znów,"
-            "Upadł do Zbawiciela nóg,"
-            "Wołając “Pan mój i Bóg mój!”,"
+            \line { "Tomasza" \underline wzrok "rozjaśniał znów," }
+            \line { "Upadł do" \concat { \underline Zba wiciela } "nóg," }
+            \line { "Wołając" \concat { “ \underline Pan } mój i Bóg mój!”, }
             "Alleluja! Alleluja!"
           }
         }
