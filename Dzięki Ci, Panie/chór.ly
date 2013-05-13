@@ -1,10 +1,10 @@
 \version "2.16.1"
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 
 \paper {
   indent = 0 \mm
-  left-margin = 13 \mm
-  right-margin = 12 \mm
+  left-margin = 18 \mm
+  right-margin = 17 \mm
   top-markup-spacing #'basic-distance = 3
   \include "epifanijny-styl-nagłówków.ily"
 }
