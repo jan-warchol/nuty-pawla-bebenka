@@ -13,6 +13,7 @@
   title = "Dzięki Ci, Panie"
   composer = "muzyka: Paweł Bębenek"
   poet = "słowa: Radpert z St. Gallen"
+  tagline = #f
 }
 
 sopranomelody = \relative f' {
@@ -206,7 +207,11 @@ text = \lyricmode {
   "kiedy do Twego"
   \tweak X-offset #-0.9
   \markup { \concat { \bold \underline sto łu } się zbli } --
-  \markup \bold \underline ża -- ją.
+  \markup \bold \underline ża --
+  \footnote #'(1 . 0.5) \markup {
+    tekst potwierdzony przez Pawła Bębenka w kwietniu 2013.
+  }
+  my.
 }
 
 \score {
