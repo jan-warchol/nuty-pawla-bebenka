@@ -192,7 +192,7 @@ text = \lyricmode {
   \markup { \concat { \bold \underline da ry } Twe nieskoń } --
   \markup \bold \underline czo -- ne,
   \tweak #'X-offset #-0.4
-  \markup { \bold \underline za Ciało }
+  "za Ciało"
   \markup \bold \underline i Two -- ją Krew.
   \once \override LyricSpace #'minimum-distance = #1.5
   \tweak #'X-offset #-2
@@ -202,7 +202,7 @@ text = \lyricmode {
   \markup \bold \underline nie -- god -- ni,
   \once \override LyricSpace #'minimum-distance = #1.5
   \tweak #'X-offset #-1
-  \markup { \concat { \bold \underline kie dy } do Twego }
+  "kiedy do Twego"
   \tweak #'X-offset #-0.9
   \markup { \concat { \bold \underline sto łu } się zbli } --
   \markup \bold \underline ża -- ją.
