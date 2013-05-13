@@ -1,4 +1,4 @@
-\version "2.16.1"
+\version "2.17.15"
 #(set-global-staff-size 17)
 
 \paper {
@@ -76,7 +76,7 @@ altomelody = \relative f' {
   \time 4/4
   % wpisz nuty:
   \repeat volta 2 {
-    \shape Slur #'((0 . 0.2)(0 . 0.5)(0 . 0.5)(0 . 0.2))
+    \shape #'((0 . 0.2)(0 . 0.5)(0 . 0.5)(0 . 0.2)) Slur
     f8( e d e) f4 d8( f)
     e2 e4 e
     f4 f f f
@@ -185,26 +185,26 @@ text = \lyricmode {
   za da -- ry nie -- skoń -- czo -- ne
   wiel -- bi -- my Cię!
   bi -- my Cię!
-  \once \override LyricSpace #'minimum-distance = #1.5
+  \once \override LyricSpace.minimum-distance = #1.5
   \set stanza = "1."
-  \tweak #'X-offset #-2
+  \tweak X-offset #-2
   "Chwalimy Cię, Wszechmocny, za"
-  \tweak #'X-offset #-0.6
+  \tweak X-offset #-0.6
   \markup { \concat { \bold \underline da ry } Twe nieskoń } --
   \markup \bold \underline czo -- ne,
-  \tweak #'X-offset #-0.4
+  \tweak X-offset #-0.4
   "za Ciało"
   \markup \bold \underline i Two -- ją Krew.
-  \once \override LyricSpace #'minimum-distance = #1.5
-  \tweak #'X-offset #-2
+  \once \override LyricSpace.minimum-distance = #1.5
+  \tweak X-offset #-2
   "Przebacz w swojej dobroci"
-  \tweak #'X-offset #-1.4
+  \tweak X-offset #-1.4
   \markup { \bold \underline tym, co Ciebie }
   \markup \bold \underline nie -- god -- ni,
-  \once \override LyricSpace #'minimum-distance = #1.5
-  \tweak #'X-offset #-1
+  \once \override LyricSpace.minimum-distance = #1.5
+  \tweak X-offset #-1
   "kiedy do Twego"
-  \tweak #'X-offset #-0.9
+  \tweak X-offset #-0.9
   \markup { \concat { \bold \underline sto łu } się zbli } --
   \markup \bold \underline ża -- ją.
 }
@@ -224,8 +224,8 @@ text = \lyricmode {
       }
     >>
     \new Lyrics \with {
-      \override VerticalAxisGroup #'staff-affinity = #CENTER
-      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.5
+      \override VerticalAxisGroup.staff-affinity = #CENTER
+      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #0.5
     }
     \lyricsto soprano \text
 
@@ -243,6 +243,6 @@ text = \lyricmode {
   >>
 
   \layout {
-    \override NoteHead #'style = #'altdefault
+    \override NoteHead.style = #'altdefault
   }
 }
