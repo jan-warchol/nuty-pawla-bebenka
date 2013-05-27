@@ -5,12 +5,12 @@
   indent = 0 \mm
   left-margin = 18 \mm
   right-margin = 17 \mm
-  top-markup-spacing #'basic-distance = 3
+  top-markup-spacing #'basic-distance = 5
   \include "epifanijny-styl-nagłówków.ily"
 }
 
 \header {
-  title = "Dzięki Ci, Panie"
+  title = \markup \column { "Dzięki Ci, Panie" " " }
   composer = "muzyka: Paweł Bębenek"
   poet = "słowa: Radpert z St. Gallen"
   tagline = #f
