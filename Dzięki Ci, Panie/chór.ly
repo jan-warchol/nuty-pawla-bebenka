@@ -215,7 +215,7 @@ text = \lyricmode {
 }
 
 \score {
-  \transpose f es
+  %\transpose f es
   \new ChoirStaff <<
     \new Staff = women <<
       \clef treble
