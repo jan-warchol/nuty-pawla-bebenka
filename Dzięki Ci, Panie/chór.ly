@@ -251,3 +251,107 @@ text = \lyricmode {
     \override NoteHead.style = #'altdefault
   }
 }
+
+\markup \fill-line {
+  \large \larger {
+    \null
+    \column {
+      \line {
+        "2. "
+        \column {
+          \line {
+            Przebacz – żeś
+            \concat { \underline\bold hoj ny } i
+            \concat { \underline\bold wier ny } –
+          }
+          \line {
+            \concat { Uwol \underline\bold nij }
+            z więzów grzechu,
+          }
+          \line {
+            Byśmy \underline\bold się
+            \concat { od \underline\bold mie nili }
+          }
+          \line {
+            Przez
+            \concat { taje \underline\bold mni ce }
+            \concat { naj \underline\bold święt sze. }
+          }
+        }
+      }
+      \vspace #0.5
+      \line {
+        "3. "
+        \column {
+          \line {
+            Niechaj przestworem spłynie z gwiazd
+            \concat { \underline\bold a nioł } Twój
+            \concat { \underline\bold mi ły, }
+          }
+          \line {
+            Oczyści i uleczy nasze
+            \concat { \underline\bold ser ca } i ciała,
+          }
+          \line {
+            Powiedzie, za sprawą
+            \concat { tajem \underline\bold ni cy, } na same
+            \concat { szczy \underline\bold ty } nieba,
+          }
+          \line {
+            A tu na ziemi ratuje
+            \concat { o \underline\bold bro ną } Twoją
+            \concat { po \underline\bold tęż ną. }
+          }
+        }
+      }
+      \vspace #0.5
+      \line {
+        "4. "
+        \column	{
+          \line {
+            Spojrzyj łaskawie, Stwórco, na nas
+            \concat { zni \underline\bold ko mych } i
+            \concat { \underline\bold sła bych, }
+          }
+          \line {
+            Ocal, Dobry Pasterzu, owce
+            \underline\bold na Swojej łące.
+          }
+          \line {
+            Tyś życie nam przywrócił
+            \underline\bold wbrew
+            \concat { nieprzyja \underline\bold cie lowi }
+          }
+          \line {
+            I wzmacniasz już na zawsze,
+            \concat { \underline\bold sie bie } dając nam,
+            \concat { \underline\bold Pa nie. }
+          }
+        }
+      }
+      \vspace #0.5
+      \line {
+        "5. "
+        \column {
+          \line {
+            Spraw to, Ojcze Wszechmocny, w
+            \concat { do \underline\bold bro ci } swej
+            \concat { nie \underline\bold zmier nej, }
+          }
+          \line { Byśmy \underline\bold się stali jedno }
+          \line {
+            Z Tobą,
+            \concat { Chry \underline\bold stu sem }
+            \underline\bold i Duchem.
+          }
+          \line {
+            Ty, coś w
+            \concat { \underline\bold Trój cy }
+            \concat { je \underline\bold dy ny. }
+          }
+        }
+      }
+    }
+  }
+  \null
+}
