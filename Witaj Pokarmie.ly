@@ -1,6 +1,6 @@
 %{TODO:
   W kilku miejscach jest akord sus4, który rozwiązuje się na zwykły z tercją.
-  Zapisywać to czy nie robić bałaganu? 
+  Zapisywać to czy nie robić bałaganu?
   A może w ogóle nie zapisywać do tego akordów?
   Posłuchać samemu.
 %}
@@ -8,8 +8,13 @@
 \version "2.17.3"
 #(set-global-staff-size 19)
 
+\paper {
+  system-system-spacing #'basic-distance = 16
+  top-markup-spacing #'basic-distance = 6
+}
+
 \header	{
-  title = "Witaj Pokarmie"
+  title = \markup \column { "Witaj Pokarmie" " " }
   poet = "słowa: XVII wiek"
   composer = "muzyka: Paweł Bębenek"
 }
@@ -96,7 +101,7 @@ stanzas = \markup {
             "Niesiesz godności."
           }
         }
-        \hspace #0.1
+        \vspace #0.75
         \line {
           "3. "
           \column {
@@ -118,7 +123,7 @@ stanzas = \markup {
             "Choć nad nim stoi."
           }
         }
-        \hspace #0.1
+        \vspace #0.75
         \line {
           "5. "
           \column {
@@ -190,4 +195,5 @@ stanzas = \markup {
   }
 }
 
+\markup \vspace #1
 \stanzas
