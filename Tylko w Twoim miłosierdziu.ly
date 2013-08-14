@@ -1,5 +1,5 @@
 \version "2.17.16"
-#(set-global-staff-size 16.3)
+#(set-global-staff-size 16)
 
 \header	{
   title = \markup \column { "Tylko w Twoim Miłosierdziu" " " }
@@ -205,7 +205,7 @@ secondverse = \lyricmode {
     >>
     \new Lyrics = sopranolyrics \with {
       \override VerticalAxisGroup #'staff-affinity = #CENTER
-      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1.7
+      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #1.9
     }
     \lyricsto soprano \text
     \new Lyrics = sopranolyrics \with {
