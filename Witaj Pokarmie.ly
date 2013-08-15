@@ -130,7 +130,7 @@ stanzas = \markup {
             "Witaj Jedyna serc ludzkich radości"
             "Witaj strapionych wszelka łaskawości"
             "Ciebie dziś moje łzy słodkie szukają"
-            "K Tobie wołają."
+            "K'Tobie wołają."
           }
         }
       }
