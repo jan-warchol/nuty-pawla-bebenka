@@ -1,5 +1,6 @@
 %{TODO:
-  W kilku miejscach jest akord sus4, który rozwiązuje się na zwykły z tercją.
+  W kilku miejscach jest akord sus4,
+  który rozwiązuje się na zwykły z tercją.
   Zapisywać to czy nie robić bałaganu?
   A może w ogóle nie zapisywać do tego akordów?
   Posłuchać samemu.
@@ -84,9 +85,12 @@ akordy = \chordmode {
 %--------------------------------LYRICS--------------------------------
 text =  \lyricmode {
   \set stanza = "1. "
-  Wi -- taj Po -- kar -- mie, | w_któ -- rym nie -- zmie -- rzo -- ny |
-  nie -- ba i zie -- mie | Twór -- ca jest zam -- knio -- ny, |
-  wi -- taj na -- po -- ju zu -- | peł -- nie ga -- szą -- cy |
+  Wi -- taj Po -- kar -- mie, |
+  w_któ -- rym nie -- zmie -- rzo -- ny |
+  nie -- ba i zie -- mie |
+  Twór -- ca jest zam -- knio -- ny, |
+  wi -- taj na -- po -- ju zu -- |
+  peł -- nie ga -- szą -- cy |
   u -- mysł pra -- gną -- | cy.
 }
 stanzas = \markup {
