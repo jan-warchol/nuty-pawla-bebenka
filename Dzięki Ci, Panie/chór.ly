@@ -3,38 +3,22 @@
 
 \paper {
   indent = 0 \mm
-  left-margin = 18 \mm
-  right-margin = 17 \mm
-  top-markup-spacing #'basic-distance = 5
-  \include "epifanijny-styl-nagłówków.ily"
+  left-margin = 16 \mm
+  right-margin = 15 \mm
+  system-system-spacing #'basic-distance = 13
+  top-markup-spacing #'basic-distance = 6
 }
 
-\header {
-  title = \markup \column { "Dzięki Ci, Panie" " " }
+\header	{
+  title = \markup \column { "Dzięki Ci, Panie" \null }
   composer = "muzyka: Paweł Bębenek"
   poet = "słowa: Radpert z St. Gallen"
   tagline = #f
 }
-
-sopranomelody = \relative f' {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \dynamicUp
-  \tupletUp
-  \clef treble
-  % podaj tonację, na przykład \key g \minor
+%--------------------------------MELODIA
+melodiaSopranu = \relative f' {
   \key d \minor
-  % podaj metrum, na przykład \time 4/4
   \time 4/4
-  % wpisz nuty:
   \repeat volta 2 {
     d'2 a4 d
     d( c8 b) c4 c
@@ -56,26 +40,9 @@ sopranomelody = \relative f' {
   f\breve f bes4 a a \bar "|"
   g\breve g a4 a4 \bar "||"
 }
-
-altomelody = \relative f' {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \dynamicUp
-  \tupletUp
-  \clef treble
-  % podaj tonację, na przykład \key g \minor
+melodiaAltu = \relative f' {
   \key d \minor
-  % podaj metrum, na przykład \time 4/4
   \time 4/4
-  % wpisz nuty:
   \repeat volta 2 {
     \shape #'((0 . 0.2)(0 . 0.5)(0 . 0.5)(0 . 0.2)) Slur
     f8( e d e) f4 d8( f)
@@ -97,26 +64,9 @@ altomelody = \relative f' {
   c\breve d f4 f f \bar "|"
   g\breve f e4 e4 \bar "||"
 }
-
-tenormelody = \relative f {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \dynamicUp
-  \tupletUp
-  \clef "treble_8"
-  % podaj tonację, na przykład \key g \minor
+melodiaTenorow = \relative f {
   \key d \minor
-  % podaj metrum, na przykład \time 4/4
   \time 4/4
-  % wpisz nuty:
   \repeat volta 2 {
     a2 a4 a
     a2 a4 bes8( c)
@@ -137,26 +87,9 @@ tenormelody = \relative f {
   a\breve bes d4 d d \bar "|"
   d\breve d d4 cis4 \bar "||"
 }
-
-bassmelody = \relative f {
-  \tag #'solo {
-    \set Staff.midiInstrument = "clarinet"
-    \set Staff.midiMinimumVolume = #0.6
-    \set Staff.midiMaximumVolume = #0.8
-  }
-  \tag #'chor {
-    \set Staff.midiInstrument = "acoustic grand"
-    \set Staff.midiMinimumVolume = #0.4
-    \set Staff.midiMaximumVolume = #0.6
-  }
-  \dynamicUp
-  \tupletUp
-  \clef bass
-  % podaj tonację, na przykład \key g \minor
+melodiaBasow = \relative f {
   \key d \minor
-  % podaj metrum, na przykład \time 4/4
   \time 4/4
-  % wpisz nuty:
   \repeat volta 2 {
     d2 d4 d
     a2 a4 a
@@ -177,9 +110,11 @@ bassmelody = \relative f {
   f\breve bes, bes4 d d \bar "|"
   b\breve bes a4 a \bar "||"
 }
+akordy = \chordmode {
+}
 
-
-text = \lyricmode {
+%--------------------------------SŁOWA
+tekst = \lyricmode {
   \set stanza = "Ref: "
   Dzię -- ki Ci, Pa -- nie,
   za Cia -- ło Twe i Krew,
@@ -214,144 +149,201 @@ text = \lyricmode {
   my.
 }
 
+tekstSopranu = \tekst
+tekstAltu = \tekst
+tekstTenorow = \tekst
+tekstBasow = \tekst
+
+zwrotkaII = \markup \column {
+  \line {
+    Przebacz – żeś
+    \concat { \underline\bold hoj ny } i
+    \concat { \underline\bold wier ny } –
+  }
+  \line {
+    \concat { Uwol \underline\bold nij }
+    z więzów grzechu,
+  }
+  \line {
+    Byśmy \underline\bold się
+    \concat { od \underline\bold mie nili }
+  }
+  \line {
+    Przez
+    \concat { taje \underline\bold mni ce }
+    \concat { naj \underline\bold święt sze. }
+  }
+}
+zwrotkaIII = \markup \column {
+  \line {
+    Niechaj przestworem spłynie z gwiazd
+    \concat { \underline\bold a nioł } Twój
+    \concat { \underline\bold mi ły, }
+  }
+  \line {
+    Oczyści i uleczy nasze
+    \concat { \underline\bold ser ca } i ciała,
+  }
+  \line {
+    Powiedzie, za sprawą
+    \concat { tajem \underline\bold ni cy, } na same
+    \concat { szczy \underline\bold ty } nieba,
+  }
+  \line {
+    A tu na ziemi ratuje
+    \concat { o \underline\bold bro ną } Twoją
+    \concat { po \underline\bold tęż ną. }
+  }
+}
+zwrotkaIV = \markup \column	{
+  \line {
+    Spojrzyj łaskawie, Stwórco, na nas
+    \concat { zni \underline\bold ko mych } i
+    \concat { \underline\bold sła bych, }
+  }
+  \line {
+    Ocal, Dobry Pasterzu, owce
+    \underline\bold na Swojej łące.
+  }
+  \line {
+    Tyś życie nam przywrócił
+    \underline\bold wbrew
+    \concat { nieprzyja \underline\bold cie lowi }
+  }
+  \line {
+    I wzmacniasz już na zawsze,
+    \concat { \underline\bold sie bie } dając nam,
+    \concat { \underline\bold Pa nie. }
+  }
+}
+zwrotkaV = \markup \column {
+  \line {
+    Spraw to, Ojcze Wszechmocny, w
+    \concat { do \underline\bold bro ci } swej
+    \concat { nie \underline\bold zmier nej, }
+  }
+  \line { Byśmy \underline\bold się stali jedno }
+  \line {
+    Z Tobą,
+    \concat { Chry \underline\bold stu sem }
+    \underline\bold i Duchem.
+  }
+  \line {
+    Ty, coś w
+    \concat { \underline\bold Trój cy }
+    \concat { je \underline\bold dy ny. }
+  }
+}
+
+
 \score {
-  %\transpose f es
   \new ChoirStaff <<
-    \new Staff = women <<
+    % \new ChordNames { \germanChords \akordy }
+    \new Staff = panie <<
       \clef treble
-      \new Voice = soprano {
+      \set Staff.instrumentName = \markup \center-column { S A }
+      \set Staff.shortInstrumentName = \markup \center-column { S A }
+      \new Voice = sopran {
+        \set Voice.midiInstrument = "clarinet"
+        \dynamicUp
+
         \voiceOne
-        \sopranomelody
+        \melodiaSopranu
       }
-      \new Voice = alto {
+      \new Voice = alt {
+        \set Voice.midiInstrument = "english horn"
+        \override Hairpin #'stencil = ##f
+        \override DynamicText #'stencil = ##f
+        \override DynamicTextSpanner #'stencil = ##f
+        \override TextScript #'stencil = ##f
+
         \voiceTwo
-        \altomelody
+        \melodiaAltu
       }
     >>
-    \new Lyrics \with {
-      \override VerticalAxisGroup.staff-affinity = #CENTER
-      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #0.5
-    }
-    \lyricsto soprano \text
 
-    \new Staff = men <<
+    \new Lyrics \lyricsto sopran \tekst
+
+    \new Staff = panowie <<
       \clef bass
+      \set Staff.instrumentName = \markup \center-column { T B }
+      \set Staff.shortInstrumentName = \markup \center-column { T B }
       \new Voice = tenor {
+        \set Voice.midiInstrument = "english horn"
+        \override Hairpin #'stencil = ##f
+        \override DynamicText #'stencil = ##f
+        \override DynamicTextSpanner #'stencil = ##f
+        \override TextScript #'stencil = ##f
+
         \voiceOne
-        \tenormelody
+        \melodiaTenorow
       }
-      \new Voice = bass {
+      \new Voice = bas {
+        \set Voice.midiInstrument = "clarinet"
+        \dynamicDown
+
         \voiceTwo
-        \bassmelody
+        \melodiaBasow
       }
     >>
   >>
 
   \layout {
-    \override NoteHead.style = #'altdefault
+    \compressFullBarRests
+    \override NoteHead #'style = #'altdefault
+    \context {
+      \Lyrics
+      \override LyricSpace #'minimum-distance = #0.7
+      \override VerticalAxisGroup #'staff-affinity = #CENTER
+      \override VerticalAxisGroup
+      #'nonstaff-relatedstaff-spacing #'padding = #0.5
+    }
   }
 }
 
-\markup \fill-line {
-  \large \larger {
-    \null
-    \column {
-      \line {
-        "2. "
-        \column {
-          \line {
-            Przebacz – żeś
-            \concat { \underline\bold hoj ny } i
-            \concat { \underline\bold wier ny } –
-          }
-          \line {
-            \concat { Uwol \underline\bold nij }
-            z więzów grzechu,
-          }
-          \line {
-            Byśmy \underline\bold się
-            \concat { od \underline\bold mie nili }
-          }
-          \line {
-            Przez
-            \concat { taje \underline\bold mni ce }
-            \concat { naj \underline\bold święt sze. }
-          }
+
+poziomyOdstepI = \markup \hspace #1
+pionowyOdstepI = \markup \vspace #1
+
+\markup {
+  \vspace #2 % żeby nie zlewało się z nutami
+  \fill-line {
+    \large {
+      % FIXME: this doesn't scale line spacing!
+      \null
+
+      \column {
+        \line {
+          \bold
+          "2."
+          \poziomyOdstepI
+          \zwrotkaII
         }
-      }
-      \vspace #0.5
-      \line {
-        "3. "
-        \column {
-          \line {
-            Niechaj przestworem spłynie z gwiazd
-            \concat { \underline\bold a nioł } Twój
-            \concat { \underline\bold mi ły, }
-          }
-          \line {
-            Oczyści i uleczy nasze
-            \concat { \underline\bold ser ca } i ciała,
-          }
-          \line {
-            Powiedzie, za sprawą
-            \concat { tajem \underline\bold ni cy, } na same
-            \concat { szczy \underline\bold ty } nieba,
-          }
-          \line {
-            A tu na ziemi ratuje
-            \concat { o \underline\bold bro ną } Twoją
-            \concat { po \underline\bold tęż ną. }
-          }
+        \pionowyOdstepI
+        \line {
+          \bold
+          "3."
+          \poziomyOdstepI
+          \zwrotkaIII
         }
-      }
-      \vspace #0.5
-      \line {
-        "4. "
-        \column	{
-          \line {
-            Spojrzyj łaskawie, Stwórco, na nas
-            \concat { zni \underline\bold ko mych } i
-            \concat { \underline\bold sła bych, }
-          }
-          \line {
-            Ocal, Dobry Pasterzu, owce
-            \underline\bold na Swojej łące.
-          }
-          \line {
-            Tyś życie nam przywrócił
-            \underline\bold wbrew
-            \concat { nieprzyja \underline\bold cie lowi }
-          }
-          \line {
-            I wzmacniasz już na zawsze,
-            \concat { \underline\bold sie bie } dając nam,
-            \concat { \underline\bold Pa nie. }
-          }
+        \pionowyOdstepI
+        \line {
+          \bold
+          "4."
+          \poziomyOdstepI
+          \zwrotkaIV
         }
-      }
-      \vspace #0.5
-      \line {
-        "5. "
-        \column {
-          \line {
-            Spraw to, Ojcze Wszechmocny, w
-            \concat { do \underline\bold bro ci } swej
-            \concat { nie \underline\bold zmier nej, }
-          }
-          \line { Byśmy \underline\bold się stali jedno }
-          \line {
-            Z Tobą,
-            \concat { Chry \underline\bold stu sem }
-            \underline\bold i Duchem.
-          }
-          \line {
-            Ty, coś w
-            \concat { \underline\bold Trój cy }
-            \concat { je \underline\bold dy ny. }
-          }
+        \pionowyOdstepI
+        \line {
+          \bold
+          "5."
+          \poziomyOdstepI
+          \zwrotkaV
         }
+        \pionowyOdstepI
       }
+
+      \null
     }
   }
-  \null
 }
