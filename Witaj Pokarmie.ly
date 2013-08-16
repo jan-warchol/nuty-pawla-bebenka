@@ -222,7 +222,7 @@ pionowyOdstepI = \markup \vspace #1
   \vspace #2 % żeby nie zlewało się z nutami
   \fill-line {
     \large {
-      \hspace #1
+      \null
 
       \column {
         \line {
@@ -241,7 +241,7 @@ pionowyOdstepI = \markup \vspace #1
         \pionowyOdstepI
       }
 
-      \hspace #3
+      \null
 
       \column {
         \line {
@@ -260,7 +260,7 @@ pionowyOdstepI = \markup \vspace #1
         \pionowyOdstepI
       }
 
-      \hspace #1
+      \null
     }
   }
 }
