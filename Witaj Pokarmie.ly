@@ -7,18 +7,19 @@
 %}
 
 \version "2.17.3"
-#(set-global-staff-size 18)
+#(set-global-staff-size 15)
+#(set-default-paper-size "a5")
 
 \paper {
   indent = 0 \mm
-  left-margin = 16 \mm
-  right-margin = 15 \mm
-  system-system-spacing #'basic-distance = 18
-  top-markup-spacing #'basic-distance = 10
+  left-margin = 11 \mm
+  right-margin = 10 \mm
+  system-system-spacing #'basic-distance = 17
+  top-markup-spacing #'basic-distance = 5
 }
 
 \header	{
-  title = \markup \column { "Witaj Pokarmie" \null \null }
+  title = \markup \column { "Witaj Pokarmie" \null }
   % śpiewnik Jagodyński, strona 106
   % (http://www.dbc.wroc.pl/dlibra/publication?id=10057&tab=3)
   poet = "słowa: XVII wiek"
@@ -228,12 +229,12 @@ zwrotkaV = \markup \column {
 }
 
 poziomyOdstepI = \markup \hspace #1
-pionowyOdstepI = \markup \vspace #2
+pionowyOdstepI = \markup \vspace #1
 
 \markup {
-  \vspace #4 % żeby nie zlewało się z nutami
+  \vspace #3 % żeby nie zlewało się z nutami
   \fill-line {
-    \large {
+    {
       \null
 
       \column {
