@@ -7,9 +7,12 @@
 %}
 
 \version "2.17.3"
-#(set-global-staff-size 19)
+#(set-global-staff-size 17)
 
 \paper {
+  indent = 0 \mm
+  left-margin = 16 \mm
+  right-margin = 15 \mm
   system-system-spacing #'basic-distance = 16
   top-markup-spacing #'basic-distance = 6
 }
@@ -21,16 +24,13 @@
   poet = "słowa: XVII wiek"
   composer = "muzyka: Paweł Bębenek"
 }
-commonprops = {
+%--------------------------------MELODIA
+melodiaSopranu = \relative f' {
   \autoBeamOff
   \key e \minor
   \time 4/4
   \tempo 4=50
-}
-%--------------------------------MELODY--------------------------------
-sopranomelody = \relative c'' {
-  \commonprops
-  e,4 fis8 g8 fis4. g8 |
+  e4 fis8 g8 fis4. g8 |
   e8 fis8 g8 a8 g4 fis4 |
   e4 fis8 g8 fis4. g8 |
   e8 fis8 g8 a8 g4 fis4 |
@@ -38,10 +38,14 @@ sopranomelody = \relative c'' {
   g4 a8 b8 a4a8 b8 |
   c4 b8 a8 g4 fis4 |
   g4 a8 g8 fis4.( g16[ fis16]) |
-  e1 \bar "|."
+  e1
+  \bar "|."
 }
-altomelody = \relative f' {
-  \commonprops
+melodiaAltu = \relative f' {
+  \autoBeamOff
+  \key e \minor
+  \time 4/4
+  \tempo 4=50
   e4 e8 e8 e4 d |
   e8 e8 e8 e8 d4 d4 |
   e4 e8 e8 e4 d4 |
@@ -50,10 +54,14 @@ altomelody = \relative f' {
   d4 d8 d8 g4 fis8 fis8 |
   e4 e8 e8 d4 d4 |
   d4 d8 d8 e4( d4) |
-  e1 \bar "|."
+  e1
+  \bar "|."
 }
-tenormelody = \relative c' {
-  \commonprops
+melodiaTenorow = \relative f {
+  \autoBeamOff
+  \key e \minor
+  \time 4/4
+  \tempo 4=50
   b4 b8 b b4 d |
   c8 c8 c8 c8 a4 a4 |
   b4 b8 b8 b4 d4 |
@@ -62,10 +70,14 @@ tenormelody = \relative c' {
   b4 b8 b8 a4 a8 a8 |
   a4 a8 a8 a4 a4 |
   b4 b8 b8 b2 |
-  b1 \bar "|."
+  b1
+  \bar "|."
 }
-bassmelody = \relative f {
-  \commonprops
+melodiaBasow = \relative f {
+  \autoBeamOff
+  \key e \minor
+  \time 4/4
+  \tempo 4=50
   e4 e8 e8 b4 b4 |
   c8 c8 c8 c8 d4 d4 |
   e4 e8 e8 b4 b4 |
@@ -74,7 +86,8 @@ bassmelody = \relative f {
   g,4 g8 g8 d'4 d8 d8 |
   a4 b8 c8 d4 d4 |
   g,4 g8 a8 b2 |
-  e1 \bar "|."
+  e1
+  \bar "|."
 }
 akordy = \chordmode {
   e2:m b:m c d
@@ -82,9 +95,10 @@ akordy = \chordmode {
   g2 d a:m d
   g2 b:m e1:m
 }
-%--------------------------------LYRICS--------------------------------
-text =  \lyricmode {
-  \set stanza = "1. "
+
+%--------------------------------SŁOWA
+tekst = \lyricmode {
+  \set stanza = "1."
   Wi -- taj Po -- kar -- mie, |
   w_któ -- rym nie -- zmie -- rzo -- ny |
   nie -- ba i zie -- mie |
@@ -93,83 +107,68 @@ text =  \lyricmode {
   peł -- nie ga -- szą -- cy |
   u -- mysł pra -- gną -- | cy.
 }
-stanzas = \markup {
-  \fill-line {
-    \large {
-      \hspace #0.1
-      \column {
-        \line {
-          "2. "
-          \column	{
-            "Witaj krynico wszystkiego dobrego"
-            "Gdy bowiem w sobie masz Boga samego"
-            "Znasz ludziom wszystkie jego wszechmocności"
-            "Niesiesz godności."
-          }
-        }
-        \vspace #0.75
-        \line {
-          "3. "
-          \column {
-            "Witaj z niebiosów manno padająca"
-            "Rozkoszny w sercu naszym smak czyniąca:"
-            "Wszystko na świecie co jedno smakuje"
-            "W tym się najduje."
-          }
-        }
-      }
-      \hspace #0.1
-      \column {
-        \line {
-          "5. "
-          \column	{
-            "Witaj rozkoszne z ogrodu rajskiego"
-            "Drzewo owocu pełne żywiącego:"
-            "Kto Cię skosztuje śmierci się nie boi"
-            "Choć nad nim stoi."
-          }
-        }
-        \vspace #0.75
-        \line {
-          "5. "
-          \column {
-            "Witaj Jedyna serc ludzkich radości"
-            "Witaj strapionych wszelka łaskawości"
-            "Ciebie dziś moje łzy słodkie szukają"
-            "K'Tobie wołają."
-          }
-        }
-      }
-      \hspace #0.1
-    }
-  }
+
+tekstSopranu = \tekst
+tekstAltu = \tekst
+tekstTenorow = \tekst
+tekstBasow = \tekst
+
+zwrotkaII = \markup \column {
+  "Witaj krynico wszystkiego dobrego"
+  "Gdy bowiem w sobie masz Boga samego"
+  "Znasz ludziom wszystkie jego wszechmocności"
+  "Niesiesz godności."
 }
-%--------------------------------ALL-FILE VARIABLE--------------------------------
+zwrotkaIII = \markup \column {
+  "Witaj z niebiosów manno padająca"
+  "Rozkoszny w sercu naszym smak czyniąca:"
+  "Wszystko na świecie co jedno smakuje"
+  "W tym się najduje."
+}
+zwrotkaIV = \markup \column {
+  "Witaj rozkoszne z ogrodu rajskiego"
+  "Drzewo owocu pełne żywiącego:"
+  "Kto Cię skosztuje śmierci się nie boi"
+  "Choć nad nim stoi."
+}
+zwrotkaV = \markup \column {
+  "Witaj Jedyna serc ludzkich radości"
+  "Witaj strapionych wszelka łaskawości"
+  "Ciebie dziś moje łzy słodkie szukają"
+  "K'Tobie wołają."
+}
+
+
+%--------------------------------CAŁOŚĆ
 
 \score {
   \new ChoirStaff <<
-    %	\new ChordNames { \germanChords \akordy }
-    \new Staff = soprano {
+    % \new ChordNames { \germanChords \akordy }
+    \new Staff = sopran {
       \clef treble
       \set Staff.instrumentName = "S "
       \set Staff.shortInstrumentName = "S "
-      \new Voice = soprano {
+      \new Voice = sopran {
         \set Voice.midiInstrument = "clarinet"
-        \sopranomelody
+        \dynamicUp
+        \tupletUp
+        \melodiaSopranu
       }
     }
-    \new Lyrics = womenlyrics \lyricsto soprano \text
+    \new Lyrics \lyricsto sopran \tekstSopranu
 
-    \new Staff = alto {
+    \new Staff = alt {
       \clef treble
       \set Staff.instrumentName = "A "
       \set Staff.shortInstrumentName = "A "
-      \new Voice = alto {
+      \new Voice = alt {
         \set Voice.midiInstrument = "english horn"
-        \altomelody
+        \dynamicUp
+        \tupletUp
+        \melodiaAltu
       }
     }
-    \new Lyrics = altolyrics \lyricsto alto \text
+    \new Lyrics \lyricsto alt \tekstAltu
 
     \new Staff = tenor {
       \clef "treble_8"
@@ -177,29 +176,91 @@ stanzas = \markup {
       \set Staff.shortInstrumentName = "T "
       \new Voice = tenor {
         \set Voice.midiInstrument = "english horn"
-        \tenormelody
+        \dynamicUp
+        \tupletUp
+        \melodiaTenorow
       }
     }
-    \new Lyrics = menlyrics \lyricsto tenor \text
+    \new Lyrics \lyricsto tenor \tekstTenorow
 
-    \new Staff = bass {
+    \new Staff = bas {
       \clef bass
       \set Staff.instrumentName = "B "
       \set Staff.shortInstrumentName = "B "
-      \new Voice = bass {
+      \new Voice = bas {
         \set Voice.midiInstrument = "clarinet"
-        \bassmelody
+        \dynamicUp
+        \tupletUp
+        \melodiaBasow
       }
     }
-    \new Lyrics = basslyrics \lyricsto bass \text
+    \new Lyrics \lyricsto bas \tekstBasow
   >>
+
   \layout {
-    indent = 0\cm
+    \compressFullBarRests
+    \override NoteHead #'style = #'altdefault
     \context {
-      \Staff \consists "Ambitus_engraver"
+      \Staff
+      \consists "Ambitus_engraver"
+    }
+    \context {
+      \Lyrics
+      \override LyricSpace #'minimum-distance = #0.7
+      \override VerticalAxisGroup
+      #'nonstaff-relatedstaff-spacing #'basic-distance = #5
+      %\override VerticalAxisGroup
+      %#'nonstaff-unrelatedstaff-spacing #'padding = #0.9
     }
   }
 }
 
-\markup \vspace #1
-\stanzas
+poziomyOdstepI = \markup \hspace #1
+pionowyOdstepI = \markup \vspace #1
+
+\markup {
+  \vspace #2 % żeby nie zlewało się z nutami
+  \fill-line {
+    \large {
+      \hspace #1
+
+      \column {
+        \line {
+          \bold
+          "2."
+          \poziomyOdstepI
+          \zwrotkaII
+        }
+        \pionowyOdstepI
+        \line {
+          \bold
+          "3."
+          \poziomyOdstepI
+          \zwrotkaIII
+        }
+        \pionowyOdstepI
+      }
+
+      \hspace #3
+
+      \column {
+        \line {
+          \bold
+          "4."
+          \poziomyOdstepI
+          \zwrotkaIV
+        }
+        \pionowyOdstepI
+        \line {
+          \bold
+          "5."
+          \poziomyOdstepI
+          \zwrotkaV
+        }
+        \pionowyOdstepI
+      }
+
+      \hspace #1
+    }
+  }
+}
