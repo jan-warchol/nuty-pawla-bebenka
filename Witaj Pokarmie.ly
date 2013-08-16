@@ -7,22 +7,23 @@
 %}
 
 \version "2.17.3"
-#(set-global-staff-size 15)
+#(set-global-staff-size 16)
 
 \paper {
   indent = 0 \mm
   left-margin = 8 \mm
   right-margin = 6 \mm
-  bottom-margin = 0 \mm
-  paper-height = 20 \cm
-  paper-width = 15 \cm
+  bottom-margin = 4 \mm
+  paper-height = 9 \cm
+  paper-width = 16 \cm
   system-system-spacing #'basic-distance = 17
   score-markup-spacing #'basic-distance = 13
-  top-markup-spacing #'basic-distance = 3
+  top-markup-spacing #'basic-distance = 0
+  top-markup-spacing #'padding = 0
 }
 
 \header	{
-  title = \markup \column { "Witaj Pokarmie" \null }
+  title = \markup \column { "Witaj Pokarmie" }
   % śpiewnik Jagodyński, strona 106
   % (http://www.dbc.wroc.pl/dlibra/publication?id=10057&tab=3)
   poet = "słowa: XVII wiek"
