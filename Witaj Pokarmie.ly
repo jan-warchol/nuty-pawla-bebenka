@@ -13,16 +13,17 @@
   indent = 0 \mm
   left-margin = 16 \mm
   right-margin = 15 \mm
-  system-system-spacing #'basic-distance = 16
-  top-markup-spacing #'basic-distance = 6
+  system-system-spacing #'basic-distance = 18
+  top-markup-spacing #'basic-distance = 10
 }
 
 \header	{
-  title = \markup \column { "Witaj Pokarmie" " " }
+  title = \markup \column { "Witaj Pokarmie" \null \null }
   % śpiewnik Jagodyński, strona 106
   % (http://www.dbc.wroc.pl/dlibra/publication?id=10057&tab=3)
   poet = "słowa: XVII wiek"
   composer = "muzyka: Paweł Bębenek"
+  tagline = ##f
 }
 %--------------------------------MELODIA
 melodiaSopranu = \relative f' {
@@ -227,10 +228,10 @@ zwrotkaV = \markup \column {
 }
 
 poziomyOdstepI = \markup \hspace #1
-pionowyOdstepI = \markup \vspace #1
+pionowyOdstepI = \markup \vspace #2
 
 \markup {
-  \vspace #2 % żeby nie zlewało się z nutami
+  \vspace #4 % żeby nie zlewało się z nutami
   \fill-line {
     \large {
       \null
