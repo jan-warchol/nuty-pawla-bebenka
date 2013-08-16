@@ -7,7 +7,7 @@
 %}
 
 \version "2.17.3"
-#(set-global-staff-size 17)
+#(set-global-staff-size 18)
 
 \paper {
   indent = 0 \mm
@@ -30,10 +30,10 @@ melodiaSopranu = \relative f' {
   \key e \minor
   \time 4/4
   \tempo 4=50
-  e4 fis8 g8 fis4. g8 |
-  e8 fis8 g8 a8 g4 fis4 |
-  e4 fis8 g8 fis4. g8 |
-  e8 fis8 g8 a8 g4 fis4 |
+  \repeat volta 2 {
+    e4 fis8 g8 fis4. g8 |
+    e8 fis8 g8 a8 g4 fis4 |
+  }
   % 5
   g4 a8 b8 a4a8 b8 |
   c4 b8 a8 g4 fis4 |
@@ -46,10 +46,10 @@ melodiaAltu = \relative f' {
   \key e \minor
   \time 4/4
   \tempo 4=50
-  e4 e8 e8 e4 d |
-  e8 e8 e8 e8 d4 d4 |
-  e4 e8 e8 e4 d4 |
-  e8 e8 e8 e8 d4 d4 |
+  \repeat volta 2 {
+    e4 e8 e8 e4 d |
+    e8 e8 e8 e8 d4 d4 |
+  }
   % 5
   d4 d8 d8 g4 fis8 fis8 |
   e4 e8 e8 d4 d4 |
@@ -62,10 +62,10 @@ melodiaTenorow = \relative f {
   \key e \minor
   \time 4/4
   \tempo 4=50
-  b4 b8 b b4 d |
-  c8 c8 c8 c8 a4 a4 |
-  b4 b8 b8 b4 d4 |
-  c8 c8 c8 c8 a4 a4 |
+  \repeat volta 2 {
+    b4 b8 b b4 d |
+    c8 c8 c8 c8 a4 a4 |
+  }
   % 5
   b4 b8 b8 a4 a8 a8 |
   a4 a8 a8 a4 a4 |
@@ -78,10 +78,10 @@ melodiaBasow = \relative f {
   \key e \minor
   \time 4/4
   \tempo 4=50
-  e4 e8 e8 b4 b4 |
-  c8 c8 c8 c8 d4 d4 |
-  e4 e8 e8 b4 b4 |
-  c8 c8 c8 c8 d4 d4 |
+  \repeat volta 2 {
+    e4 e8 e8 b4 b4 |
+    c8 c8 c8 c8 d4 d4 |
+  }
   % 5
   g,4 g8 g8 d'4 d8 d8 |
   a4 b8 c8 d4 d4 |
@@ -90,8 +90,9 @@ melodiaBasow = \relative f {
   \bar "|."
 }
 akordy = \chordmode {
-  e2:m b:m c d
-  e2:m b:m c d
+  \repeat volta 2 {
+    e2:m b:m c d
+  }
   g2 d a:m d
   g2 b:m e1:m
 }
@@ -101,11 +102,13 @@ tekst = \lyricmode {
   \set stanza = "1."
   Wi -- taj Po -- kar -- mie, |
   w_któ -- rym nie -- zmie -- rzo -- ny |
-  nie -- ba i zie -- mie |
-  Twór -- ca jest zam -- knio -- ny, |
   wi -- taj na -- po -- ju zu -- |
   peł -- nie ga -- szą -- cy |
   u -- mysł pra -- gną -- | cy.
+}
+drugiWers = \lyricmode {
+  nie -- ba i zie -- mie |
+  Twór -- ca jest zam -- knio -- ny, |
 }
 
 tekstSopranu = \tekst
@@ -156,6 +159,7 @@ zwrotkaV = \markup \column {
       }
     }
     \new Lyrics \lyricsto sopran \tekstSopranu
+    \new Lyrics \lyricsto sopran \drugiWers
 
     \new Staff = alt {
       \clef treble
@@ -169,6 +173,7 @@ zwrotkaV = \markup \column {
       }
     }
     \new Lyrics \lyricsto alt \tekstAltu
+    \new Lyrics \lyricsto alt \drugiWers
 
     \new Staff = tenor {
       \clef "treble_8"
@@ -182,6 +187,7 @@ zwrotkaV = \markup \column {
       }
     }
     \new Lyrics \lyricsto tenor \tekstTenorow
+    \new Lyrics \lyricsto tenor \drugiWers
 
     \new Staff = bas {
       \clef bass
@@ -195,6 +201,7 @@ zwrotkaV = \markup \column {
       }
     }
     \new Lyrics \lyricsto bas \tekstBasow
+    \new Lyrics \lyricsto bas \drugiWers
   >>
 
   \layout {
