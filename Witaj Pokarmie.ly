@@ -100,15 +100,19 @@ akordy = \chordmode {
 %--------------------------------SŁOWA
 tekst = \lyricmode {
   \set stanza = "1."
-  Wi -- taj Po -- kar -- mie, |
-  w_któ -- rym nie -- zmie -- rzo -- ny |
+  Wi -- taj Po -- kar --
+  \tweak #'X-offset #-1.5 mie, |
+  \tweak #'X-offset #-3 w_któ -- rym nie -- zmie --
+  \tweak #'X-offset #-0.7 LyricText
+  rzo -- ny |
   wi -- taj na -- po -- ju zu -- |
   peł -- nie ga -- szą -- cy |
   u -- mysł pra -- gną -- | cy.
 }
 drugiWers = \lyricmode {
   nie -- ba i zie -- mie |
-  Twór -- ca jest zam -- knio -- ny, |
+  Twór -- ca jest zam -- knio --
+  \tweak #'X-offset #-0.75 ny, |
 }
 
 tekstSopranu = \tekst
