@@ -15,6 +15,8 @@
 
 \header	{
   title = \markup \column { "Witaj Pokarmie" " " }
+  % śpiewnik Jagodyński, strona 106
+  % (http://www.dbc.wroc.pl/dlibra/publication?id=10057&tab=3)
   poet = "słowa: XVII wiek"
   composer = "muzyka: Paweł Bębenek"
 }
