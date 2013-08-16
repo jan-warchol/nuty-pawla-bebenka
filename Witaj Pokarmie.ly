@@ -8,14 +8,17 @@
 
 \version "2.17.3"
 #(set-global-staff-size 15)
-#(set-default-paper-size "a5")
 
 \paper {
   indent = 0 \mm
-  left-margin = 11 \mm
-  right-margin = 10 \mm
+  left-margin = 8 \mm
+  right-margin = 6 \mm
+  bottom-margin = 0 \mm
+  paper-height = 20 \cm
+  paper-width = 15 \cm
   system-system-spacing #'basic-distance = 17
-  top-markup-spacing #'basic-distance = 5
+  score-markup-spacing #'basic-distance = 13
+  top-markup-spacing #'basic-distance = 3
 }
 
 \header	{
@@ -231,10 +234,9 @@ zwrotkaV = \markup \column {
 poziomyOdstepI = \markup \hspace #1
 pionowyOdstepI = \markup \vspace #1
 
-\markup {
-  \vspace #3 % żeby nie zlewało się z nutami
+\markup { % żeby nie zlewało się z nutami
   \fill-line {
-    {
+    \large {
       \null
 
       \column {
