@@ -7,29 +7,19 @@
 %}
 
 \version "2.17.3"
-#(set-global-staff-size 16)
 
-\paper {
-  indent = 0 \mm
-  left-margin = 8 \mm
-  right-margin = 6 \mm
-  bottom-margin = 4 \mm
-  paper-height = 9 \cm
-  paper-width = 16 \cm
-  system-system-spacing #'basic-distance = 17
-  score-markup-spacing #'basic-distance = 13
-  top-markup-spacing #'basic-distance = 0
-  top-markup-spacing #'padding = 0
-}
+\include "format-b5.ly"
 
 \header	{
-  title = \markup \column { "Witaj Pokarmie" }
+  title = "Witaj Pokarmie"
   % śpiewnik Jagodyński, strona 106
   % (http://www.dbc.wroc.pl/dlibra/publication?id=10057&tab=3)
   poet = "słowa: XVII wiek"
   composer = "muzyka: Paweł Bębenek"
-  tagline = ##f
+  editor = "skład nut: Jan Warchoł"
+  copyright = "© Paweł Bębenek"
 }
+
 %--------------------------------MELODIA
 melodiaSopranu = \relative f' {
   \autoBeamOff
@@ -232,29 +222,26 @@ zwrotkaV = \markup \column {
   }
 }
 
-poziomyOdstepI = \markup \hspace #1
-pionowyOdstepI = \markup \vspace #1
-
-\markup { % żeby nie zlewało się z nutami
+\markup {
   \fill-line {
-    \large {
+    \scale #powiekszenie-zwrotek {
       \null
 
       \column {
         \line {
           \bold
           "2."
-          \poziomyOdstepI
+          \odstepOdNumeruDoZwrotki
           \zwrotkaII
         }
-        \pionowyOdstepI
+        \odstepMiedzyZwrotkami
         \line {
           \bold
           "3."
-          \poziomyOdstepI
+          \odstepOdNumeruDoZwrotki
           \zwrotkaIII
         }
-        \pionowyOdstepI
+        \odstepMiedzyZwrotkami
       }
 
       \null
@@ -263,17 +250,17 @@ pionowyOdstepI = \markup \vspace #1
         \line {
           \bold
           "4."
-          \poziomyOdstepI
+          \odstepOdNumeruDoZwrotki
           \zwrotkaIV
         }
-        \pionowyOdstepI
+        \odstepMiedzyZwrotkami
         \line {
           \bold
           "5."
-          \poziomyOdstepI
+          \odstepOdNumeruDoZwrotki
           \zwrotkaV
         }
-        \pionowyOdstepI
+        \odstepMiedzyZwrotkami
       }
 
       \null
