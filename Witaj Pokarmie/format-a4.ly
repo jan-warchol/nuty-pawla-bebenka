@@ -27,4 +27,5 @@ odstepMiedzyZwrotkami = \markup \vspace #2
 odstepOdNumeruDoZwrotki = \markup \hspace #1
 
 \bookOutputSuffix "a4"
-\include "Witaj Pokarmie.ly"
+\include "muzyka-i-tekst.ily"
+\include "struktura-SATB-4-pieciolinie.ily"

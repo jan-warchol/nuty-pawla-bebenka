@@ -50,4 +50,5 @@ odstepMiedzyZwrotkami = \markup \vspace #1
 odstepOdNumeruDoZwrotki = \markup \hspace #1
 
 \bookOutputSuffix "smartfon"
-\include "Witaj Pokarmie.ly"
+\include "muzyka-i-tekst.ily"
+\include "struktura-SATB-4-pieciolinie.ily"
