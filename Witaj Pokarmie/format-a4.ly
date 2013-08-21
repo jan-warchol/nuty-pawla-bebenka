@@ -3,11 +3,6 @@
 #(set-global-staff-size 18)
 
 \paper {
-  #(define fonts
-     (make-pango-font-tree "FreeSerif"
-       "Nimbus Sans"
-       "Luxi Mono"
-       (/ staff-height pt 20)))
   indent = 0 \mm
   left-margin = 16 \mm
   right-margin = 15 \mm
@@ -29,3 +24,4 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
 \bookOutputSuffix "a4"
 \include "muzyka-i-tekst.ily"
 \include "struktura-SATB-4-pieciolinie.ily"
+\include "ustawienia-formatowania.ily"
