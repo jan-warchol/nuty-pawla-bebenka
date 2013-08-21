@@ -21,3 +21,6 @@
 #(define powiekszenie-zwrotek '(1.02 . 1.02))
 odstepMiedzyZwrotkami = \markup \vspace #1
 odstepOdNumeruDoZwrotki = \markup \hspace #1
+
+\bookOutputSuffix "a5"
+\include "Witaj Pokarmie.ly"

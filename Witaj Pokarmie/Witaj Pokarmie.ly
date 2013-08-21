@@ -8,7 +8,7 @@
 
 \version "2.17.18"
 
-\include "format-a4.ly"
+\bookOutputName "witaj-pokarmie"
 
 \header	{
   title = "Witaj Pokarmie"
