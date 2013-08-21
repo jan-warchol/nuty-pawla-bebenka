@@ -13,10 +13,10 @@
   top-markup-spacing #'basic-distance = 0
   %top-markup-spacing #'padding = 0
   markup-system-spacing #'basic-distance = 0
-  top-system-spacing #'basic-distance = 9
-  system-system-spacing #'basic-distance = 17
+  top-system-spacing #'basic-distance = 6
+  system-system-spacing #'basic-distance = 0
   score-markup-spacing #'basic-distance = 13.5
-  last-bottom-spacing #'padding = -2
+  %last-bottom-spacing #'padding = 0
   \include "uklad-tytulow.ily"
   % na ogół na pierwszej stronie nie ma miejsca, więc przesuwam na ostatnią
   % ugh, copy-paste.
@@ -46,10 +46,11 @@
 }
 
 #(define powiekszenie-zwrotek '(1.1 . 1.1))
+#(define interlinia '(baseline-skip . 2.3))
 odstepMiedzyZwrotkami = \markup \vspace #1
 odstepOdNumeruDoZwrotki = \markup \hspace #1
 
 \bookOutputSuffix "smartfon"
 \include "muzyka-i-tekst.ily"
-\include "struktura-SATB-4-pieciolinie.ily"
+\include "struktura-SATB-2-pieciolinie.ily"
 \include "ustawienia-formatowania.ily"
