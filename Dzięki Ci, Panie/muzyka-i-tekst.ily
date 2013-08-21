@@ -1,19 +1,13 @@
-\version "2.17.15"
-#(set-global-staff-size 17)
+\version "2.17.3"
 
-\paper {
-  indent = 0 \mm
-  left-margin = 16 \mm
-  right-margin = 15 \mm
-  system-system-spacing #'basic-distance = 13
-  top-markup-spacing #'basic-distance = 6
-}
+\bookOutputName "dzieki-ci-panie"
 
 \header	{
-  title = \markup \column { "Dzięki Ci, Panie" \null }
+  title = "Dzięki Ci, Panie"
   composer = "muzyka: Paweł Bębenek"
   poet = "słowa: Radpert z St. Gallen"
-  tagline = #f
+  editor = "skład nut: Jan Warchoł"
+  copyright = "© Paweł Bębenek"
 }
 %--------------------------------MELODIA
 melodiaSopranu = \relative f' {
@@ -232,118 +226,5 @@ zwrotkaV = \markup \column {
     Ty, coś w
     \concat { \underline\bold Trój cy }
     \concat { je \underline\bold dy ny. }
-  }
-}
-
-
-\score {
-  \new ChoirStaff <<
-    % \new ChordNames { \germanChords \akordy }
-    \new Staff = panie <<
-      \clef treble
-      \set Staff.instrumentName = \markup \center-column { S A }
-      \set Staff.shortInstrumentName = \markup \center-column { S A }
-      \new Voice = sopran {
-        \set Voice.midiInstrument = "clarinet"
-        \dynamicUp
-
-        \voiceOne
-        \melodiaSopranu
-      }
-      \new Voice = alt {
-        \set Voice.midiInstrument = "english horn"
-        \override Hairpin #'stencil = ##f
-        \override DynamicText #'stencil = ##f
-        \override DynamicTextSpanner #'stencil = ##f
-        \override TextScript #'stencil = ##f
-
-        \voiceTwo
-        \melodiaAltu
-      }
-    >>
-
-    \new Lyrics \lyricsto sopran \tekst
-
-    \new Staff = panowie <<
-      \clef bass
-      \set Staff.instrumentName = \markup \center-column { T B }
-      \set Staff.shortInstrumentName = \markup \center-column { T B }
-      \new Voice = tenor {
-        \set Voice.midiInstrument = "english horn"
-        \override Hairpin #'stencil = ##f
-        \override DynamicText #'stencil = ##f
-        \override DynamicTextSpanner #'stencil = ##f
-        \override TextScript #'stencil = ##f
-
-        \voiceOne
-        \melodiaTenorow
-      }
-      \new Voice = bas {
-        \set Voice.midiInstrument = "clarinet"
-        \dynamicDown
-
-        \voiceTwo
-        \melodiaBasow
-      }
-    >>
-  >>
-
-  \layout {
-    \compressFullBarRests
-    \override NoteHead #'style = #'altdefault
-    \context {
-      \Lyrics
-      \override LyricSpace #'minimum-distance = #0.7
-      \override VerticalAxisGroup #'staff-affinity = #CENTER
-      \override VerticalAxisGroup
-      #'nonstaff-relatedstaff-spacing #'padding = #0.5
-    }
-  }
-}
-
-
-poziomyOdstepI = \markup \hspace #1
-pionowyOdstepI = \markup \vspace #1
-
-\markup {
-  \vspace #2 % żeby nie zlewało się z nutami
-  \fill-line {
-    \large {
-      % FIXME: this doesn't scale line spacing!
-      \null
-
-      \column {
-        \line {
-          \bold
-          "2."
-          \poziomyOdstepI
-          \zwrotkaII
-        }
-        \pionowyOdstepI
-        \line {
-          \bold
-          "3."
-          \poziomyOdstepI
-          \zwrotkaIII
-        }
-        \pionowyOdstepI
-        \line {
-          \bold
-          "4."
-          \poziomyOdstepI
-          \zwrotkaIV
-        }
-        \pionowyOdstepI
-        \line {
-          \bold
-          "5."
-          \poziomyOdstepI
-          \zwrotkaV
-        }
-        \pionowyOdstepI
-      }
-
-      \null
-    }
   }
 }
