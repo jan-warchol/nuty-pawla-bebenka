@@ -3,6 +3,11 @@
 #(set-global-staff-size 18)
 
 \paper {
+  #(define fonts
+     (make-pango-font-tree "FreeSerif"
+       "Nimbus Sans"
+       "Luxi Mono"
+       (/ staff-height pt 20)))
   indent = 0 \mm
   left-margin = 16 \mm
   right-margin = 15 \mm

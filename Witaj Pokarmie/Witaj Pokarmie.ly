@@ -6,9 +6,9 @@
   Posłuchać samemu.
 %}
 
-\version "2.17.3"
+\version "2.17.18"
 
-\include "format-b5.ly"
+\include "format-a4.ly"
 
 \header	{
   title = "Witaj Pokarmie"
@@ -97,7 +97,7 @@ akordy = \chordmode {
 tekst = \lyricmode {
   \set stanza = "1."
   Wi -- taj Po -- kar --
-  \tweak #'X-offset #-1.5 mie, |
+  \tweak #'X-offset #-1.2 mie, |
   \tweak #'X-offset #-3 w_któ -- rym nie -- zmie --
   \tweak #'X-offset #-0.7 LyricText
   rzo -- ny |
@@ -108,7 +108,7 @@ tekst = \lyricmode {
 drugiWers = \lyricmode {
   nie -- ba i zie -- mie |
   Twór -- ca jest zam -- knio --
-  \tweak #'X-offset #-0.75 ny, |
+  \tweak #'X-offset #-0.5 ny, |
 }
 
 tekstSopranu = \tekst
@@ -210,9 +210,20 @@ zwrotkaV = \markup \column {
     \context {
       \Staff
       \consists "Ambitus_engraver"
+      \override StaffSymbol #'thickness = #0.9
+      \override BarLine #'hair-thickness = #2
+      \override Stem #'thickness = #1.2
+      \override Slur #'thickness = #1.6
+      \override Tie #'line-thickness = #1
+      \override ClefModifier #'font-shape = #'roman
+      \override ClefModifier #'font-size = #-3.3
+      \override ClefModifier #'X-offset = #0.7
     }
     \context {
       \Lyrics
+      \override LyricText #'font-size = #0.8
+      \override LyricHyphen #'extra-offset = #'(0 . 0.1)
+      \override LyricHyphen #'minimum-distance = #0.5
       \override LyricSpace #'minimum-distance = #0.7
       \override VerticalAxisGroup
       #'nonstaff-relatedstaff-spacing #'basic-distance = #5
