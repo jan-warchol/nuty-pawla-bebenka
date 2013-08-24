@@ -51,18 +51,16 @@
       }
     >>
   >>
-
-  \layout {
-    \context {
-      \Lyrics
-      \override LyricSpace #'minimum-distance = #0.7
-      \override VerticalAxisGroup #'staff-affinity = #CENTER
-      \override VerticalAxisGroup
-      #'nonstaff-relatedstaff-spacing #'padding = #0.5
-    }
+}
+\layout {
+  \context {
+    \Lyrics
+    \override LyricSpace #'minimum-distance = #0.7
+    \override VerticalAxisGroup #'staff-affinity = #CENTER
+    \override VerticalAxisGroup
+    #'nonstaff-relatedstaff-spacing #'padding = #0.5
   }
 }
-
 
 \markup {
   \fill-line {
