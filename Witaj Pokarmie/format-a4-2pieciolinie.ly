@@ -29,3 +29,4 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
 \include "muzyka-i-tekst.ily"
 \include "../szablon/struktura-SATB-2-pieciolinie.ily"
 \include "../szablon/struktura-zwrotek.ily"
+\include "specjalne-ustawienia-utworu.ily"

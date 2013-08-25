@@ -28,11 +28,4 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
 \include "muzyka-i-tekst.ily"
 \include "../szablon/struktura-SATB-2-pieciolinie.ily"
 \include "struktura-zwrotek.ily"
-
-\layout {
-  \context {
-    \Lyrics
-    \override VerticalAxisGroup
-    #'nonstaff-relatedstaff-spacing #'padding = #0.5
-  }
-}
+\include "specjalne-ustawienia-utworu.ily"
