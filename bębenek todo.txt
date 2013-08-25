@@ -3,5 +3,4 @@ wszystkie utwory powinny używać wspólnych szablonów i ustawień
 
 przesunąć kontakt do mnie do stopki
 
-przenieść \bookoutputsuffix na górę
 przenieść include z ustawieniami na górę
