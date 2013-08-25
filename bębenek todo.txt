@@ -1,4 +1,1 @@
-wydzielić repozytorium
-wszystkie utwory powinny używać wspólnych szablonów i ustawień
-
 przesunąć kontakt do mnie do stopki

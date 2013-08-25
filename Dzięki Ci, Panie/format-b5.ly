@@ -1,4 +1,5 @@
 \version "2.17.3"
+\bookOutputSuffix "b5"
 
 #(set-global-staff-size 16)
 #(set-default-paper-size "b5")
@@ -10,7 +11,7 @@
   top-markup-spacing #'basic-distance = 2
   system-system-spacing #'basic-distance = 13
   score-markup-spacing #'basic-distance = 10
-  \include "uklad-tytulow.ily"
+  \include "../szablon/uklad-tytulow.ily"
   %annotate-spacing = ##t
 }
 
@@ -23,7 +24,15 @@
 odstepMiedzyZwrotkami = \markup \vspace #0.5
 odstepOdNumeruDoZwrotki = \markup \hspace #1
 
-\bookOutputSuffix "b5"
+\include "../szablon/globalne-ustawienia-formatowania.ily"
 \include "muzyka-i-tekst.ily"
-\include "struktura-SATB-2-pieciolinie.ily"
-\include "ustawienia-formatowania.ily"
+\include "../szablon/struktura-SATB-2-pieciolinie.ily"
+\include "struktura-zwrotek.ily"
+
+\layout {
+  \context {
+    \Lyrics
+    \override VerticalAxisGroup
+    #'nonstaff-relatedstaff-spacing #'padding = #0.5
+  }
+}

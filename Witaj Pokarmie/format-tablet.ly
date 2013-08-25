@@ -1,6 +1,8 @@
 \version "2.17.3"
+\bookOutputSuffix "tablet"
 
 #(set-global-staff-size 15)
+
 
 \paper {
   paper-height = 20 \cm
@@ -14,7 +16,7 @@
   system-system-spacing #'basic-distance = 17
   score-markup-spacing #'basic-distance = 13.5
   last-bottom-spacing #'padding = -2
-  \include "uklad-tytulow.ily"
+  \include "../szablon/uklad-tytulow.ily"
   %annotate-spacing = ##t
 }
 
@@ -23,10 +25,11 @@
 }
 
 #(define powiekszenie-zwrotek '(1.1 . 1.1))
+#(define interlinia '(baseline-skip . 3)) % 3 is Lily default
 odstepMiedzyZwrotkami = \markup \vspace #1
 odstepOdNumeruDoZwrotki = \markup \hspace #1
 
-\bookOutputSuffix "tablet"
+\include "../szablon/globalne-ustawienia-formatowania.ily"
 \include "muzyka-i-tekst.ily"
 \include "struktura-SATB-4-pieciolinie.ily"
-\include "ustawienia-formatowania.ily"
+\include "../szablon/struktura-zwrotek.ily"
