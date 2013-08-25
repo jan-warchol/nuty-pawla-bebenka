@@ -5,4 +5,3 @@ przesunąć kontakt do mnie do stopki
 
 przenieść \bookoutputsuffix na górę
 przenieść include z ustawieniami na górę
-poprawić położenie bloku layout
