@@ -20,30 +20,46 @@ tonacjaitp = {
 
 melodiaSopranu = \relative f' {
   \tonacjaitp
-  d8 e | f4. f8 f f g f | e4 d8[ c] d d
-  d8 e | f4 f f8 f g a | g4 g a8 a
-  g8 a | bes4. a8 g4( f8[ e]) | f1
+  d8 e |
+  f4. f8 f f g f |
+  e4 d8[ c] d d d8 e |
+  f4 f f8 f g a |
+  g4 g a8 a g8 a |
+  bes4. a8 g4( f8[ e]) |
+  f1
   \bar "|."
 }
 melodiaAltu = \relative f' {
   \tonacjaitp
-  d8 d | d4 d d8 d d d | c4 d c8 bes
-  bes8 bes | d4 d d8 d d16[ e] f8 | e4 d8[ e] f f
-  f8 f | f4. f8 e2 | e2( d)
+  d8 d |
+  d4 d d8 d d d |
+  c4 d4 c8 bes8 bes8 bes8 |
+  d4 d d8 d d16[ e] f8 |
+  e4 d8[ e] f f f8 f |
+  f4. f8 e2 |
+  e2( d)
   \bar "|."
 }
 melodiaTenorow = \relative f {
   \tonacjaitp
-  a8 a | a[ g] a[ f] bes bes bes a | g4 g g8 g
-  g16[ f] g[ bes] | a4 a bes8 bes d d | c4 c c8 c
-  c c | c4. d8 c2 | bes4 a8[ g] a2
+  a8 a |
+  a[ g] a[ f] bes bes bes a |
+  g4 g g8 g g16[ f] g[ bes] |
+  a4 a bes8 bes d d |
+  c4 c c8 c c c |
+  c4. d8 c2 |
+  bes4 a8[ g] a2
   \bar "|."
 }
 melodiaBasow = \relative f {
   \tonacjaitp
-  d8 d | d4 c bes8 bes bes bes | c4 c g8 g
-  g8 g | d'4 c bes8 bes bes bes | c4 c f8 f
-  f8 f | g,4. g8 c2 | d1
+  d8 d |
+  d4 c bes8 bes bes bes |
+  c4 c g8 g g8 g |
+  d'4 c bes8 bes bes bes |
+  c4 c f8 f f8 f |
+  g,4. g8 c2 |
+  d1
   \bar "|."
 }
 akordy = \chordmode {
@@ -55,8 +71,10 @@ akordy = \chordmode {
 %--------------------------------SŁOWA
 tekst = \lyricmode {
   \set stanza = "1. "
-  Bło -- go -- sław -- cie Pa -- na wszy -- stkie Je -- go dzie -- ła,
-  któ -- re by nie kwi -- tły gdy -- by nie cier -- pie -- nie,
+  Bło -- go -- sław -- cie Pa -- na
+  wszy -- stkie Je -- go dzie -- ła,
+  któ -- re by nie kwi -- tły
+  gdy -- by nie cier -- pie -- nie,
   bło -- go -- sław -- cie Pa -- na.
 }
 
