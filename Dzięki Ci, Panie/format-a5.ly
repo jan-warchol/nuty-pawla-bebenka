@@ -1,15 +1,9 @@
 \version "2.17.3"
-\bookOutputSuffix "a5"
+\include "../szablon/formaty/default-a5-paper.ly"
 
 #(set-global-staff-size 13.7)
-#(set-default-paper-size "a5")
 
 \paper {
-  indent = 0 \mm
-  indent = 2 \mm
-  short-indent = 2 \mm
-  left-margin = 10 \mm
-  right-margin = 10 \mm
   top-markup-spacing #'basic-distance = 1
   system-system-spacing #'basic-distance = 13
   score-markup-spacing #'basic-distance = 11

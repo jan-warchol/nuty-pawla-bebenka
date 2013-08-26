@@ -1,18 +1,9 @@
 \version "2.17.3"
-\bookOutputSuffix "tablet"
+\include "../szablon/formaty/default-tablet-paper.ly"
 
 #(set-global-staff-size 13.5)
 
-
 \paper {
-  paper-height = 20 \cm
-  paper-width = 15 \cm
-  indent = 2 \mm
-  short-indent = 2 \mm
-  left-margin = 5 \mm
-  right-margin = 5 \mm
-  top-margin = 1 \mm
-  bottom-margin = 2 \mm
   top-markup-spacing #'basic-distance = 4
   system-system-spacing #'basic-distance = 12
   score-markup-spacing #'basic-distance = 9

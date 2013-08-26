@@ -1,14 +1,9 @@
 \version "2.17.3"
-\bookOutputSuffix "a4"
+\include "../szablon/formaty/default-a4-paper.ly"
 
 #(set-global-staff-size 17)
 
-
 \paper {
-  indent = 2 \mm
-  short-indent = 2 \mm
-  left-margin = 15 \mm
-  right-margin = 15 \mm
   top-markup-spacing #'basic-distance = 4
   system-system-spacing #'basic-distance = 13
   score-markup-spacing #'basic-distance = 12
