@@ -5,9 +5,10 @@
 
 
 \paper {
-  indent = 0 \mm
+  indent = 2 \mm
+  short-indent = 2 \mm
   system-count = 2
-  left-margin = 21 \mm
+  left-margin = 20 \mm
   right-margin = 20 \mm
   top-markup-spacing #'basic-distance = 10
   system-system-spacing #'basic-distance = 18
