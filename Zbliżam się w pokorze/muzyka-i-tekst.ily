@@ -18,13 +18,21 @@ metrumitp = {
   \time 4/4
 }
 melodiaSopranu = \relative f' {
+  \pytanie "Staff.TimeSignature" "czy to raczej nie powinno być 2/2?" #'(2.5 . 2.4)
   \metrumitp
   d4 fis a a | a( b) a2 |
   g4 fis e d | d1 |
   d4 fis a a | a( b) a2 |
   g4 fis e d | d1 |
   % 9: Tobie dziś...
-  a'4 a b( cis) | \time 5/4 d d( cis) a2 |
+  a'4 a b( cis) |
+  \pytanie "Staff.TimeSignature"
+  \markup \column {
+    "czy takt na 5/4 nie powinien być wcześniej,"
+    "tak żeby kreska taktowa przesunęła się o ćwiartkę dalej" "i 'raz' wypadło zgodnie z akcentem tekstu (na 'fie')?"
+  }
+  #'(-1.5 . 2.4)
+  \time 5/4 d d( cis) a2 |
   \time 4/4 b4 a g fis | e1 |
   fis4 a g fis | e( d) e2 |
   fis4 d e d | d1
