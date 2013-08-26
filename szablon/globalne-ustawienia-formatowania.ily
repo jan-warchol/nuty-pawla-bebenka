@@ -18,12 +18,12 @@
   }
   \context {
     \Staff
-    \override StaffSymbol #'thickness = #0.9
+    \override StaffSymbol #'thickness = #0.7
     \override StaffSymbol #'ledger-line-thickness = #'(1 . 0.05)
-    \override BarLine #'hair-thickness = #2
-    \override Stem #'thickness = #1.2
-    \override Slur #'thickness = #1.6
-    \override Tie #'line-thickness = #1
+    \override BarLine #'hair-thickness = #1.5
+    \override Stem #'thickness = #1
+    \override Slur #'thickness = #1.8
+    \override Tie #'line-thickness = #1.2
     \override ClefModifier #'font-shape = #'roman
     \override ClefModifier #'font-size = #-3.3
     \override ClefModifier #'X-offset = #0.7
