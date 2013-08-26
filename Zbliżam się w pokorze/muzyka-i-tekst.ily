@@ -19,38 +19,54 @@ metrumitp = {
 }
 melodiaSopranu = \relative f' {
   \metrumitp
-  d4 fis a a | a( b) a2 | g4 fis e d | d1 |
-  d4 fis a a | a( b) a2 | g4 fis e d | d1 |
+  d4 fis a a | a( b) a2 |
+  g4 fis e d | d1 |
+  d4 fis a a | a( b) a2 |
+  g4 fis e d | d1 |
   % 9: Tobie dziś...
-  a'4 a b( cis) | \time 5/4 d d( cis) a2 | \time 4/4 b4 a g fis | e1 |
-  fis4 a g fis | e( d) e2 | fis4 d e d | d1
+  a'4 a b( cis) | \time 5/4 d d( cis) a2 |
+  \time 4/4 b4 a g fis | e1 |
+  fis4 a g fis | e( d) e2 |
+  fis4 d e d | d1
   \bar "|."
 }
 melodiaAltu = \relative f' {
   \metrumitp
-  d4 d8[ e] fis4 fis | e2 e2 | d4 d b b | d1 |
-  d4 d8[ e] fis4 fis | e2 e2 | d4 d b b | d1 |
+  d4 d8[ e] fis4 fis | e2 e2 |
+  d4 d b b | d1 |
+  d4 d8[ e] fis4 fis | e2 e2 |
+  d4 d b b | d1 |
   % 9: Tobie dziś...
-  fis4 fis fis( e) | \time 5/4 fis4 fis2 fis | \time 4/4 d4 d d d | cis1 |
-  d4 fis d d | cis( b) cis2 | d4 b cis b | d1
+  fis4 fis fis( e) | \time 5/4 fis4 fis2 fis |
+  \time 4/4 d4 d d d | cis1 |
+  d4 fis d d | cis( b) cis2 |
+  d4 b cis b | d1
   \bar "|."
 }
 melodiaTenorow = \relative f {
   \metrumitp
-  a4 a a a | a2 a | b4 b g g | a1 |
-  a4 a a a | a2 a | b4 b g g | a1 |
+  a4 a a a | a2 a |
+  b4 b g g | a1 |
+  a4 a a a | a2 a |
+  b4 b g g | a1 |
   % 9: Tobie dziś...
-  a4 a b( a) | \time 5/4 b b( a) a2 | \time 4/4 g4 g b b | a1 |
-  a4 a b b | a2 a | b4 b a g | a1
+  a4 a b( a) | \time 5/4 b b( a) a2 |
+  \time 4/4 g4 g b b | a1 |
+  a4 a b b | a2 a |
+  b4 b a g | a1
   \bar "|."
 }
 melodiaBasow = \relative f {
   \metrumitp
-  d4 d d d | cis2 cis | b4 b g a | d1 |
-  d4 d d d | cis2 cis | b4 b g a | d1 |
+  d4 d d d | cis2 cis |
+  b4 b g a | d1 |
+  d4 d d d | cis2 cis |
+  b4 b g a | d1 |
   % 9: Tobie dziś...
-  d4 d d( a) | \time 5/4 b b( cis) d2 | \time 4/4 g,4 a b b | cis1 |
-  d4 d d d | cis2 cis | b4 b cis d | d1
+  d4 d d( a) | \time 5/4 b b( cis) d2 |
+  \time 4/4 g,4 a b b | cis1 |
+  d4 d d d | cis2 cis |
+  b4 b cis d | d1
   \bar "|."
 }
 akordy = \chordmode {
