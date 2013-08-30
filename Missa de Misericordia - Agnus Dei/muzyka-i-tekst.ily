@@ -65,7 +65,8 @@ melodiaTenorow = \relative f {
   \metrumitp
   \repeat volta 3 {
     c'4. c8 es4( des)
-    c4.( bes16 as g4) g
+    c4.-\shape #'((0 . -1.3)(0.5 . -1)(-0.5 . -0.3)(-0.4 . -0.7))
+    ( bes16 as g4) g
     as8( bes) c8 c es4 des
     c4.( bes16 as) g2
     as4 as bes4. bes8

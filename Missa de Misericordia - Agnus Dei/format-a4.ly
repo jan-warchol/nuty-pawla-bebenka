@@ -5,7 +5,7 @@
 
 \paper {
   top-markup-spacing #'basic-distance = 10
-  system-system-spacing #'basic-distance = 18
+  system-system-spacing #'basic-distance = 22
   score-markup-spacing #'basic-distance = 18
   \include "../szablon/uklad-tytulow.ily"
   %annotate-spacing = ##t
