@@ -133,7 +133,9 @@ akordy = \chordmode {
 tekst = \lyricmode {
   O sa -- lu -- ta -- ris Ho -- sti -- a,
   quae cæ -- li pan -- dis o -- sti -- um:
-  bel -- _ la pre -- munt ho -- sti -- li -- a
+  bel -- _ la pre --
+  \tweak #'self-alignment-X #0.3 \markup \scale #'(0.9 . 1) munt
+  \tweak #'X-offset #0.2 LyricText ho -- sti -- li -- a
   da ro -- bur, fer __ _ au -- xi -- li -- um.
 }
 drugiWers = \lyricmode {
@@ -148,7 +150,9 @@ tekstAltu = \tekst
 tekstTenorow = \lyricmode {
   O sa -- lu -- ta -- ris Ho -- sti -- a,
   quae cæ -- li pan -- dis o -- sti -- um:
-  bel -- _ _ _ la pre -- munt ho -- sti -- li -- a
+  bel -- _ _ _ la pre --
+  \tweak #'self-alignment-X #0.2 LyricText \markup \scale #'(0.85 . 1) munt
+  \tweak #'X-offset #0.2 LyricText ho -- sti -- li -- a
   da ro -- bur, fer __ _ au -- xi -- li -- um.
 }
 tekstBasow = \tekst
