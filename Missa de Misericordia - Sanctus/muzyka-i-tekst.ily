@@ -121,7 +121,7 @@ akordy = \chordmode {
 tekst = \lyricmode {
   San -- ctus, San -- ctus, San -- ctus
   Do -- mi -- nus De -- us Sa -- ba -- oth.
-  Pl -- eni sunt cæ -- li et ter -- ra
+  Ple -- ni sunt cæ -- li et ter -- ra
   glo -- ri -- a tu -- a.
   Ho -- san -- na in ex -- cel -- sis!
   Ho -- san -- na in ex -- cel -- sis!
