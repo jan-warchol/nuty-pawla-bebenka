@@ -4,18 +4,20 @@
 #(set-global-staff-size 18)
 
 \paper {
-  top-markup-spacing #'basic-distance = 10
+  left-margin = 15 \mm
+  right-margin = 15 \mm
+  top-markup-spacing #'basic-distance = 12
   system-system-spacing #'basic-distance = 18
-  score-markup-spacing #'basic-distance = 18
+  score-markup-spacing #'basic-distance = 20
   \include "../szablon/uklad-tytulow.ily"
   %annotate-spacing = ##t
 }
 
 \header {
-  odsteppotytule = \markup \vspace #2
+  odsteppotytule = \markup \vspace #4.4
 }
 
-#(define powiekszenie-zwrotek '(1.1 . 1.1))
+#(define powiekszenie-zwrotek '(1.2 . 1.2))
 #(define interlinia '(baseline-skip . 3)) % 3 is Lily default
 odstepMiedzyZwrotkami = \markup \vspace #2
 odstepOdNumeruDoZwrotki = \markup \hspace #1
