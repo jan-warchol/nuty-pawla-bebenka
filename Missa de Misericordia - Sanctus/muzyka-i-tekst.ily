@@ -3,7 +3,7 @@
 \bookOutputName "missa-de-misericordia-sanctus"
 
 \header	{
-  title = "Kyrie"
+  title = "Sanctus"
   subtitle = \markup \italic "Missa de Misericordia"
   composer = "muzyka: Paweł Bębenek"
   editor = "skład nut: Jan Warchoł"
