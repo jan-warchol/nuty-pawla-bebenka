@@ -97,11 +97,14 @@ akordy = \chordmode {
 
 %--------------------------------SŁOWA
 tekst = \lyricmode {
-  \set stanza = "1. "
   O sa -- lu -- ta -- ris Ho -- sti -- a,
   quae cæ -- li pan -- dis o -- sti -- um:
   bel -- la pre -- munt ho -- sti -- li -- a
   da ro -- bur, fer au -- xi -- li -- um.
+  U -- ni tri -- no -- que Do --  mi -- no
+  sit sem -- pi -- ter -- na glo -- ri -- a,
+  qui vi -- tam si -- ne ter --  mi -- no
+  no -- bis do -- net in pa -- tri -- a.
 }
 
 tekstSopranu = \tekst
