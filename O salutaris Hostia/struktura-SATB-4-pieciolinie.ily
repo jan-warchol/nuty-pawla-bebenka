@@ -43,7 +43,7 @@
       }
     }
     \new Lyrics \lyricsto tenor \tekstTenorow
-    \new Lyrics \lyricsto tenor \drugiWers
+    \new Lyrics \lyricsto tenor \drugiWersTenorow
 
     \new Staff = bas {
       \clef bass
