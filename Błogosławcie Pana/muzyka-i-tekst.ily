@@ -83,6 +83,14 @@ tekstAltu = \tekst
 tekstTenorow = \tekst
 tekstBasow = \tekst
 
+drugiWers = \lyricmode {
+}
+
+drugiWersSopranu = \drugiWers
+drugiWersAltu = \drugiWers
+drugiWersTenorow = \drugiWers
+drugiWersBasow = \drugiWers
+
 zwrotkaII = \markup \column {
   "Błogosławcie Pana wszystkie łzy i żale,"
   "Każda moja słabość i upokorzenie,"

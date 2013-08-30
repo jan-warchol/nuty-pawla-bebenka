@@ -105,16 +105,22 @@ tekst = \lyricmode {
   peł -- nie ga -- szą -- cy |
   u -- mysł pra -- gną -- | cy.
 }
+
+tekstSopranu = \tekst
+tekstAltu = \tekst
+tekstTenorow = \tekst
+tekstBasow = \tekst
+
 drugiWers = \lyricmode {
   nie -- ba i zie -- mie |
   Twór -- ca jest zam -- knio --
   \tweak #'X-offset #-0.5 ny, |
 }
 
-tekstSopranu = \tekst
-tekstAltu = \tekst
-tekstTenorow = \tekst
-tekstBasow = \tekst
+drugiWersSopranu = \drugiWers
+drugiWersAltu = \drugiWers
+drugiWersTenorow = \drugiWers
+drugiWersBasow = \drugiWers
 
 zwrotkaII = \markup \column {
   "Witaj krynico wszystkiego dobrego"

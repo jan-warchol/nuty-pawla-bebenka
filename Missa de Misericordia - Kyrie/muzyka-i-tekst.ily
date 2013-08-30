@@ -116,6 +116,14 @@ tekstBasow = \lyricmode {
   Ky -- ri -- e e -- le -- i -- son.
 }
 
+drugiWers = \lyricmode {
+}
+
+drugiWersSopranu = \drugiWers
+drugiWersAltu = \drugiWers
+drugiWersTenorow = \drugiWers
+drugiWersBasow = \drugiWers
+
 zwrotkaII = \markup {
 }
 zwrotkaIII = \markup {

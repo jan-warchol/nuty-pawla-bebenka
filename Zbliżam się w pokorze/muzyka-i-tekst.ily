@@ -103,6 +103,14 @@ tekstAltu = \tekst
 tekstTenorow = \tekst
 tekstBasow = \tekst
 
+drugiWers = \lyricmode {
+}
+
+drugiWersSopranu = \drugiWers
+drugiWersAltu = \drugiWers
+drugiWersTenorow = \drugiWers
+drugiWersBasow = \drugiWers
+
 zwrotkaII = \markup \column {
   "Mylą się, o Boże, w Tobie wzrok i smak;"
   "Kto się im poddaje, temu wiary brak;"

@@ -138,12 +138,6 @@ tekst = \lyricmode {
   \tweak #'X-offset #0.2 LyricText ho -- sti -- li -- a
   da ro -- bur, fer __ _ au -- xi -- li -- um.
 }
-drugiWers = \lyricmode {
-  U -- ni tri -- no -- que Do --  mi -- no
-  sit sem -- pi -- ter -- na glo -- ri -- a,
-  qui vi -- tam si -- ne _ ter --  mi -- no
-  no -- _ bis do -- net in pa -- tri -- a.
-}
 
 tekstSopranu = \tekst
 tekstAltu = \tekst
@@ -157,12 +151,24 @@ tekstTenorow = \lyricmode {
 }
 tekstBasow = \tekst
 
+drugiWers = \lyricmode {
+  U -- ni tri -- no -- que Do --  mi -- no
+  sit sem -- pi -- ter -- na glo -- ri -- a,
+  qui vi -- tam si -- ne _ ter --  mi -- no
+  no -- _ bis do -- net in pa -- tri -- a.
+}
+
+drugiWersSopranu = \drugiWers
+drugiWersAltu = \drugiWers
 drugiWersTenorow = \lyricmode {
   U -- ni tri -- no -- que Do --  mi -- no
   sit sem -- pi -- ter -- na glo -- ri -- a,
   qui _ vi -- _ tam si -- ne _ ter --  mi -- no
   no -- _ bis do -- net in pa -- tri -- a.
 }
+drugiWersBasow = \drugiWers
+
+
 
 zwrotkaII = \markup {
 }
