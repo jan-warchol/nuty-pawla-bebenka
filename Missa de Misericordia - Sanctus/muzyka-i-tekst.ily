@@ -14,6 +14,8 @@ metrumitp = {
   \key f \minor
   \time 4/4
   \tempo Andante
+  \set Timing.beamExceptions = #'()
+  \set Timing.beamHalfMeasure = ##f
 }
 
 melodiaSopranu = \relative f' {
