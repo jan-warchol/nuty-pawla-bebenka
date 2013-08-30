@@ -19,8 +19,10 @@ metrumitp = {
 }
 melodiaSopranu = \relative f' {
   \metrumitp
-  fis4 e8 fis g4. g8
-  a8 g fis d e4 e
+  \repeat volta 2 {
+    fis4 e8 fis g4. g8
+    a8 g fis d e4 e
+  }
   g4 a8 g fis( e) fis4
   d8 cis d e fis4 e
   a4 g16( fis) e( d) e2
@@ -29,8 +31,10 @@ melodiaSopranu = \relative f' {
 }
 melodiaAltu = \relative f' {
   \metrumitp
-  d4 d8 d d( e) d4
-  d8 d d d d( b) d( cis)
+  \repeat volta 2 {
+    d4 d8 d d( e) d4
+    d8 d d d d( b) d( cis)
+  }
   d4 d8 d d( b16 cis) d8( cis)
   b b b b16( cis) d4. cis8
   fis8( e) d8 d d4( cis8 b16 cis)
@@ -39,8 +43,10 @@ melodiaAltu = \relative f' {
 }
 melodiaTenorow = \relative f {
   \metrumitp
-  a4 a8 a d8( cis) b4
-  a8 a a b a4 a
+  \repeat volta 2 {
+    a4 a8 a d8( cis) b4
+    a8 a a b a4 a
+  }
   b4 b8 b fis4 fis
   g8 g g g a8( b) a4
   a b8 b a4.( b8)
@@ -49,8 +55,10 @@ melodiaTenorow = \relative f {
 }
 melodiaBasow = \relative f {
   \metrumitp
-  d4 d8 d e4 e
-  fis8 fis fis fis a4 a,
+  \repeat volta 2 {
+    d4 d8 d e4 e
+    fis8 fis fis fis a4 a,
+  }
   g4 g8 a b4 b8( a)
   g8 g g g d'4 a4
   d4 g8 g a4( a,)
@@ -65,8 +73,6 @@ tekst = \lyricmode {
   \set stanza = "1. "
   To -- bie  wzna -- wia -- my,
   Pan -- no, nad wy -- mo -- wę
-  %u -- przej -- mym sło -- wem
-  %cześć Ga -- bri -- e -- lo -- wę,
   któ -- raś w_te sło -- wa
   by -- ła u -- ra -- czo -- na:
   bądź po -- zdro -- wio -- na.
@@ -78,6 +84,8 @@ tekstTenorow = \tekst
 tekstBasow = \tekst
 
 drugiWers = \lyricmode {
+  u -- przej -- mym sło -- wem
+  cześć Ga -- bri -- e -- lo -- wę,
 }
 
 drugiWersSopranu = \drugiWers
