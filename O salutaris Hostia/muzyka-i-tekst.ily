@@ -21,10 +21,16 @@ solid = {
   \unset melismaBusyProperties
 }
 
-%--------------------------------MELODIA
-melodiaSopranu = \relative f' {
+metrumitp = {
   \key d \minor
   \time 3/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.beamHalfMeasure = ##f
+}
+
+%--------------------------------MELODIA
+melodiaSopranu = \relative f' {
+  \metrumitp
   a2 g8 g
   g2 c4
   bes4.( a8) g4
@@ -48,6 +54,7 @@ melodiaSopranu = \relative f' {
   \bar ":|."
 }
 melodiaAltu = \relative f' {
+  \metrumitp
   f2 e8 d
   f2 e4
   d2 d4
@@ -72,6 +79,7 @@ melodiaAltu = \relative f' {
   \bar ":|."
 }
 melodiaTenorow = \relative f {
+  \metrumitp
   d'4 d a
   c4.( bes8) a4
   g8( a bes4) bes
@@ -95,6 +103,7 @@ melodiaTenorow = \relative f {
   \bar ":|."
 }
 melodiaBasow = \relative f {
+  \metrumitp
   d4 d d
   d2 d4
   g,2 bes8( c)
