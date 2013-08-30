@@ -93,11 +93,11 @@ melodiaTenorow = \relative f {
 melodiaBasow = \relative f {
   \metrumitp
   f4 f es8( d) c4
-  d2 as4.( g8)
+  des2 as4.( g8)
   f4 g8 as g8( as) g4
   ges4. ges8 f2
   f'4 f8 f es8( d) c8 c
-  d2 as4.( g8)
+  des2 as4.( g8)
   f4( g8 as) g8( as) g4
   ges2 f4 f'8( es)
   as,2 bes4 es8 es
@@ -105,7 +105,7 @@ melodiaBasow = \relative f {
   as,2 bes4 es8 es
   des4( bes) f2
   f'4 f es8( d) c8 c
-  d2 as4. g8
+  des2 as4. g8
   f4( g8 as) g8( as) g4
   ges4. ges8 f4 f'8( es)
   as,2 bes4 es8 es
