@@ -71,9 +71,15 @@ akordy = \chordmode {
 %--------------------------------SŁOWA
 tekst = \lyricmode {
   \set stanza = "1. "
-  To -- bie  wzna -- wia -- my,
+  To -- bie  wzna --
+  \once \override LyricText #'self-alignment-X = #-0.5
+  wia -- my,
   Pan -- no, nad wy -- mo -- wę
-  któ -- raś w_te sło -- wa
+  któ --
+  \once \override LyricText #'self-alignment-X = #1
+  raś
+  \once \override LyricText #'self-alignment-X = #0.5
+  w_te sło -- wa
   by -- ła u -- ra -- czo -- na:
   bądź po -- zdro -- wio -- na.
 }
@@ -84,7 +90,11 @@ tekstTenorow = \tekst
 tekstBasow = \tekst
 
 drugiWers = \lyricmode {
-  u -- przej -- mym sło -- wem
+  u --
+  \once \override LyricText #'self-alignment-X = #0.5
+  przej -- mym
+  \once \override LyricText #'self-alignment-X = #-0.5
+  sło -- wem
   cześć Ga -- bri -- e -- lo -- wę,
 }
 
