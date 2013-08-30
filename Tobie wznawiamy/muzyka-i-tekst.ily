@@ -57,7 +57,7 @@ melodiaBasow = \relative f {
   \metrumitp
   \repeat volta 2 {
     d4 d8 d e4 e
-    fis8 fis fis fis a4 a,
+    fis8 fis fis g a4 a,
   }
   g4 g8 a b4 b8( a)
   g8 g g g d'4 a4
