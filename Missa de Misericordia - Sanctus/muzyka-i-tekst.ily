@@ -118,9 +118,13 @@ akordy = \chordmode {
 %--------------------------------SŁOWA
 tekst = \lyricmode {
   San -- ctus, San -- ctus, San -- ctus
-  Do -- mi -- nus De -- us Sa -- ba -- oth.
+  Do -- mi -- nus De -- us Sa -- ba --
+  \once \override LyricText #'self-alignment-X = #-0.3
+  oth.
   \set stanza = "1."
-  Ple -- ni sunt cæ -- li et ter -- ra _
+  Ple -- ni sunt
+  \once \override LyricText #'self-alignment-X = #-1
+  cæ -- li et ter -- ra _
   glo -- ri -- a tu -- _ a.
   Ho -- san -- na in ex -- cel -- sis!
   Ho -- san -- na in ex -- cel -- sis!
@@ -134,7 +138,9 @@ tekstBasow = \tekst
 drugiWers = \lyricmode {
   \repeat unfold 14 \skip 4
   \set stanza = "2."
-  Be -- ne -- _ di -- ctus qui ve -- nit
+  Be -- ne -- _ di -- ctus
+  \once \override LyricText #'self-alignment-X = #-0.6
+  qui ve -- nit
   in no -- mi -- ne Do -- mi -- ni.
 }
 
