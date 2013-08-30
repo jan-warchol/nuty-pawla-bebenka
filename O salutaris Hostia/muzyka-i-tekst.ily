@@ -131,6 +131,7 @@ akordy = \chordmode {
 
 %--------------------------------SŁOWA
 tekst = \lyricmode {
+  \set stanza = "1."
   O sa -- lu -- ta -- ris Ho -- sti -- a,
   quae cæ -- li pan -- dis o -- sti -- um:
   bel -- _ la pre --
@@ -142,6 +143,7 @@ tekst = \lyricmode {
 tekstSopranu = \tekst
 tekstAltu = \tekst
 tekstTenorow = \lyricmode {
+  \set stanza = "1."
   O sa -- lu -- ta -- ris Ho -- sti -- a,
   quae cæ -- li pan -- dis o -- sti -- um:
   bel -- _ _ _ la pre --
@@ -152,6 +154,7 @@ tekstTenorow = \lyricmode {
 tekstBasow = \tekst
 
 drugiWers = \lyricmode {
+  \set stanza = "2."
   U -- ni tri -- no -- que Do --  mi -- no
   sit sem -- pi -- ter -- na glo -- ri -- a,
   qui vi -- tam si -- ne _ ter --  mi -- no
@@ -161,6 +164,7 @@ drugiWers = \lyricmode {
 drugiWersSopranu = \drugiWers
 drugiWersAltu = \drugiWers
 drugiWersTenorow = \lyricmode {
+  \set stanza = "2."
   U -- ni tri -- no -- que Do --  mi -- no
   sit sem -- pi -- ter -- na glo -- ri -- a,
   qui _ vi -- _ tam si -- ne _ ter --  mi -- no
