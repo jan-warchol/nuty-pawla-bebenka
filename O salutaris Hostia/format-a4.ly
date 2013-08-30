@@ -4,7 +4,8 @@
 #(set-global-staff-size 18)
 
 \paper {
-  top-markup-spacing #'basic-distance = 10
+  system-count = 3
+  top-markup-spacing #'basic-distance = 3
   system-system-spacing #'basic-distance = 18
   score-markup-spacing #'basic-distance = 18
   \include "../szablon/uklad-tytulow.ily"
@@ -12,7 +13,7 @@
 }
 
 \header {
-  odsteppotytule = \markup \vspace #2
+  odsteppotytule = \markup \vspace #1
 }
 
 #(define powiekszenie-zwrotek '(1.1 . 1.1))
