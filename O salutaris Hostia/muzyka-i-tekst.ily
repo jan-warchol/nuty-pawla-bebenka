@@ -171,7 +171,21 @@ drugiWersTenorow = \lyricmode {
 }
 drugiWersBasow = \drugiWers
 
-
+tlumaczenie = \markup \tiny \typewriter \column {
+  \vspace #1
+  \bold
+  "O salutaris Hostia, quae cæli  pandis    ostium:"
+  "O zbawcza   Hostio, co   nieba otwierasz bramy:"
+  \bold
+  "Bella premunt        hostilia, da  robur, fer      auxilium."
+  "Wojny uciskają [nas] wrogie,   daj siłę,  przynieś pomoc."
+  \bold
+  "Uni trinoque Domino sit          sempiterna gloria,"
+  "Trójjedynemu Panu   niech będzie wieczna    chwała,"
+  \bold
+  "Qui   vitam sine termino nobis donet in patria."
+  "Który życie bez  końca   nam   daje  w  ojczyźnie [niebieskiej]."
+}
 
 zwrotkaII = \markup {
 }
