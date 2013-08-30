@@ -4,7 +4,6 @@
 #(set-global-staff-size 18)
 
 \paper {
-  line-width = 195 \mm
   top-markup-spacing #'basic-distance = 10
   system-system-spacing #'basic-distance = 18
   score-markup-spacing #'basic-distance = 18
