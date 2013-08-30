@@ -12,10 +12,10 @@
 }
 
 \header {
-  odsteppotytule = \markup \vspace #1
+  odsteppotytule = \markup \vspace #0.5
 }
 
-#(define powiekszenie-zwrotek '(1.02 . 1.02))
+#(define powiekszenie-zwrotek '(1.15 . 1.15))
 #(define interlinia '(baseline-skip . 3)) % 3 is Lily default
 odstepMiedzyZwrotkami = \markup \vspace #1
 odstepOdNumeruDoZwrotki = \markup \hspace #1
