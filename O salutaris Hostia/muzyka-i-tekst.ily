@@ -131,7 +131,11 @@ akordy = \chordmode {
 %--------------------------------SŁOWA
 tekst = \lyricmode {
   \set stanza = "1."
-  O sa -- lu -- ta -- ris Ho -- sti -- a,
+  O
+  \once \override LyricText #'X-offset = #-2
+  sa --
+  \once \override LyricText #'X-offset = #-1
+  lu -- ta -- ris Ho -- sti -- a,
   quae cæ -- li pan -- dis o -- sti -- um:
   bel -- _ la pre --
   \tweak #'self-alignment-X #0.3 \markup \scale #'(0.9 . 1) munt
@@ -143,7 +147,11 @@ tekstSopranu = \tekst
 tekstAltu = \tekst
 tekstTenorow = \lyricmode {
   \set stanza = "1."
-  O sa -- lu -- ta -- ris Ho -- sti -- a,
+  O
+  \once \override LyricText #'X-offset = #-2
+  sa --
+  \once \override LyricText #'X-offset = #-1
+  lu -- ta -- ris Ho -- sti -- a,
   quae cæ -- li pan -- dis o -- sti -- um:
   bel -- _ _ _ la pre --
   \tweak #'self-alignment-X #0.2 LyricText \markup \scale #'(0.85 . 1) munt
@@ -154,7 +162,11 @@ tekstBasow = \tekst
 
 drugiWers = \lyricmode {
   \set stanza = "2."
-  U -- ni tri -- no -- que Do --  mi -- no
+  U --
+  \once \override LyricText #'X-offset = #-2
+  ni
+  \once \override LyricText #'X-offset = #-1
+  tri -- no -- que Do --  mi -- no
   sit sem -- pi -- ter -- na glo -- ri -- a,
   qui vi -- tam si -- ne _ ter --  mi -- no
   no -- _ bis do -- net in pa -- tri -- a.
@@ -164,7 +176,11 @@ drugiWersSopranu = \drugiWers
 drugiWersAltu = \drugiWers
 drugiWersTenorow = \lyricmode {
   \set stanza = "2."
-  U -- ni tri -- no -- que Do --  mi -- no
+  U --
+  \once \override LyricText #'X-offset = #-2
+  ni
+  \once \override LyricText #'X-offset = #-1
+  tri -- no -- que Do --  mi -- no
   sit sem -- pi -- ter -- na glo -- ri -- a,
   qui _ vi -- _ tam si -- ne _ ter --  mi -- no
   no -- _ bis do -- net in pa -- tri -- a.
