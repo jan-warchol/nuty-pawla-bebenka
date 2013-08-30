@@ -4,7 +4,6 @@
 
 \header	{
   title = "O salutaris Hostia"
-  poet = ""
   composer = "muzyka: Paweł Bębenek"
   editor = "skład nut: Jan Warchoł"
   copyright = "© Paweł Bębenek"
@@ -136,7 +135,7 @@ tekst = \lyricmode {
   quae cæ -- li pan -- dis o -- sti -- um:
   bel -- _ la pre --
   \tweak #'self-alignment-X #0.3 \markup \scale #'(0.9 . 1) munt
-  \tweak #'X-offset #0.2 LyricText ho -- sti -- li -- a
+  \tweak #'X-offset #0.2 LyricText ho -- sti -- li -- a,
   da ro -- bur, fer __ _ au -- xi -- li -- um.
 }
 
@@ -148,7 +147,7 @@ tekstTenorow = \lyricmode {
   quae cæ -- li pan -- dis o -- sti -- um:
   bel -- _ _ _ la pre --
   \tweak #'self-alignment-X #0.2 LyricText \markup \scale #'(0.85 . 1) munt
-  \tweak #'X-offset #0.2 LyricText ho -- sti -- li -- a
+  \tweak #'X-offset #0.2 LyricText ho -- sti -- li -- a,
   da ro -- bur, fer __ _ au -- xi -- li -- um.
 }
 tekstBasow = \tekst
