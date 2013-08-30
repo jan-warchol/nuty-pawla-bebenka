@@ -15,7 +15,7 @@
   odsteppotytule = \markup \vspace #0
 }
 
-#(define powiekszenie-zwrotek '(1.05 . 1.0))
+#(define powiekszenie-zwrotek '(1.1 . 1.1))
 #(define interlinia '(baseline-skip . 2.3))
 odstepMiedzyZwrotkami = \markup \vspace #0.5
 odstepOdNumeruDoZwrotki = \markup \hspace #1

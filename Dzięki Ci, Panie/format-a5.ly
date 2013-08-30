@@ -6,7 +6,7 @@
 \paper {
   top-markup-spacing #'basic-distance = 1
   system-system-spacing #'basic-distance = 13
-  score-markup-spacing #'basic-distance = 11
+  score-markup-spacing #'basic-distance = 9
   \include "../szablon/uklad-tytulow.ily"
   %annotate-spacing = ##t
 }
@@ -15,7 +15,7 @@
   odsteppotytule = \markup \vspace #-0.3
 }
 
-#(define powiekszenie-zwrotek '(1.05 . 1.0))
+#(define powiekszenie-zwrotek '(1.1 . 1.1))
 #(define interlinia '(baseline-skip . 2.3))
 odstepMiedzyZwrotkami = \markup \vspace #0.5
 odstepOdNumeruDoZwrotki = \markup \hspace #1
