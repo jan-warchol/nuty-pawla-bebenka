@@ -14,6 +14,8 @@ metrumitp = {
   \key f \minor
   \time 4/4
   \tempo Largo
+  \set Timing.beamExceptions = #'()
+  \set Timing.beamHalfMeasure = ##f
   \partial 4
 }
 
@@ -57,11 +59,13 @@ melodiaTenorow = \relative f {
   r4 c' des2
   bes4 c2.
   r4 c des des
-  c4.( bes16 as g4) f8( g)
+  c4.-\shape #'((0 . -1.3)(0.5 . -1)(-0.5 . -0.3)(-0.4 . -0.7))
+  ( bes16 as g4) f8( g)
   as4 bes bes as
   bes2. f8( g)
   as4 bes8( c) des4 c
-  c4.( bes16 as g4) c8 c
+  c4.-\shape #'((0 . -1.3)(0.5 . -1)(-0.5 . -0.3)(-0.4 . -0.7))
+  ( bes16 as g4) c8 c
   c4 c des2
   bes4 c2 c8 c
   c4 c8( bes8) as4 g
