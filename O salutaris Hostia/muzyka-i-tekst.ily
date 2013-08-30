@@ -101,6 +101,8 @@ tekst = \lyricmode {
   quae cæ -- li pan -- dis o -- sti -- um:
   bel -- la pre -- munt ho -- sti -- li -- a
   da ro -- bur, fer au -- xi -- li -- um.
+}
+drugiWers = \lyricmode {
   U -- ni tri -- no -- que Do --  mi -- no
   sit sem -- pi -- ter -- na glo -- ri -- a,
   qui vi -- tam si -- ne ter --  mi -- no

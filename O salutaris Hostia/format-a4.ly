@@ -22,5 +22,5 @@ odstepOdNumeruDoZwrotki = \markup \hspace #1
 
 \include "../szablon/globalne-ustawienia-formatowania.ily"
 \include "muzyka-i-tekst.ily"
-\include "../szablon/struktura-SATB-4-pieciolinie.ily"
+\include "struktura-SATB-4-pieciolinie.ily"
 \include "specjalne-ustawienia-utworu.ily"
