@@ -1,6 +1,6 @@
 \version "2.17.3"
 \include "../szablon/formaty/default-smartfon-paper.ily"
-\bookOutputSuffix "smartfon-4pieciolinie"
+\bookOutputSuffix "pl-smartfon-4pieciolinie"
 
 #(set-global-staff-size 16)
 
@@ -27,7 +27,8 @@ odstepMiedzyZwrotkami = \markup \vspace #1
 odstepOdNumeruDoZwrotki = \markup \hspace #1
 
 \include "../szablon/globalne-ustawienia-formatowania.ily"
-\include "muzyka-i-tekst.ily"
+\include "muzyka.ily"
+\include "tekst-polski.ily"
 \include "../szablon/struktura-SATB-4-pieciolinie.ily"
 \include "../szablon/struktura-zwrotek.ily"
 \include "specjalne-ustawienia-utworu.ily"

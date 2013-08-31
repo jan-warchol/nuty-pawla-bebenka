@@ -1,11 +1,11 @@
 \version "2.17.3"
 \include "../szablon/formaty/default-a4-paper.ily"
-\bookOutputSuffix "a4-2pieciolinie"
+\bookOutputSuffix "pl-a4-4pieciolinie"
 
 #(set-global-staff-size 18)
 
 \paper {
-  top-markup-spacing #'basic-distance = 14
+  top-markup-spacing #'basic-distance = 10
   system-system-spacing #'basic-distance = 18
   score-markup-spacing #'basic-distance = 18
   \include "../szablon/uklad-tytulow.ily"
@@ -13,7 +13,7 @@
 }
 
 \header {
-  odsteppotytule = \markup \vspace #4
+  odsteppotytule = \markup \vspace #2
 }
 
 #(define powiekszenie-zwrotek '(1.2 . 1.2))
@@ -22,7 +22,8 @@ odstepMiedzyZwrotkami = \markup \vspace #2
 odstepOdNumeruDoZwrotki = \markup \hspace #1
 
 \include "../szablon/globalne-ustawienia-formatowania.ily"
-\include "muzyka-i-tekst.ily"
-\include "../szablon/struktura-SATB-2-pieciolinie.ily"
+\include "muzyka.ily"
+\include "tekst-polski.ily"
+\include "../szablon/struktura-SATB-4-pieciolinie.ily"
 \include "../szablon/struktura-zwrotek.ily"
 \include "specjalne-ustawienia-utworu.ily"
