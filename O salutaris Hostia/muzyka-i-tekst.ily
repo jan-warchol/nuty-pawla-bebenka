@@ -136,9 +136,9 @@ tekst = \lyricmode {
   sa --
   \once \override LyricText #'X-offset = #-1
   lu -- ta -- ris Ho -- sti -- a,
-  quae cæ -- li pan -- dis o -- sti -- um:
+  quæ cæ -- li pan -- dis o -- sti -- um:
   bel -- _ la pre --
-  \tweak #'self-alignment-X #0.3 \markup \scale #'(0.9 . 1) munt
+  \tweak #'self-alignment-X #0.3 \markup \scale #'(0.98 . 1) munt
   \tweak #'X-offset #0.2 LyricText ho -- sti -- li -- a,
   da ro -- bur, fer __ _ au -- xi -- li -- um.
 }
@@ -152,9 +152,9 @@ tekstTenorow = \lyricmode {
   sa --
   \once \override LyricText #'X-offset = #-1
   lu -- ta -- ris Ho -- sti -- a,
-  quae cæ -- li pan -- dis o -- sti -- um:
+  quæ cæ -- li pan -- dis o -- sti -- um:
   bel -- _ _ _ la pre --
-  \tweak #'self-alignment-X #0.2 LyricText \markup \scale #'(0.85 . 1) munt
+  \tweak #'self-alignment-X #0.2 LyricText \markup \scale #'(0.95 . 1) munt
   \tweak #'X-offset #0.2 LyricText ho -- sti -- li -- a,
   da ro -- bur, fer __ _ au -- xi -- li -- um.
 }
@@ -190,8 +190,8 @@ drugiWersBasow = \drugiWers
 tlumaczenie = \markup \tiny \typewriter \column {
   \vspace #1
   \bold
-  "O salutaris Hostia, quae cæli  pandis    ostium:"
-  "O zbawcza   Hostio, co   nieba otwierasz bramy:"
+  "O salutaris Hostia, quæ cæli  pandis    ostium:"
+  "O zbawcza   Hostio, co  nieba otwierasz bramy:"
   \bold
   "Bella premunt        hostilia, da  robur, fer      auxilium."
   "Wojny uciskają [nas] wrogie,   daj siłę,  przynieś pomoc."
