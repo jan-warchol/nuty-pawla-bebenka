@@ -72,9 +72,11 @@ akordy = \chordmode {
 tekst = \lyricmode {
   \set stanza = "1. "
   To -- bie  wzna --
-  \once \override LyricText #'self-alignment-X = #-0.5
+  \once \override LyricText #'self-alignment-X = #-0.8
   wia -- my,
-  Pan -- no, nad wy -- mo -- wę
+  Pan --
+  \once \override LyricText #'self-alignment-X = #-0.4
+  no, nad wy -- mo -- wę
   któ --
   \once \override LyricText #'self-alignment-X = #1
   raś
@@ -93,9 +95,11 @@ drugiWers = \lyricmode {
   u --
   \once \override LyricText #'self-alignment-X = #0.5
   przej -- mym
-  \once \override LyricText #'self-alignment-X = #-0.5
+  \once \override LyricText #'self-alignment-X = #-0.8
   sło -- wem
-  cześć Ga -- bri -- e -- lo -- wę,
+  cześć
+  \once \override LyricText #'self-alignment-X = #-0.7
+  Ga -- bri -- e -- lo -- wę,
 }
 
 drugiWersSopranu = \drugiWers
