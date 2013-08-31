@@ -12,10 +12,11 @@
 }
 %--------------------------------MELODIA
 metrumitp = {
-  \autoBeamOff
   \tempo 4=90
   \key d \major
   \time 4/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.beamHalfMeasure = ##f
 }
 melodiaSopranu = \relative f' {
   \pytanie "Staff.TimeSignature" "czy to raczej nie powinno być 2/2?" #'(2.5 . 2.4)
@@ -40,9 +41,9 @@ melodiaSopranu = \relative f' {
 }
 melodiaAltu = \relative f' {
   \metrumitp
-  d4 d8[ e] fis4 fis | e2 e2 |
+  d4 d8( e) fis4 fis | e2 e2 |
   d4 d b b | d1 |
-  d4 d8[ e] fis4 fis | e2 e2 |
+  d4 d8( e) fis4 fis | e2 e2 |
   d4 d b b | d1 |
   % 9: Tobie dziś...
   fis4 fis fis( e) | \time 5/4 fis4 fis2 fis |
