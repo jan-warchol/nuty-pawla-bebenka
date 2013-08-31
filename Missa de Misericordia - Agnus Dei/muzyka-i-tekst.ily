@@ -78,7 +78,8 @@ melodiaTenorow = \relative f {
       c1
     }
     {
-      c4( bes4. as8 g4)
+      c4-\shape #'((0 . -1)(0.2 . -0.5)(0 . 0)(-0.1 . 0))
+      ( bes4. as8 g4)
       f1
     }
   }
