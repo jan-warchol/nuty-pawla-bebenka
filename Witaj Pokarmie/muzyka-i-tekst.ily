@@ -21,11 +21,15 @@
 }
 
 %--------------------------------MELODIA
-melodiaSopranu = \relative f' {
-  \autoBeamOff
+metrumitp = {
   \key e \minor
   \time 4/4
   \tempo 4=50
+  \set Timing.beamExceptions = #'()
+  \set Timing.beamHalfMeasure = ##f
+}
+melodiaSopranu = \relative f' {
+  \metrumitp
   \repeat volta 2 {
     e4 fis8 g8 fis4. g8 |
     e8 fis8 g8 a8 g4 fis4 |
@@ -38,10 +42,7 @@ melodiaSopranu = \relative f' {
   \bar "|."
 }
 melodiaAltu = \relative f' {
-  \autoBeamOff
-  \key e \minor
-  \time 4/4
-  \tempo 4=50
+  \metrumitp
   \repeat volta 2 {
     e4 e8 e8 e4 d |
     e8 e8 e8 e8 d4 d4 |
@@ -54,10 +55,7 @@ melodiaAltu = \relative f' {
   \bar "|."
 }
 melodiaTenorow = \relative f {
-  \autoBeamOff
-  \key e \minor
-  \time 4/4
-  \tempo 4=50
+  \metrumitp
   \repeat volta 2 {
     b4 b8 b b4 d |
     c8 c8 c8 c8 a4 a4 |
@@ -70,10 +68,7 @@ melodiaTenorow = \relative f {
   \bar "|."
 }
 melodiaBasow = \relative f {
-  \autoBeamOff
-  \key e \minor
-  \time 4/4
-  \tempo 4=50
+  \metrumitp
   \repeat volta 2 {
     e4 e8 e8 b4 b4 |
     c8 c8 c8 c8 d4 d4 |
