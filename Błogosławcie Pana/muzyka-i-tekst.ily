@@ -26,7 +26,7 @@ melodiaSopranu = \relative f' {
   e4 d8( c) d d d8 e |
   f4 f f8 f g a |
   g4 g a8 a g8 a |
-  bes4. a8 g4( f8( e)) |
+  bes4. a8 g4( f8 e) |
   f1
   \bar "|."
 }
