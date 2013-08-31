@@ -1,5 +1,6 @@
 \version "2.17.3"
-\include "../szablon/formaty/default-a4-2pieciolinie-paper.ily"
+\include "../szablon/formaty/default-a4-paper.ily"
+\bookOutputSuffix "a4-2pieciolinie"
 
 #(set-global-staff-size 18.5)
 

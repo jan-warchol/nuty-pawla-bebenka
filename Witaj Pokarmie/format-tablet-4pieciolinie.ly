@@ -1,5 +1,6 @@
 \version "2.17.3"
 \include "../szablon/formaty/default-tablet-paper.ily"
+\bookOutputSuffix "tablet-4pieciolinie"
 
 #(set-global-staff-size 15)
 
