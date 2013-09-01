@@ -10,16 +10,6 @@
 
 \bookOutputName "witaj-pokarmie"
 
-\header	{
-  title = "Witaj Pokarmie"
-  % śpiewnik Jagodyński, strona 106
-  % (http://www.dbc.wroc.pl/dlibra/publication?id=10057&tab=3)
-  poet = "słowa: śpiewnik Jagodyńskiego, XVII wiek"
-  composer = "muzyka: Paweł Bębenek"
-  editor = "skład nut: Jan Warchoł"
-  copyright = "© Paweł Bębenek"
-}
-
 %--------------------------------MELODIA
 metrumitp = {
   \key e \minor

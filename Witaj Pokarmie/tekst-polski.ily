@@ -1,5 +1,15 @@
 \version "2.17.3"
 
+\header	{
+  title = "Witaj Pokarmie"
+  % śpiewnik Jagodyński, strona 106
+  % (http://www.dbc.wroc.pl/dlibra/publication?id=10057&tab=3)
+  poet = "słowa: śpiewnik Jagodyńskiego, XVII wiek"
+  composer = "muzyka: Paweł Bębenek"
+  editor = "skład nut: Jan Warchoł"
+  copyright = "© Paweł Bębenek"
+}
+
 %--------------------------------SŁOWA
 tekst = \lyricmode {
   \set stanza = "1."
