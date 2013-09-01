@@ -10,6 +10,17 @@
 
 \bookOutputName "witaj-pokarmie"
 
+doted = {
+  \slurDashed
+  \tieDashed
+  \set melismaBusyProperties = #'()
+}
+solid = {
+  \slurSolid
+  \tieSolid
+  \unset melismaBusyProperties
+}
+
 %--------------------------------MELODIA
 metrumitp = {
   \key e \minor
@@ -25,8 +36,10 @@ melodiaSopranu = \relative f' {
     e8 fis8 g8 a8 g4 fis4 |
   }
   % 5
-  g4 a8 b8 a4a8 b8 |
-  c4 b8 a8 g4 fis4 |
+  \doted
+  g4 a8 b8 a4( a8) b8 |
+  c8~c b8 a8 g4 fis4 |
+  \solid
   g4 a8 g8 fis4.( g16[ fis16]) |
   e1
   \bar "|."
@@ -38,8 +51,10 @@ melodiaAltu = \relative f' {
     e8 e8 e8 e8 d4 d4 |
   }
   % 5
-  d4 d8 d8 g4 fis8 fis8 |
-  e4 e8 e8 d4 d4 |
+  \doted
+  d4 d8 d8 g4( fis8) fis8 |
+  e8~e e8 e8 d4 d4 |
+  \solid
   d4 d8 d8 e4( d4) |
   e1
   \bar "|."
@@ -51,8 +66,10 @@ melodiaTenorow = \relative f {
     c8 c8 c8 c8 a4 a4 |
   }
   % 5
-  b4 b8 b8 a4 a8 a8 |
-  a4 a8 a8 a4 a4 |
+  \doted
+  b4 b8 b8 a4~ a8 a8 |
+  a8~a a8 a8 a4 a4 |
+  \solid
   b4 b8 b8 b2 |
   b1
   \bar "|."
@@ -64,8 +81,10 @@ melodiaBasow = \relative f {
     c8 c8 c8 c8 d4 d4 |
   }
   % 5
-  g,4 g8 g8 d'4 d8 d8 |
-  a4 b8 c8 d4 d4 |
+  \doted
+  g,4 g8 g8 d'4~ d8 d8 |
+  a8~a b8 c8 d4 d4 |
+  \solid
   g,4 g8 a8 b2 |
   e1
   \bar "|."

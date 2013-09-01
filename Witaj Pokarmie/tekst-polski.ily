@@ -19,7 +19,7 @@ tekst = \lyricmode {
   \tweak #'X-offset #-0.7 LyricText
   rzo -- ny |
   wi -- taj, na -- po -- ju zu -- |
-  \markup \underline peł -- nie ga -- szą -- cy |
+  \markup \underline peł -- _ nie ga -- szą -- cy |
   u -- mysł pra -- gną -- | cy.
 }
 

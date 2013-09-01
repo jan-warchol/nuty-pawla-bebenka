@@ -17,7 +17,7 @@ tekst = \lyricmode {
   Sal -- ve, o es -- ca,
   in qua est im -- men -- sus
   Sal -- ve, o po -- _ tus,
-  verum si -- ti -- en -- tis
+  ve -- rum si -- ti -- en -- tis
   le -- va -- men men -- tis.
 }
 
