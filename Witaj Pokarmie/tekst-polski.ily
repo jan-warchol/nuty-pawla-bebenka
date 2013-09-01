@@ -19,7 +19,7 @@ tekst = \lyricmode {
   \tweak #'X-offset #-0.7 LyricText
   rzo -- ny |
   wi -- taj, na -- po -- ju zu -- |
-  peł -- nie ga -- szą -- cy |
+  \markup \underline peł -- nie ga -- szą -- cy |
   u -- mysł pra -- gną -- | cy.
 }
 
@@ -42,24 +42,40 @@ drugiWersBasow = \drugiWers
 zwrotkaII = \markup \column {
   "Witaj, krynico wszystkiego dobrego,"
   "Gdy bowiem w sobie masz Boga samego"
-  "Znasz ludziom wszystkie jego wszechmocności,"
+  \line {
+    "Znasz ludziom wszystkie"
+    \concat {\underline je go }
+    wszechmocności,
+  }
   "Niesiesz godności."
 }
 zwrotkaIII = \markup \column {
   "Witaj, z niebiosów manno padająca,"
   "Rozkoszny w sercu naszym smak czyniąca:"
-  "Wszystko na świecie co jedno smakuje"
+  \line {
+    "Wszystko na świecie co"
+    \concat { \underline jed no }
+    smakuje
+  }
   "W tym się najduje."
 }
 zwrotkaIV = \markup \column {
   "Witaj, rozkoszne z ogrodu rajskiego"
   "Drzewo owocu pełne żywiącego:"
-  "Kto Cię skosztuje, śmierci się nie boi,"
+  \line {
+    "Kto Cię skosztuje,"
+    \concat { \underline śmier ci }
+    "się nie boi,"
+  }
   "Choć nad nim stoi."
 }
 zwrotkaV = \markup \column {
   "Witaj, jedyna serc ludzkich radości,"
   "Witaj, strapionych wszelka łaskawości,"
-  "Ciebie dziś moje łzy słodkie szukają,"
+  \line {
+    "Ciebie dziś moje łzy"
+    \concat { \underline słod kie }
+    szukają,
+  }
   "K'Tobie wołają."
 }
