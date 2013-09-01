@@ -1,8 +1,8 @@
 \version "2.17.3"
 
 \header	{
-  title = "Salve o esca"
-  subtitle = "Witaj Pokarmie"
+  title = "Salve, o esca"
+  subtitle = "Witaj, Pokarmie"
   % śpiewnik Jagodyński, strona 106
   % (http://www.dbc.wroc.pl/dlibra/publication?id=10057&tab=3)
   poet = "słowa: śpiewnik Jagodyńskiego, XVII wiek"
@@ -14,9 +14,9 @@
 %--------------------------------SŁOWA
 tekst = \lyricmode {
   \set stanza = "1."
-  Sal -- ve o es -- ca,
+  Sal -- ve, o es -- ca,
   in qua est im -- men -- sus
-  Sal -- ve o po -- _ tus,
+  Sal -- ve, o po -- _ tus,
   verum si -- ti -- en -- tis
   le -- va -- men men -- tis.
 }
@@ -43,16 +43,16 @@ zwrotkaII = \markup \column {
   "Præmia gratis."
 }
 zwrotkaIII = \markup \column {
-  "Salve o Manna cælitus descendens,"
+  "Salve o manna cælitus descendens,"
   "Omnem saporem in te comprehendens:"
-  "Est in te omnis gustus suauitatis,"
+  "Est in te omnis gustus suavitatis,"
   "Et voluptatis."
 }
 zwrotkaIV = \markup \column {
-  "Salve o dulce paradisi lignum,"
+  "Salve, o dulce paradisi lignum,"
   "Tu verus vitæ fructus es et signum:"
   "Quisquis te gustat mortem non timebit,"
-  "Quamuis videbit."
+  "Quamvis videbit."
 }
 zwrotkaV = \markup \column {
   "Salve o unicum cordis levamen,"
