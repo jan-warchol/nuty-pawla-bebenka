@@ -113,20 +113,20 @@ drugiWersTenorow = \drugiWers
 drugiWersBasow = \drugiWers
 
 zwrotkaII = \markup \column {
-  "Mylą się, o Boże, w Tobie wzrok i smak;"
+  "Mylą się, o Boże, w Tobie wzrok i smak,"
   "Kto się im poddaje, temu wiary brak;"
   "Ja jedynie wierzyć Twej nauce chcę,"
   "Że w postaci Chleba utaiłeś się."
 }
 zwrotkaIII = \markup \column {
-  "Bóstwo Swe na Krzyżu skryłeś wobec nas;"
-  "Tu ukryte z Bóstwem Człowieczeństwo wraz;"
-  "Lecz w Oboje wierząc, wiem, że dojdę tam,"
+  "Bóstwo Swe na Krzyżu skryłeś wobec nas,"
+  "Tu ukryte z bóstwem człowieczeństwo wraz;"
+  "Lecz w oboje wierząc, wiem, że dojdę tam,"
   "Gdzieś przygarnął łotra: do Twych niebios bram."
 }
 zwrotkaIV = \markup \column {
   "Jak niewierny Tomasz Twych nie szukam ran,"
-  "Lecz wyznaję z wiarą, żeś mój Bóg i Pan,"
+  "Lecz wyznaję z wiarą, żeś mój Bóg i Pan;"
   "Pomóż wierze mojej, Jezu, łaską Swą,"
   "Ożyw mą nadzieję, rozpal miłość mą."
 }
@@ -143,7 +143,7 @@ zwrotkaVI = \markup \column {
   "Jedną kroplą może obmyć z win i zmaz."
 }
 zwrotkaVII = \markup \column {
-  "Pod zasłoną teraz, Jezu, widzę Cię;"
+  "Pod zasłoną teraz, Jezu, widzę Cię,"
   "Niech pragnienie serca kiedyś spełni się,"
   "Bym Oblicze Twoje tam oglądać mógł,"
   "Gdzie wybranym miejsce przygotował Bóg."

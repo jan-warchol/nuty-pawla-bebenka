@@ -172,7 +172,7 @@ zwrotkaII = \markup \column {
   }
   \line {
     Przez
-    \concat { taje \underline\bold mni ce }
+    \concat { tajem \underline\bold ni ce }
     \concat { naj \underline\bold święt sze. }
   }
 }
@@ -227,7 +227,7 @@ zwrotkaV = \markup \column {
   \line { Byśmy \underline\bold się stali jedno }
   \line {
     Z Tobą,
-    \concat { Chry \underline\bold stu sem }
+    \concat { Chrys \underline\bold tu sem }
     \underline\bold i Duchem.
   }
   \line {

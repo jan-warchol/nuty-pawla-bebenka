@@ -37,7 +37,9 @@ melodiaSopranu = \relative f' {
   }
   % 5
   \doted
-  g4 a8 b8 a4( a8) b8 |
+  g4 a8 b8
+  \pytanie Slur "zaznaczyłem tak zmianę w podłożeniu tekstu w innych zwrotkach" #'(-1.5 . 2)
+  a4( a8) b8 |
   c8~c b8 a8 g4 fis4 |
   \solid
   g4 a8 g8 fis4.( g16[ fis16]) |

@@ -49,7 +49,7 @@ melodiaTenorow = \relative f {
   a4 a bes8 bes d d |
   c4 c c8 c c c |
   \pytanie NoteHead "w niektórych źródłach jest d" #'(2 . 1) c4. d8 c2 |
-  bes4 a8( g) a2
+  bes4( a8 g a2)
   \bar "|."
 }
 melodiaBasow = \relative f {
@@ -102,7 +102,7 @@ zwrotkaII = \markup \column {
 }
 zwrotkaIII = \markup \column {
   "Błogosławcie Pana wszystkie moje rany,"
-  "No które Duch Święty staje się balsamem,"
+  "Na które Duch Święty staje się balsamem,"
   "Błogosławcie Pana."
 }
 zwrotkaIV = \markup \column {

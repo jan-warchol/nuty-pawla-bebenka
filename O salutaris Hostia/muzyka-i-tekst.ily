@@ -50,7 +50,7 @@ melodiaSopranu = \relative f' {
   \solid
   d4.( f8) e4
   d2.
-  \bar ":|."
+  \bar "|."
 }
 melodiaAltu = \relative f' {
   \metrumitp
@@ -75,7 +75,7 @@ melodiaAltu = \relative f' {
   \solid
   d8( c d4) c4
   d2.
-  \bar ":|."
+  \bar "|."
 }
 melodiaTenorow = \relative f {
   \metrumitp
@@ -99,7 +99,7 @@ melodiaTenorow = \relative f {
   \solid
   bes2 g4
   a2.
-  \bar ":|."
+  \bar "|."
 }
 melodiaBasow = \relative f {
   \metrumitp
@@ -123,7 +123,7 @@ melodiaBasow = \relative f {
   \solid
   bes2 c4
   d2.
-  \bar ":|."
+  \bar "|."
 }
 akordy = \chordmode {
 }
