@@ -2,7 +2,7 @@
 
 \header	{
   title = "Salve, o esca"
-  subtitle = "Witaj, Pokarmie"
+  subtitle = "Witaj, pokarmie"
   % śpiewnik Jagodyński, strona 106
   % (http://www.dbc.wroc.pl/dlibra/publication?id=10057&tab=3)
   poet = "słowa: śpiewnik Jagodyńskiego, XVII wiek"
