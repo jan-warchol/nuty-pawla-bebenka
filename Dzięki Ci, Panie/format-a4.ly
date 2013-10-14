@@ -2,7 +2,7 @@
 \include "../szablon/formaty/default-a4-paper.ily"
 \bookOutputSuffix "a4"
 
-#(set-global-staff-size 17)
+#(set-global-staff-size 17.5)
 
 \paper {
   top-markup-spacing #'basic-distance = 4

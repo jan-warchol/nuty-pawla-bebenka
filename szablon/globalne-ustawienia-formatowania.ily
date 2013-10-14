@@ -1,12 +1,5 @@
 \version "2.17.18"
 
-\paper {
-  #(define fonts
-     (make-pango-font-tree "FreeSerif"
-       "Nimbus Sans"
-       "Luxi Mono"
-       (/ staff-height pt 20)))
-}
 
 \layout {
   \compressFullBarRests
