@@ -11,7 +11,7 @@
   }
   \context {
     \Staff
-    \override StaffSymbol #'thickness = #0.9
+    \override StaffSymbol #'thickness = #1
     \override StaffSymbol #'ledger-line-thickness = #'(1 . 0.05)
     \override BarLine #'hair-thickness = #2
     \override Stem #'thickness = #1.2
@@ -23,7 +23,7 @@
   }
   \context {
     \Lyrics
-    \override LyricText #'font-size = #0.8
+    \override LyricText #'font-size = #1.2
     \override LyricHyphen #'extra-offset = #'(0 . 0.1)
     \override LyricHyphen #'minimum-distance = #0.5
     \override LyricSpace #'minimum-distance = #0.7

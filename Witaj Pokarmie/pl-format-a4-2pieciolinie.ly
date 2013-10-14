@@ -2,7 +2,7 @@
 \include "../szablon/formaty/default-a4-paper.ily"
 \bookOutputSuffix "pl-a4-2pieciolinie"
 
-#(set-global-staff-size 18)
+#(set-global-staff-size 18.5)
 
 \paper {
   top-markup-spacing #'basic-distance = 14
