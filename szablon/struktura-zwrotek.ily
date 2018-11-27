@@ -5,8 +5,8 @@ zwrotki = #(define-scheme-function
 		(markup-list?)
 	(let ((powiekszenie-zwrotek '(1.1 . 1.1))
 				(interlinia '(baseline-skip . 3))
-				(odstepOdNumeruDoZwrotki #{ \markup \vspace #2 #})
-				(odstepMiedzyZwrotkami #{ \markup \hspace #1 #})
+				(odstepOdNumeruDoZwrotki 1)
+				(odstepMiedzyZwrotkami 2)
 				(counter 2))
 	#{
 		\markup {
@@ -22,11 +22,11 @@ zwrotki = #(define-scheme-function
 							\line {
 								\bold
 								{ #(object->string counter)  "."}
-								#odstepOdNumeruDoZwrotki
+								\hspace #odstepOdNumeruDoZwrotki
 								#(car zwrotki)
 								#(begin (set! zwrotki (cdr zwrotki)) (set! counter (+ counter 1)) #{ \markup {} #})
 							}
-							#odstepMiedzyZwrotkami }
+							\vspace #odstepMiedzyZwrotkami }
 					
 						#})
 						zwrotki)
