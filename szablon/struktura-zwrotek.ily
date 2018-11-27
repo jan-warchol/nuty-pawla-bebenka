@@ -1,49 +1,42 @@
 \version "2.17.3"
 
-\markup {
-  \fill-line {
-    \scale #powiekszenie-zwrotek {
-      \null
+zwrotki = #(define-scheme-function
+		(parser location zwrotki)
+		(markup-list?)
+	(let ((powiekszenie-zwrotek '(1.1 . 1.1))
+				(interlinia '(baseline-skip . 3))
+				(odstepOdNumeruDoZwrotki #{ \markup \vspace #2 #})
+				(odstepMiedzyZwrotkami #{ \markup \hspace #1 #})
+				(counter 2))
+	#{
+		\markup {
+			\fill-line {
+				\scale #powiekszenie-zwrotek {
+					\null
 
-      \override #interlinia
-      \column {
-        \line {
-          \bold
-          "2."
-          \odstepOdNumeruDoZwrotki
-          \zwrotkaII
-        }
-        \odstepMiedzyZwrotkami
-        \line {
-          \bold
-          "3."
-          \odstepOdNumeruDoZwrotki
-          \zwrotkaIII
-        }
-        \odstepMiedzyZwrotkami
-      }
+					\override #interlinia
+					\column {
+						
+						#(map
+							(lambda (x) #{ \markup {
+							\line {
+								\bold
+								{ #(object->string counter)  "."}
+								#odstepOdNumeruDoZwrotki
+								#(car zwrotki)
+								#(begin (set! zwrotki (cdr zwrotki)) (set! counter (+ counter 1)) #{ \markup {} #})
+							}
+							#odstepMiedzyZwrotkami }
+					
+						#})
+						zwrotki)
 
-      \null
+					}
 
-      \override #interlinia
-      \column {
-        \line {
-          \bold
-          "4."
-          \odstepOdNumeruDoZwrotki
-          \zwrotkaIV
-        }
-        \odstepMiedzyZwrotkami
-        \line {
-          \bold
-          "5."
-          \odstepOdNumeruDoZwrotki
-          \zwrotkaV
-        }
-        \odstepMiedzyZwrotkami
-      }
+					\null
 
-      \null
-    }
-  }
-}
+				}
+			}
+		}
+
+	#}))
