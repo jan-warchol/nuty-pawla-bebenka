@@ -21,7 +21,7 @@ zwrotki = #(define-scheme-function
               (lambda (x) #{ \markup {
               \line {
                 \bold
-                { #(object->string counter)  "."}
+                \concat { #(object->string counter)  "."}
                 \hspace #odstepOdNumeruDoZwrotki
                 #(car zwrotki)
                 #(begin (set! zwrotki (cdr zwrotki)) (set! counter (+ counter 1)) #{ \markup {} #})
