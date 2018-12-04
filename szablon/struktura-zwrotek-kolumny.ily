@@ -1,4 +1,4 @@
-\version "2.17.3"
+\version "2.19.82"
 
 debug = #(define-scheme-function
     (parser location lista-zwrotek liczbaKolumn)
