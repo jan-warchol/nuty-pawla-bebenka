@@ -1,55 +1,5 @@
 \version "2.19.82"
 
-debug = #(define-scheme-function
-    (parser location lista-zwrotek liczbaKolumn)
-    (markup-list? number?)
-  (let ((powiekszenie-zwrotek '(1.1 . 1.1))
-    (interlinia '(baseline-skip . 3))
-    (odstepOdNumeruDoZwrotki 1)
-    (odstepMiedzyZwrotkami 2)
-    (counter 2)
-    (out #{ \markup {} #}))
-  #{
-    \markup {
-      \fill-line {
-        \scale #powiekszenie-zwrotek {
-          \null
-
-          #(map
-            (lambda (kolumna) #{ \markup {
-          
-          \override #interlinia
-          \column {
-            
-            #(map
-              (lambda (zwrotka) #{ \markup {
-              \line {
-                \bold
-                \concat { #(object->string counter)  "."}
-                \hspace #odstepOdNumeruDoZwrotki
-                #zwrotka
-                #(begin (set! counter (+ counter 1)) #{ \markup {} #})
-              }
-              \vspace #odstepMiedzyZwrotkami
-            }
-          
-            #})
-            kolumna)
-
-          }
-
-          \null
-          
-          }
-          #})
-            (podzielNaKolumny lista-zwrotek liczbaKolumn))
-
-        }
-      }
-    }
-
-  #}))
-  
 podzielNaKolumny = #(define-scheme-function
     (parser location lista-zwrotek liczbaKolumn)
     (markup-list? number?)
@@ -63,49 +13,40 @@ podzielNaKolumny = #(define-scheme-function
 zwrotki = #(define-scheme-function
     (parser location lista-zwrotek liczbaKolumn)
     (markup-list? number?)
-  (let ((powiekszenie-zwrotek '(1.1 . 1.1))
+  (let* ((powiekszenie-zwrotek '(1.1 . 1.1))
     (interlinia '(baseline-skip . 3))
     (odstepOdNumeruDoZwrotki 1)
     (odstepMiedzyZwrotkami 2)
     (counter 2)
-    (out #{ \markup {} #}))
-  #{
-    \markup {
-      \fill-line {
-        \scale #powiekszenie-zwrotek {
-          \null
-
-          #(map
-            (lambda (kolumna) #{ \markup {
-          
-          \override #interlinia
-          \column {
-            
-            #(map
-              (lambda (zwrotka) #{ \markup {
-              \line {
+    
+    (kolumna-markup (define-scheme-function
+    (parser location lista-zwrotek)
+    (markup-list?)
+    #{ \markup {
+        \override #interlinia
+        \column #(apply append (map 
+            (lambda (zwrotka) (list 
+              #{ \markup {
                 \bold
                 \concat { #(object->string counter)  "."}
                 \hspace #odstepOdNumeruDoZwrotki
                 #zwrotka
-                #(begin (set! counter (+ counter 1)) #{ \markup {} #})
-              }
-              \vspace #odstepMiedzyZwrotkami
-            }
-          
-            #})
-            kolumna)
+                #(begin (set! counter (+ counter 1)) (markup) )}
+              #}
+              #{\markup { \vspace #odstepMiedzyZwrotkami } #}
+            )) lista-zwrotek
+            
+            ))}
+    #})))
+  #{ \markup {
+      \fill-line
+        \scale #powiekszenie-zwrotek
+        #(append (list #{\markup \null #}) 
+          (apply append (map 
+            (lambda (kolumna) (list 
+              (kolumna-markup kolumna)
+              #{\markup \null #}
+            )) (podzielNaKolumny lista-zwrotek liczbaKolumn)
+            )))
 
-          }
-
-          \null
-          
-          }
-          #})
-            (podzielNaKolumny lista-zwrotek liczbaKolumn))
-
-        }
-      }
-    }
-
-  #}))
+   }#}))
