@@ -11,19 +11,15 @@ podzielNaKolumny = #(define-scheme-function
 
 
 zwrotki = #(define-scheme-function
-    (parser location lista-zwrotek liczbaKolumn)
-    (markup-list? number?)
+    (parser location liczbaKolumn counter powiekszenie interlinia odstepMiedzyZwrotkami odstepOdNumeruDoZwrotki lista-zwrotek)
+    ((number? 2) (number? 2) (number? 1.1) (number? 3) (number? 2) (number? 1) markup-list?)
   (let* ((powiekszenie-zwrotek '(1.1 . 1.1))
-    (interlinia '(baseline-skip . 3))
-    (odstepOdNumeruDoZwrotki 1)
-    (odstepMiedzyZwrotkami 2)
-    (counter 2)
     
     (kolumna-markup (define-scheme-function
     (parser location lista-zwrotek)
     (markup-list?)
     #{ \markup {
-        \override #interlinia
+        \override #`(baseline-skip . ,interlinia)
         \column #(apply append (map 
             (lambda (zwrotka) (list 
               #{ \markup {
@@ -40,7 +36,7 @@ zwrotki = #(define-scheme-function
     #})))
   #{ \markup {
       \fill-line
-        \scale #powiekszenie-zwrotek
+        \scale #`(,powiekszenie . ,powiekszenie)
         #(append (list #{\markup \null #}) 
           (apply append (map 
             (lambda (kolumna) (list 

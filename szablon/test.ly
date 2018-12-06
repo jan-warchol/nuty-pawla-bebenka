@@ -29,4 +29,4 @@ muzyka = \markuplist{
 }
 }
 
-\zwrotki \muzyka 2
+\zwrotki \muzyka
