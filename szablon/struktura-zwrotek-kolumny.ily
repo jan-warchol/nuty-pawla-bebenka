@@ -13,9 +13,7 @@ podzielNaKolumny = #(define-scheme-function
 zwrotki = #(define-scheme-function
     (parser location liczbaKolumn counter powiekszenie interlinia odstepMiedzyZwrotkami odstepOdNumeruDoZwrotki lista-zwrotek)
     ((number? 2) (number? 2) (number? 1.1) (number? 3) (number? 2) (number? 1) markup-list?)
-  (let* ((powiekszenie-zwrotek '(1.1 . 1.1))
-    
-    (kolumna-markup (define-scheme-function
+  (let* ((kolumna-markup (define-scheme-function
     (parser location lista-zwrotek)
     (markup-list?)
     #{ \markup {
