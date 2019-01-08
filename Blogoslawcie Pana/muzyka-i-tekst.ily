@@ -1,6 +1,6 @@
 \version "2.17.3"
 
-\bookOutputName "błogosławcie-pana"
+\bookOutputName "blogoslawcie-pana"
 
 \header	{
   title = "Błogosławcie Pana wszystkie Jego dzieła"

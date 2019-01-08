@@ -1,6 +1,6 @@
 \version "2.17.3"
 
-\bookOutputName "zbliżam-się-w-pokorze"
+\bookOutputName "zblizam-sie-w-pokorze"
 
 \header	{
   title = "Zbliżam się w pokorze"
