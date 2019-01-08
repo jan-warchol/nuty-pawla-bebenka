@@ -1,7 +1,7 @@
-\version "2.17.3"
+\version "2.21.0"
 
 zwrotki = #(define-scheme-function
-    (parser location zwrotki)
+    (zwrotki)
     (markup-list?)
   (let ((powiekszenie-zwrotek '(1.1 . 1.1))
     (interlinia '(baseline-skip . 3))
@@ -26,7 +26,7 @@ zwrotki = #(define-scheme-function
                 #(car zwrotki)
                 #(begin (set! zwrotki (cdr zwrotki)) (set! counter (+ counter 1)) #{ \markup {} #})
               }
-              \vspace #odstepMiedzyZwrotkami }
+              \combine \null \vspace #odstepMiedzyZwrotkami }
           
             #})
             zwrotki)

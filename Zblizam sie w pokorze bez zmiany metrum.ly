@@ -1,3 +1,5 @@
+\version "2.21.0"
+
 \header	{
   title = "Zbliżam się w pokorze"
   poet = "słowa: św. Tomasz z Akwinu"
@@ -59,9 +61,9 @@ akordy = \chordmode {
 text =  \lyricmode {
   \set stanza = "1. "
   Zbli -- żam się w_po -- ko -- rze i ni -- sko -- ści swej,
-  wiel -- bię Twój ma -- je -- stat, skry -- ty \tweak #'X-offset #-2.3 w_Ho -- stii tej.
-  To -- bie dziś \tweak #'X-offset #-2.3 w_o -- fie -- rze se -- rce da -- ję swe,
-  o u -- twier -- dzaj \tweak #'X-offset #-2.3 w_wie -- rze, Je -- zu, dzie -- ci Twe.
+  wiel -- bię Twój ma -- je -- stat, skry -- ty \tweak X-offset #-2.3 w_Ho -- stii tej.
+  To -- bie dziś \tweak X-offset #-2.3 w_o -- fie -- rze se -- rce da -- ję swe,
+  o u -- twier -- dzaj \tweak X-offset #-2.3 w_wie -- rze, Je -- zu, dzie -- ci Twe.
 }
 stanzas = \markup {
   \vspace #2
@@ -78,7 +80,7 @@ stanzas = \markup {
             "Że w postaci Chleba utaiłeś się."
           }
         }
-        \vspace #0.5
+        \combine \null \vspace #0.5
         \line {
           "3. "
           \column {
@@ -88,7 +90,7 @@ stanzas = \markup {
             "Gdzieś przygarnął łotra: do Twych niebios bram."
           }
         }
-        \vspace #0.5
+        \combine \null \vspace #0.5
         \line {
           "4. "
           \column {
@@ -110,7 +112,7 @@ stanzas = \markup {
             "Bym nad wszelką słodycz Ciebie poznać chciał."
           }
         }
-        \vspace #0.5
+        \combine \null \vspace #0.5
         \line {
           "6. "
           \column {
@@ -120,7 +122,7 @@ stanzas = \markup {
             "Jedną kroplą może obmyć z win i zmaz."
           }
         }
-        \vspace #0.5
+        \combine \null \vspace #0.5
         \line {
           "7. "
           \column {

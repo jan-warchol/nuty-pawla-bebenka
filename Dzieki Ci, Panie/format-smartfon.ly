@@ -1,17 +1,17 @@
-\version "2.17.3"
+\version "2.21.0"
 \include "../szablon/formaty/default-smartfon-paper.ily"
 \bookOutputSuffix "smartfon"
 
 #(set-global-staff-size 16)
 
 \paper {
-  top-markup-spacing #'basic-distance = 0
-  %top-markup-spacing #'padding = 0
-  markup-system-spacing #'basic-distance = 0
-  top-system-spacing #'basic-distance = 6
-  system-system-spacing #'basic-distance = 0
-  score-markup-spacing #'basic-distance = 13.5
-  %last-bottom-spacing #'padding = 0
+  top-markup-spacing.basic-distance = 0
+  %top-markup-spacing.padding = 0
+  markup-system-spacing.basic-distance = 0
+  top-system-spacing.basic-distance = 6
+  system-system-spacing.basic-distance = 0
+  score-markup-spacing.basic-distance = 13.5
+  %last-bottom-spacing.padding = 0
   \include "../szablon/uklad-tytulow.ily"
   \include "../szablon/stopka-w-smartfonach.ily"
   %annotate-spacing = ##t

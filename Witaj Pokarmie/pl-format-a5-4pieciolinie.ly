@@ -1,13 +1,13 @@
-\version "2.17.3"
+\version "2.21.0"
 \include "../szablon/formaty/default-a5-paper.ily"
 \bookOutputSuffix "pl-a5-4pieciolinie"
 
 #(set-global-staff-size 15)
 
 \paper {
-  top-markup-spacing #'basic-distance = 5
-  system-system-spacing #'basic-distance = 17
-  score-markup-spacing #'basic-distance = 16
+  top-markup-spacing.basic-distance = 5
+  system-system-spacing.basic-distance = 17
+  score-markup-spacing.basic-distance = 16
   \include "../szablon/uklad-tytulow.ily"
   %annotate-spacing = ##t
 }

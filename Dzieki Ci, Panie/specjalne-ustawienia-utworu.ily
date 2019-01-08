@@ -6,7 +6,7 @@
 \layout {
   \context {
     \Lyrics
-    \override VerticalAxisGroup
-    #'nonstaff-relatedstaff-spacing #'padding = #0.5
+    \override VerticalAxisGroup.
+    nonstaff-relatedstaff-spacing.padding = #0.5
   }
 }

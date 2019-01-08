@@ -1,4 +1,4 @@
-\version "2.17.3"
+\version "2.21.0"
 \include "../szablon/formaty/default-a4-paper.ily"
 \bookOutputSuffix "a4-2pieciolinie"
 
@@ -8,9 +8,9 @@
   system-count = 3
   left-margin = 22 \mm
   right-margin = 22 \mm
-  top-markup-spacing #'basic-distance = 10
-  system-system-spacing #'basic-distance = 18
-  score-markup-spacing #'basic-distance = 12
+  top-markup-spacing.basic-distance = 10
+  system-system-spacing.basic-distance = 18
+  score-markup-spacing.basic-distance = 12
   \include "../szablon/uklad-tytulow.ily"
   %annotate-spacing = ##t
 }

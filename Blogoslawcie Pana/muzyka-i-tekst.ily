@@ -1,4 +1,4 @@
-\version "2.17.3"
+\version "2.21.0"
 
 \bookOutputName "blogoslawcie-pana"
 
@@ -74,9 +74,9 @@ tekst = \lyricmode {
   \set stanza = "1. "
   Bło -- go -- sław -- cie Pa -- na
   wszy --
-  \tweak #'self-alignment-X #-0.5 LyricText stkie
-  \tweak #'X-offset #0 LyricText Je -- go dzie --
-  \tweak #'self-alignment-X #-0.8 ła,
+  \tweak self-alignment-X #-0.5 LyricText stkie
+  \tweak X-offset #0 LyricText Je -- go dzie --
+  \tweak self-alignment-X #-0.8 ła,
   któ -- re by nie kwi -- tły
   gdy -- by nie cier -- pie -- nie,
   bło -- go -- sław -- cie Pa -- na.

@@ -1,13 +1,13 @@
-\version "2.17.3"
+\version "2.21.0"
 \include "../szablon/formaty/default-a4-paper.ily"
 \bookOutputSuffix "a4"
 
 #(set-global-staff-size 17)
 
 \paper {
-  top-markup-spacing #'basic-distance = 4
-  system-system-spacing #'basic-distance = 13
-  score-markup-spacing #'basic-distance = 12
+  top-markup-spacing.basic-distance = 4
+  system-system-spacing.basic-distance = 13
+  score-markup-spacing.basic-distance = 12
   \include "../szablon/uklad-tytulow.ily"
   %annotate-spacing = ##t
 }
