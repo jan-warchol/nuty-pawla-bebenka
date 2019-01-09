@@ -17,13 +17,13 @@
   odsteppotytule = \markup \vspace #2
 }
 
-#(define powiekszenie-zwrotek '(1.2 . 1.2))
-#(define interlinia '(baseline-skip . 2.7)) % 3 is Lily default
-odstepMiedzyZwrotkami = \markup \vspace #1.8
-odstepOdNumeruDoZwrotki = \markup \hspace #1
+liczbaKolumn = #2
+powiekszenieZwrotek = #1.2
+interlinia = #2.7
+odstepMiedzyZwrotkami = #1.8
+odstepOdNumeruDoZwrotki = #1
 
 \include "../szablon/globalne-ustawienia-formatowania.ily"
 \include "muzyka-i-tekst.ily"
 \include "../szablon/struktura-SATB-2-pieciolinie.ily"
-\include "struktura-zwrotek.ily"
 \include "specjalne-ustawienia-utworu.ily"

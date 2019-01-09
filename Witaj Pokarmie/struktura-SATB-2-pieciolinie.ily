@@ -70,3 +70,5 @@
     nonstaff-relatedstaff-spacing.padding = #1.5
   }
 }
+
+\zwrotki \liczbaKolumn \numerZwrotki \powiekszenieZwrotek \interlinia \odstepMiedzyZwrotkami \odstepOdNumeruDoZwrotki \dalszeZwrotki

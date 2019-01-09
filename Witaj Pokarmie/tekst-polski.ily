@@ -79,3 +79,14 @@ zwrotkaV = \markup \column {
   }
   "K'Tobie wołają."
 }
+
+dalszeZwrotki = \markuplist {
+  \zwrotkaII
+  \zwrotkaIII
+  \zwrotkaIV
+  \zwrotkaV
+}
+
+numerZwrotki = #2
+
+

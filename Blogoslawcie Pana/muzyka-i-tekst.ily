@@ -115,3 +115,12 @@ zwrotkaV = \markup \column {
   "Że mnie wciąż uzdrawia łaski Swojej deszczem,"
   "Błogosławcie Pana."
 }
+
+dalszeZwrotki = \markuplist {
+  \zwrotkaII
+  \zwrotkaIII
+  \zwrotkaIV
+  \zwrotkaV
+}
+
+numerZwrotki = #2

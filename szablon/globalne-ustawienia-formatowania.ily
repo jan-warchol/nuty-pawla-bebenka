@@ -58,3 +58,6 @@ pytanie =
      #offset \markup "" $grob
    #}
    )
+
+% do formatowania dalszych zwrotek
+\include "../szablon/struktura-zwrotek.ily"

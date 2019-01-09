@@ -236,3 +236,13 @@ zwrotkaV = \markup \column {
     \concat { je \underline\bold dy ny. }
   }
 }
+
+dalszeZwrotki = \markuplist {
+  \zwrotkaII
+  \zwrotkaIII
+  \zwrotkaIV
+  \zwrotkaV
+}
+
+numerZwrotki = #2
+

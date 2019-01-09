@@ -60,3 +60,12 @@ zwrotkaV = \markup \column {
   "Te cum lachrymis pijs quæritamus,"
   "Te invocamus."
 }
+
+dalszeZwrotki = \markuplist {
+  \zwrotkaII
+  \zwrotkaIII
+  \zwrotkaIV
+  \zwrotkaV
+}
+
+numerZwrotki = #2

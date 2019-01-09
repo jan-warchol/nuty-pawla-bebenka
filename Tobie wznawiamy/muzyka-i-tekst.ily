@@ -134,3 +134,12 @@ zwrotkaV = \markup \column {
   "By nam odpuścił z Twej świętej zasługi,"
   "Bóg nasze długi."
 }
+
+dalszeZwrotki = \markuplist {
+  \zwrotkaII
+  \zwrotkaIII
+  \zwrotkaIV
+  \zwrotkaV
+}
+
+numerZwrotki = #2

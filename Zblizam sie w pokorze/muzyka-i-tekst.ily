@@ -149,3 +149,14 @@ zwrotkaVII = \markup \column {
   "Bym Oblicze Twoje tam oglądać mógł,"
   "Gdzie wybranym miejsce przygotował Bóg."
 }
+
+dalszeZwrotki = \markuplist {
+  \zwrotkaII
+  \zwrotkaIII
+  \zwrotkaIV
+  \zwrotkaV
+  \zwrotkaVI
+  \zwrotkaVII
+}
+
+numerZwrotki = #2

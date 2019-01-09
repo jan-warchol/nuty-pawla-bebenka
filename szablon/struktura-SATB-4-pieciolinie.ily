@@ -63,3 +63,5 @@
 
 \layout {
 }
+
+\zwrotki \liczbaKolumn \numerZwrotki \powiekszenieZwrotek \interlinia \odstepMiedzyZwrotkami \odstepOdNumeruDoZwrotki \dalszeZwrotki

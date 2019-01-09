@@ -21,13 +21,13 @@
   odsteppotytule = \markup \vspace #-1
 }
 
-#(define powiekszenie-zwrotek '(1.1 . 1.1))
-#(define interlinia '(baseline-skip . 2.3))
-odstepMiedzyZwrotkami = \markup \vspace #1
-odstepOdNumeruDoZwrotki = \markup \hspace #1
+liczbaKolumn = #1
+powiekszenieZwrotek = #1.1
+interlinia = #2.3
+odstepMiedzyZwrotkami = #1
+odstepOdNumeruDoZwrotki = #1
 
 \include "../szablon/globalne-ustawienia-formatowania.ily"
 \include "muzyka-i-tekst.ily"
 \include "../szablon/struktura-SATB-2-pieciolinie.ily"
-\include "struktura-zwrotek.ily"
 \include "specjalne-ustawienia-utworu.ily"
