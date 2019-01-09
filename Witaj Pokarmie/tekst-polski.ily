@@ -1,4 +1,4 @@
-\version "2.17.3"
+\version "2.21.0"
 
 \header	{
   title = "Witaj, pokarmie"
@@ -14,9 +14,9 @@
 tekst = \lyricmode {
   \set stanza = "1."
   Wi -- taj, po -- kar --
-  \tweak #'X-offset #-1.2 mie, |
-  \tweak #'X-offset #-3 w_któ -- rym nie -- zmie --
-  \tweak #'X-offset #-0.7 LyricText
+  \tweak X-offset #-1.2 mie, |
+  \tweak X-offset #-3 w_któ -- rym nie -- zmie --
+  \tweak LyricText.X-offset #-0.7
   rzo -- ny |
   wi -- taj, na -- po -- ju zu -- |
   \markup \underline peł -- _ nie ga -- szą -- cy |
@@ -31,7 +31,7 @@ tekstBasow = \tekst
 drugiWers = \lyricmode {
   nie -- ba i zie -- mie |
   Twór -- ca jest zam -- knio --
-  \tweak #'X-offset #-0.5 ny, |
+  \tweak X-offset #-0.5 ny, |
 }
 
 drugiWersSopranu = \drugiWers

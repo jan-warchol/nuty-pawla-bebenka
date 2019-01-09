@@ -1,4 +1,4 @@
-\version "2.17.18"
+\version "2.21.0"
 
 \paper {
   #(define fonts
@@ -34,10 +34,10 @@
     \override LyricHyphen #'extra-offset = #'(0 . 0.1)
     \override LyricHyphen #'minimum-distance = #0.5
     \override LyricSpace #'minimum-distance = #0.7
-    \override VerticalAxisGroup
-    #'nonstaff-relatedstaff-spacing #'basic-distance = #5
+    \override VerticalAxisGroup.
+    nonstaff-relatedstaff-spacing.basic-distance = #5
     %\override VerticalAxisGroup
-    %#'nonstaff-unrelatedstaff-spacing #'padding = #0.9
+    %#'nonstaff-unrelatedstaff-spacing.padding = #0.9
   }
   \context {
     \Score
@@ -49,11 +49,11 @@
 
 % do zaznaczania wątpliwości i pytań
 pytanie =
-#(define-music-function (parser location grob comment offset)
+#(define-music-function (grob comment offset)
    (string? markup? pair?)
-   (ly:input-warning location "Pytanie:")
+   (ly:input-warning (*location*) "Pytanie:")
    #{
-     \once \override $grob #'color = #magenta
+     \once \override $grob .color = #magenta
      \footnote \markup { \large \bold \with-color #magenta #comment }
      #offset \markup "" $grob
    #}

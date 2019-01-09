@@ -49,11 +49,11 @@
 
 % do zaznaczania wątpliwości i pytań
 pytanie =
-#(define-music-function (grob comment offset)
-   (string? markup? pair?)
+#(define-music-function (grob comment context offset)
+   (string? markup? (string? "Voice") pair?)
    (ly:input-warning (*location*) "Pytanie:")
    #{
-     \once \override $grob #'color = #magenta
+     \once \override $context . $grob .color = #magenta
      \footnote \markup { \large \bold \with-color #magenta #comment }
      #offset \markup "" $grob
    #}

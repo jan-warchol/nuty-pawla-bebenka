@@ -1,4 +1,4 @@
-\version "2.17.3"
+\version "2.21.0"
 
 bookTitleMarkup = \markup {
   \override #'(baseline-skip . 3.5)
@@ -39,7 +39,7 @@ tagline = \markup {
   \pad-to-box #'(0 . 0) #'(0 . 1.6)
   \center-column {
     \with-url
-    #"http://lilypond.org/"
+    "http://lilypond.org/"
     \scale #'(0.6 . 0.6)
     #(format #f "LilyPond v~a"
        (lilypond-version)

@@ -1,4 +1,4 @@
-\version "2.17.3"
+\version "2.21.0"
 
 \bookOutputName "o-salutaris-hostia"
 
@@ -132,14 +132,14 @@ akordy = \chordmode {
 tekst = \lyricmode {
   \set stanza = "1."
   O
-  \once \override LyricText #'X-offset = #-2
+  \once \override LyricText.X-offset = #-2
   sa --
-  \once \override LyricText #'X-offset = #-1
+  \once \override LyricText.X-offset = #-1
   lu -- ta -- ris Ho -- sti -- a,
   quæ cæ -- li pan -- dis o -- sti -- um:
   bel -- _ la pre --
-  \tweak #'self-alignment-X #0.3 \markup \scale #'(0.98 . 1) munt
-  \tweak #'X-offset #0.2 LyricText ho -- sti -- li -- a,
+  \tweak self-alignment-X #0.3 \markup \scale #'(0.98 . 1) munt
+  \tweak LyricText.X-offset #0.2 ho -- sti -- li -- a,
   da ro -- bur, fer __ _ au -- xi -- li -- um.
 }
 
@@ -148,14 +148,14 @@ tekstAltu = \tekst
 tekstTenorow = \lyricmode {
   \set stanza = "1."
   O
-  \once \override LyricText #'X-offset = #-2
+  \once \override LyricText.X-offset = #-2
   sa --
-  \once \override LyricText #'X-offset = #-1
+  \once \override LyricText.X-offset = #-1
   lu -- ta -- ris Ho -- sti -- a,
   quæ cæ -- li pan -- dis o -- sti -- um:
   bel -- _ _ _ la pre --
-  \tweak #'self-alignment-X #0.2 LyricText \markup \scale #'(0.95 . 1) munt
-  \tweak #'X-offset #0.2 LyricText ho -- sti -- li -- a,
+  \tweak LyricText.self-alignment-X #0.2 \markup \scale #'(0.95 . 1) munt
+  \tweak LyricText.X-offset #0.2 ho -- sti -- li -- a,
   da ro -- bur, fer __ _ au -- xi -- li -- um.
 }
 tekstBasow = \tekst
@@ -163,9 +163,9 @@ tekstBasow = \tekst
 drugiWers = \lyricmode {
   \set stanza = "2."
   U --
-  \once \override LyricText #'X-offset = #-2
+  \once \override LyricText.X-offset = #-2
   ni
-  \once \override LyricText #'X-offset = #-1
+  \once \override LyricText.X-offset = #-1
   tri -- no -- que Do --  mi -- no
   sit sem -- pi -- ter -- na glo -- ri -- a,
   qui vi -- tam si -- ne _ ter --  mi -- no
@@ -177,9 +177,9 @@ drugiWersAltu = \drugiWers
 drugiWersTenorow = \lyricmode {
   \set stanza = "2."
   U --
-  \once \override LyricText #'X-offset = #-2
+  \once \override LyricText.X-offset = #-2
   ni
-  \once \override LyricText #'X-offset = #-1
+  \once \override LyricText.X-offset = #-1
   tri -- no -- que Do --  mi -- no
   sit sem -- pi -- ter -- na glo -- ri -- a,
   qui _ vi -- _ tam si -- ne _ ter --  mi -- no
@@ -188,7 +188,7 @@ drugiWersTenorow = \lyricmode {
 drugiWersBasow = \drugiWers
 
 tlumaczenie = \markup \tiny \typewriter \column {
-  \vspace #1
+  \combine \null \vspace #1
   \bold
   "O salutaris Hostia, quæ cæli  pandis    ostium:"
   "O zbawcza   Hostio, co  nieba otwierasz bramy:"

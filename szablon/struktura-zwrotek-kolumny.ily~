@@ -1,4 +1,4 @@
-\version "2.19.82"
+\version "2.21.0"
 
 podzielNaKolumny = #(define-scheme-function
     (parser location lista-zwrotek liczbaKolumn)

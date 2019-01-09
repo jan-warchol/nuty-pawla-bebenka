@@ -1,4 +1,4 @@
-\version "2.17.3"
+\version "2.21.0"
 
 \bookOutputName "tobie-wznawiamy"
 
@@ -72,15 +72,15 @@ akordy = \chordmode {
 tekst = \lyricmode {
   \set stanza = "1. "
   To -- bie  wzna --
-  \once \override LyricText #'self-alignment-X = #-0.8
+  \once \override LyricText.self-alignment-X = #-0.8
   wia -- my,
   Pan --
-  \once \override LyricText #'self-alignment-X = #-0.4
+  \once \override LyricText.self-alignment-X = #-0.4
   no, nad wy -- mo -- wę
   któ --
-  \once \override LyricText #'self-alignment-X = #1
+  \once \override LyricText.self-alignment-X = #1
   raś
-  \once \override LyricText #'self-alignment-X = #0.5
+  \once \override LyricText.self-alignment-X = #0.5
   w_te sło -- wa
   by -- ła u -- ra -- czo -- na:
   bądź po -- zdro -- wio -- na.
@@ -93,12 +93,12 @@ tekstBasow = \tekst
 
 drugiWers = \lyricmode {
   u --
-  \once \override LyricText #'self-alignment-X = #0.5
+  \once \override LyricText.self-alignment-X = #0.5
   przej -- mym
-  \once \override LyricText #'self-alignment-X = #-0.8
+  \once \override LyricText.self-alignment-X = #-0.8
   sło -- wem
   cześć
-  \once \override LyricText #'self-alignment-X = #-0.7
+  \once \override LyricText.self-alignment-X = #-0.7
   Ga -- bri -- e -- lo -- wę,
 }
 
