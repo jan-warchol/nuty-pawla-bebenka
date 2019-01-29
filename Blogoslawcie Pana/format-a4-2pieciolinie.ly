@@ -21,8 +21,13 @@ powiekszenieZwrotek = #1.2
 interlinia = #3
 odstepMiedzyZwrotkami = #2
 odstepOdNumeruDoZwrotki = #1
+TwoVoicesPerStaff = ##t
 
 \include "../szablon/globalne-ustawienia-formatowania.ily"
+\include "../szablon/dostosowanie-szablonu.ily"
 \include "muzyka-i-tekst.ily"
-\include "../szablon/struktura-SATB-2-pieciolinie.ily"
+\include "satb.ly"
 \include "specjalne-ustawienia-utworu.ily"
+
+\zwrotki \liczbaKolumn \numerZwrotki \powiekszenieZwrotek \interlinia \odstepMiedzyZwrotkami \odstepOdNumeruDoZwrotki \dalszeZwrotki
+

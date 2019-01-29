@@ -28,6 +28,9 @@ odstepMiedzyZwrotkami = #1
 odstepOdNumeruDoZwrotki = #1
 
 \include "../szablon/globalne-ustawienia-formatowania.ily"
+\include "../szablon/dostosowanie-szablonu.ily"
 \include "muzyka-i-tekst.ily"
-\include "../szablon/struktura-SATB-4-pieciolinie.ily"
+\include "satb.ly"
 \include "specjalne-ustawienia-utworu.ily"
+
+\zwrotki \liczbaKolumn \numerZwrotki \powiekszenieZwrotek \interlinia \odstepMiedzyZwrotkami \odstepOdNumeruDoZwrotki \dalszeZwrotki

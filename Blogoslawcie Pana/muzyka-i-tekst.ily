@@ -10,17 +10,18 @@
   copyright = "© Paweł Bębenek"
 }
 %--------------------------------MELODIA
-tonacjaitp = {
+
+Key = \key d \minor
+
+Time = {
   \tempo 4=60
-  \key d \minor
   \time 4/4
   \set Timing.beamExceptions = #'()
   \set Timing.beamHalfMeasure = ##f
   \partial 4
 }
 
-melodiaSopranu = \relative f' {
-  \tonacjaitp
+SopranoMusic = \relative f' {
   d8 e |
   f4. f8 f f g f |
   e4 d8( c) d d d8 e |
@@ -30,8 +31,7 @@ melodiaSopranu = \relative f' {
   f1
   \bar "|."
 }
-melodiaAltu = \relative f' {
-  \tonacjaitp
+AltoMusic = \relative f' {
   d8 d |
   d4 d d8 d d d |
   c4 \pytanie NoteHead "w niektórych źródłach jest c" #'(2 . 2) d4 c8 bes8 bes8 bes8 |
@@ -41,8 +41,7 @@ melodiaAltu = \relative f' {
   e2( d)
   \bar "|."
 }
-melodiaTenorow = \relative f {
-  \tonacjaitp
+TenorMusic = \relative f {
   a8 a |
   a( g) a( f) bes bes bes a |
   g4 g g8 g g16( f) g( bes) |
@@ -52,8 +51,7 @@ melodiaTenorow = \relative f {
   bes4( a8 g a2)
   \bar "|."
 }
-melodiaBasow = \relative f {
-  \tonacjaitp
+BassMusic = \relative f {
   d8 d |
   d4 c bes8 bes bes bes |
   c4 c g8 g g8 g |
@@ -74,26 +72,20 @@ tekst = \lyricmode {
   \set stanza = "1. "
   Bło -- go -- sław -- cie Pa -- na
   wszy --
-  \tweak self-alignment-X #-0.5 LyricText stkie
-  \tweak X-offset #0 LyricText Je -- go dzie --
+  \tweak LyricText.self-alignment-X #-0.5 stkie
+  \tweak LyricText.X-offset #0 Je -- go dzie --
   \tweak self-alignment-X #-0.8 ła,
   któ -- re by nie kwi -- tły
   gdy -- by nie cier -- pie -- nie,
   bło -- go -- sław -- cie Pa -- na.
 }
 
-tekstSopranu = \tekst
-tekstAltu = \tekst
-tekstTenorow = \tekst
-tekstBasow = \tekst
+SopranoLyrics = \tekst
+AltoLyrics = \tekst
+TenorLyrics = \tekst
+BasLyrics = \tekst
 
-drugiWers = \lyricmode {
-}
-
-drugiWersSopranu = \drugiWers
-drugiWersAltu = \drugiWers
-drugiWersTenorow = \drugiWers
-drugiWersBasow = \drugiWers
+VerseOne = \tekst
 
 zwrotkaII = \markup \column {
   "Błogosławcie Pana wszystkie łzy i żale,"
