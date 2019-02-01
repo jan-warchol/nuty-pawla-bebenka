@@ -25,6 +25,7 @@ BassMidiInstrument = "clarinet"
   \context {
     \Lyrics
     \override VerticalAxisGroup.staff-affinity = #CENTER
+    \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.padding = #1.5 % ważne dla 2 pięciolinii
   }
 }
 
