@@ -26,6 +26,7 @@ powiekszenieZwrotek = #1.1
 interlinia = #3
 odstepMiedzyZwrotkami = #1
 odstepOdNumeruDoZwrotki = #1
+TwoVoicesPerStaff = ##f
 
 \include "../szablon/globalne-ustawienia-formatowania.ily"
 \include "../szablon/dostosowanie-szablonu.ily"

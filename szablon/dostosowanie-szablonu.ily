@@ -1,14 +1,14 @@
 \version "2.21.0"
 
-SopranoInstrumentName = "S"
-AltoInstrumentName = "A"
-TenorInstrumentName = "T"
-BassInstrumentName = "B"
+SopranoInstrumentName = "S "
+AltoInstrumentName = "A "
+TenorInstrumentName = "T "
+BassInstrumentName = "B "
 
-SopranoShortInstrumentName = "S"
-AltoShortInstrumentName = "A"
-TenorShortInstrumentName = "T"
-BassShortInstrumentName = "B"
+SopranoShortInstrumentName = "S "
+AltoShortInstrumentName = "A "
+TenorShortInstrumentName = "T "
+BassShortInstrumentName = "B "
 
 SopranoMidiInstrument = "clarinet"
 AltoMidiInstrument = "english horn"
@@ -19,9 +19,12 @@ BassMidiInstrument = "clarinet"
   \context {
     \Voice
     \applyContext #(lambda (x)
-        (if (member (ly:context-id x ) (list "SopranoVoice" "TenorVoice"))
+        (if (and TwoVoicesPerStaff (member (ly:context-id x ) (list "SopranoVoice" "TenorVoice")))
           (ly:context-pushpop-property x 'Ambitus 'X-offset 1.7 )))
-
+  }
+  \context {
+    \Lyrics
+    \override VerticalAxisGroup.staff-affinity = #CENTER
   }
 }
 

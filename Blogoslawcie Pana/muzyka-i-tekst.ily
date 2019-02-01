@@ -83,7 +83,7 @@ tekst = \lyricmode {
 SopranoLyrics = #(if (not TwoVoicesPerStaff) tekst )
 AltoLyrics = #(if (not TwoVoicesPerStaff) tekst )
 TenorLyrics = #(if (not TwoVoicesPerStaff) tekst )
-BasLyrics = #(if (not TwoVoicesPerStaff) tekst )
+BassLyrics = #(if (not TwoVoicesPerStaff) tekst )
 
 VerseOne = #(if TwoVoicesPerStaff tekst )
 
