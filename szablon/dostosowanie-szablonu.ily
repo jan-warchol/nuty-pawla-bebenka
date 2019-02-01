@@ -15,6 +15,16 @@ AltoMidiInstrument = "english horn"
 TenorMidiInstrument = "english horn"
 BassMidiInstrument = "clarinet"
 
+\layout {
+  \context {
+    \Voice
+    \applyContext #(lambda (x)
+        (if (member (ly:context-id x ) (list "SopranoVoice" "TenorVoice"))
+          (ly:context-pushpop-property x 'Ambitus 'X-offset 1.7 )))
+
+  }
+}
+
 %{
 \score {
   \new ChoirStaff <<

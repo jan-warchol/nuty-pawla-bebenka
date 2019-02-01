@@ -80,12 +80,12 @@ tekst = \lyricmode {
   bło -- go -- sław -- cie Pa -- na.
 }
 
-SopranoLyrics = \tekst
-AltoLyrics = \tekst
-TenorLyrics = \tekst
-BasLyrics = \tekst
+SopranoLyrics = #(if (not TwoVoicesPerStaff) tekst )
+AltoLyrics = #(if (not TwoVoicesPerStaff) tekst )
+TenorLyrics = #(if (not TwoVoicesPerStaff) tekst )
+BasLyrics = #(if (not TwoVoicesPerStaff) tekst )
 
-VerseOne = \tekst
+VerseOne = #(if TwoVoicesPerStaff tekst )
 
 zwrotkaII = \markup \column {
   "Błogosławcie Pana wszystkie łzy i żale,"
