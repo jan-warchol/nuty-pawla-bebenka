@@ -74,8 +74,8 @@ tekst = \lyricmode {
   \set stanza = "1. "
   Bło -- go -- sław -- cie Pa -- na
   wszy --
-  \tweak self-alignment-X #-0.5 LyricText stkie
-  \tweak X-offset #0 LyricText Je -- go dzie --
+  \tweak LyricText.self-alignment-X #-0.5 stkie
+  \tweak LyricText.X-offset #0 Je -- go dzie --
   \tweak self-alignment-X #-0.8 ła,
   któ -- re by nie kwi -- tły
   gdy -- by nie cier -- pie -- nie,
