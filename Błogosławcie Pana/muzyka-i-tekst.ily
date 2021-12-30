@@ -34,7 +34,7 @@ melodiaAltu = \relative f' {
   \tonacjaitp
   d8 d |
   d4 d d8 d d d |
-  c4 \pytanie NoteHead "w niektórych źródłach jest c" #'(2 . 2) d4 c8 bes8 bes8 bes8 |
+  c4 c c8 bes8 bes8 bes8 |
   d4 d d8 d d16( e) f8 |
   e4 d8( e) f f f8 f |
   f4. f8 e2 |
@@ -48,8 +48,8 @@ melodiaTenorow = \relative f {
   g4 g g8 g g16( f) g( bes) |
   a4 a bes8 bes d d |
   c4 c c8 c c c |
-  \pytanie NoteHead "w niektórych źródłach jest d" #'(2 . 1) c4. d8 c2 |
-  bes4( a8 g a2)
+  d4. d8 c2( |
+  bes4 a8 g) a2
   \bar "|."
 }
 melodiaBasow = \relative f {
